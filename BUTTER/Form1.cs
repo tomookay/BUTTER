@@ -1,4 +1,6 @@
 using System;
+using System.Diagnostics.Eventing.Reader;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace BUTTER
@@ -10,6 +12,10 @@ namespace BUTTER
         public Form1()
         {
             InitializeComponent();
+
+            // Wire the checkbox event here so the handler works without modifying the Designer file.
+            if (cboxStandard1 != null)
+                cboxStandard1.CheckedChanged += cboxStandard1_CheckedChanged;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,12 +35,25 @@ namespace BUTTER
             KeepTotalAt100(tbEasy6, tbMedium6, tbHard6, lblEasyVal6, lblMediumVal6, lblHardVal6);
 
             // Compute hours for all stations (station1 uses numericUpDown1 & numericUpDown4/5/6)
-            UpdateHoursForStation(nudNumberOfMotions1, tbEasy1, tbMedium1, tbHard1, nudEasyHoursTask1, nudMediumHoursTask2, nudHardHoursTask1, txbHoursS1);
+            UpdateHoursForStation(nudNumberOfMotions1, tbEasy1, tbMedium1, tbHard1, nudEasyHoursTask1, nudMediumHoursTask1, nudHardHoursTask1, txbHoursS1);
             UpdateHoursForStation(nudNumberOfMotions2, tbEasy2, tbMedium2, tbHard2, nudEasyHoursTask2, nudMediumHoursTask2, nudHardHoursTask2, txbHoursS2);
             UpdateHoursForStation(nudNumberOfMotions3, tbEasy3, tbMedium3, tbHard3, nudEasyHoursTask3, nudMediumHoursTask3, nudHardHoursTask3, txbHoursS3);
             UpdateHoursForStation(nudNumberOfMotions4, tbEasy4, tbMedium4, tbHard4, nudEasyHoursTask4, nudMediumHoursTask4, nudHardHoursTask4, txbHoursS4);
             UpdateHoursForStation(nudNumberOfMotions5, tbEasy5, tbMedium5, tbHard5, nudEasyHoursTask5, nudMediumHoursTask5, nudHardHoursTask5, txbHoursS5);
             UpdateHoursForStation(nudNumberOfMotions6, tbEasy6, tbMedium6, tbHard6, nudEasyHoursTask6, nudMediumHoursTask6, nudHardHoursTask6, txbHoursS6);
+
+            // Ensure total is computed at startup
+            UpdateTotalHours();
+
+            //disable hours setting
+            nudEasyHoursTask1.Enabled = false;
+            nudMediumHoursTask1.Enabled = false;
+            nudHardHoursTask1.Enabled = false;
+            tbEasy1.Enabled = false;
+            tbMedium1.Enabled = false;
+            tbHard1.Enabled = false;
+
+
         }
 
         private void label1_Click(object sender, EventArgs e) { }
@@ -91,6 +110,43 @@ namespace BUTTER
         {
             // hard task hours changed for station1
             UpdateHoursForStation(nudNumberOfMotions1, tbEasy1, tbMedium1, tbHard1, nudEasyHoursTask1, nudMediumHoursTask1, nudHardHoursTask1, txbHoursS1);
+        }
+
+        // New handler for the "standard" checkbox for station 1
+        private void cboxStandard1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cboxStandard1 == null) return;
+
+            if (cboxStandard1.Checked)
+            {
+                // Set the standard values, but clamp to each NumericUpDown's min/max to avoid exceptions
+                SetNumericUpDownValueSafe(nudEasyHoursTask1, 1.0m);
+                SetNumericUpDownValueSafe(nudMediumHoursTask1, 3.0m);
+                SetNumericUpDownValueSafe(nudHardHoursTask1, 8.0m);
+
+                SetTrackBarValueSafe(tbEasy1, 75);
+                SetTrackBarValueSafe(tbMedium1, 15);
+                SetTrackBarValueSafe(tbHard1, 10);
+
+
+                // Recompute station1 hours after changing the per-task hours
+                UpdateHoursForStation(nudNumberOfMotions1, tbEasy1, tbMedium1, tbHard1,
+                    nudEasyHoursTask1, nudMediumHoursTask1, nudHardHoursTask1, txbHoursS1);
+
+                KeepTotalAt100(tbEasy1, tbMedium1, tbHard1, lblEasyVal, lblMediumVal, lblHardVal);
+               
+            }
+
+            else
+                   {
+                // Re-enable the NumericUpDowns and TrackBars for manual editing
+                nudEasyHoursTask1.Enabled = true;
+                nudMediumHoursTask1.Enabled = true;
+                nudHardHoursTask1.Enabled = true;
+                tbEasy1.Enabled = true;
+                tbMedium1.Enabled = true;
+                tbHard1.Enabled = true;
+            }
         }
 
         // -------------------------
@@ -393,6 +449,7 @@ namespace BUTTER
         /// <summary>
         /// Compute total hours for a station and write into the provided textbox.
         /// totalHours = motions * ( (easyPct/100)*easyHours + (medPct/100)*medHours + (hardPct/100)*hardHours )
+        /// Also updates the overall total across all stations (txbTotalHours).
         /// </summary>
         private void UpdateHoursForStation(NumericUpDown nudMotions,
             TrackBar tbEasyLocal, TrackBar tbMedLocal, TrackBar tbHardLocal,
@@ -425,12 +482,33 @@ namespace BUTTER
             {
                 txbOut.Text = "0";
             }
+            finally
+            {
+                // Keep the overall total in sync whenever any station updates
+                UpdateTotalHours();
+            }
         }
 
-        // Keep existing helper that returns a NumericUpDown if needed by other code
-        private NumericUpDown GetNudNumberOfMotions1()
+        // Helper to safely set a NumericUpDown's Value while respecting its Minimum/Maximum
+        private void SetNumericUpDownValueSafe(NumericUpDown nud, decimal desired)
         {
-            return nudNumberOfMotions2;
+            if (nud == null) return;
+            decimal v = desired;
+            if (v < nud.Minimum) v = nud.Minimum;
+            if (v > nud.Maximum) v = nud.Maximum;
+            nud.Value = v;
+            nud.Enabled = false;
+        }
+
+        private void SetTrackBarValueSafe(TrackBar nud, decimal desired)
+        {
+            if (nud == null) return;
+            decimal v = desired;
+            if (v < nud.Minimum) v = nud.Minimum;
+            if (v > nud.Maximum) v = nud.Maximum;
+            nud.Value = (int)v;
+            nud.Enabled = false;
+
         }
 
         private void tpStation1_Click(object sender, EventArgs e) { }
@@ -463,5 +541,48 @@ namespace BUTTER
         {
             UpdateHoursForStation(nudNumberOfMotions6, tbEasy6, tbMedium6, tbHard6, nudEasyHoursTask6, nudMediumHoursTask6, nudHardHoursTask6, txbHoursS6);
         }
+
+        /// <summary>
+        /// Parse a text value to decimal safely. Returns 0 when parsing fails.
+        /// Uses current culture for parsing (fallback to InvariantCulture handled by TryParse overloads).
+        /// </summary>
+        private decimal ParseDecimalSafe(string text)
+        {
+            if (string.IsNullOrWhiteSpace(text)) return 0m;
+            if (decimal.TryParse(text, NumberStyles.Number, CultureInfo.CurrentCulture, out var v)) return v;
+            if (decimal.TryParse(text, NumberStyles.Number, CultureInfo.InvariantCulture, out v)) return v;
+            return 0m;
+        }
+
+        /// <summary>
+        /// Sum the floating-point values in txbHoursS1..txbHoursS6 and write result into txbTotalHours.
+        /// Invalid or non-parsable values are treated as 0.
+        /// </summary>
+        private void UpdateTotalHours()
+        {
+            try
+            {
+                decimal sum = 0m;
+
+                // Treat any unparsable text as zero
+                sum += ParseDecimalSafe(txbHoursS1.Text);
+                sum += ParseDecimalSafe(txbHoursS2.Text);
+                sum += ParseDecimalSafe(txbHoursS3.Text);
+                sum += ParseDecimalSafe(txbHoursS4.Text);
+                sum += ParseDecimalSafe(txbHoursS5.Text);
+                sum += ParseDecimalSafe(txbHoursS6.Text);
+
+                if (txbTotalHours != null)
+                {
+                    txbTotalHours.Text = decimal.Round(sum, 2).ToString("0.##");
+                }
+            }
+            catch
+            {
+                if (txbTotalHours != null)
+                    txbTotalHours.Text = "0";
+            }
+        }
+
     }
 }

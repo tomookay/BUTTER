@@ -60,7 +60,7 @@ namespace BUTTER
             tpStation2 = new TabPage();
             txbHoursS2 = new TextBox();
             label19 = new Label();
-            checkBox4 = new CheckBox();
+            cboxStandard2 = new CheckBox();
             label10 = new Label();
             nudNumberOfMotions2 = new NumericUpDown();
             groupBoxEasy2 = new GroupBox();
@@ -81,7 +81,7 @@ namespace BUTTER
             tpStation3 = new TabPage();
             txbHoursS3 = new TextBox();
             label20 = new Label();
-            checkBox7 = new CheckBox();
+            cboxStandard3 = new CheckBox();
             label12 = new Label();
             nudNumberOfMotions3 = new NumericUpDown();
             groupBoxEasy3 = new GroupBox();
@@ -102,7 +102,7 @@ namespace BUTTER
             tpStation4 = new TabPage();
             txbHoursS4 = new TextBox();
             label21 = new Label();
-            checkBox8 = new CheckBox();
+            cboxStandard4 = new CheckBox();
             label13 = new Label();
             nudNumberOfMotions4 = new NumericUpDown();
             groupBoxEasy4 = new GroupBox();
@@ -123,7 +123,7 @@ namespace BUTTER
             tpStation5 = new TabPage();
             txbHoursS5 = new TextBox();
             label22 = new Label();
-            checkBox9 = new CheckBox();
+            cboxStandard5 = new CheckBox();
             label15 = new Label();
             nudNumberOfMotions5 = new NumericUpDown();
             groupBoxEasy5 = new GroupBox();
@@ -144,7 +144,7 @@ namespace BUTTER
             tpStation6 = new TabPage();
             txbHoursS6 = new TextBox();
             label23 = new Label();
-            checkBox10 = new CheckBox();
+            cboxStandard6 = new CheckBox();
             label17 = new Label();
             nudNumberOfMotions6 = new NumericUpDown();
             groupBoxEasy6 = new GroupBox();
@@ -512,18 +512,18 @@ namespace BUTTER
             label18.AutoSize = true;
             label18.Location = new Point(377, 47);
             label18.Name = "label18";
-            label18.Size = new Size(59, 15);
+            label18.Size = new Size(75, 15);
             label18.TabIndex = 16;
-            label18.Text = "Task Ratio";
+            label18.Text = "%  Task Ratio";
             // 
             // lblHardVal
             // 
             lblHardVal.AutoSize = true;
             lblHardVal.Location = new Point(339, 47);
             lblHardVal.Name = "lblHardVal";
-            lblHardVal.Size = new Size(32, 15);
+            lblHardVal.Size = new Size(19, 15);
             lblHardVal.TabIndex = 9;
-            lblHardVal.Text = "10 %";
+            lblHardVal.Text = "10";
             // 
             // label16
             // 
@@ -577,18 +577,18 @@ namespace BUTTER
             label1.AutoSize = true;
             label1.Location = new Point(377, 47);
             label1.Name = "label1";
-            label1.Size = new Size(59, 15);
+            label1.Size = new Size(75, 15);
             label1.TabIndex = 15;
-            label1.Text = "Task Ratio";
+            label1.Text = "%  Task Ratio";
             // 
             // lblMediumVal
             // 
             lblMediumVal.AutoSize = true;
             lblMediumVal.Location = new Point(339, 47);
             lblMediumVal.Name = "lblMediumVal";
-            lblMediumVal.Size = new Size(32, 15);
+            lblMediumVal.Size = new Size(19, 15);
             lblMediumVal.TabIndex = 9;
-            lblMediumVal.Text = "15 %";
+            lblMediumVal.Text = "15";
             // 
             // label14
             // 
@@ -609,7 +609,7 @@ namespace BUTTER
             tbMedium1.SmallChange = 5;
             tbMedium1.TabIndex = 5;
             tbMedium1.TickFrequency = 5;
-            tbMedium1.Value = 20;
+            tbMedium1.Value = 15;
             tbMedium1.Scroll += tbMedium_Scroll;
             // 
             // nudMediumHoursTask1
@@ -642,18 +642,18 @@ namespace BUTTER
             lblRatio.AutoSize = true;
             lblRatio.Location = new Point(377, 47);
             lblRatio.Name = "lblRatio";
-            lblRatio.Size = new Size(59, 15);
+            lblRatio.Size = new Size(75, 15);
             lblRatio.TabIndex = 14;
-            lblRatio.Text = "Task Ratio";
+            lblRatio.Text = "%  Task Ratio";
             // 
             // lblEasyVal
             // 
             lblEasyVal.AutoSize = true;
             lblEasyVal.Location = new Point(339, 47);
             lblEasyVal.Name = "lblEasyVal";
-            lblEasyVal.Size = new Size(32, 15);
+            lblEasyVal.Size = new Size(19, 15);
             lblEasyVal.TabIndex = 9;
-            lblEasyVal.Text = "75 %";
+            lblEasyVal.Text = "75";
             // 
             // label11
             // 
@@ -674,7 +674,7 @@ namespace BUTTER
             tbEasy1.SmallChange = 5;
             tbEasy1.TabIndex = 5;
             tbEasy1.TickFrequency = 5;
-            tbEasy1.Value = 70;
+            tbEasy1.Value = 75;
             tbEasy1.Scroll += trackBar1_Scroll;
             // 
             // nudEasyHoursTask1
@@ -700,6 +700,7 @@ namespace BUTTER
             cboxStandard1.TabIndex = 4;
             cboxStandard1.Text = "Standard";
             cboxStandard1.UseVisualStyleBackColor = true;
+            cboxStandard1.CheckedChanged += cboxStandard1_CheckedChanged;
             // 
             // lblNumberofMotion1
             // 
@@ -724,7 +725,7 @@ namespace BUTTER
             // 
             tpStation2.Controls.Add(txbHoursS2);
             tpStation2.Controls.Add(label19);
-            tpStation2.Controls.Add(checkBox4);
+            tpStation2.Controls.Add(cboxStandard2);
             tpStation2.Controls.Add(label10);
             tpStation2.Controls.Add(nudNumberOfMotions2);
             tpStation2.Controls.Add(groupBoxEasy2);
@@ -754,17 +755,17 @@ namespace BUTTER
             label19.TabIndex = 14;
             label19.Text = "Hours";
             // 
-            // checkBox4
+            // cboxStandard2
             // 
-            checkBox4.AutoSize = true;
-            checkBox4.Checked = true;
-            checkBox4.CheckState = CheckState.Checked;
-            checkBox4.Location = new Point(223, 14);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(73, 19);
-            checkBox4.TabIndex = 7;
-            checkBox4.Text = "Standard";
-            checkBox4.UseVisualStyleBackColor = true;
+            cboxStandard2.AutoSize = true;
+            cboxStandard2.Checked = true;
+            cboxStandard2.CheckState = CheckState.Checked;
+            cboxStandard2.Location = new Point(223, 14);
+            cboxStandard2.Name = "cboxStandard2";
+            cboxStandard2.Size = new Size(73, 19);
+            cboxStandard2.TabIndex = 7;
+            cboxStandard2.Text = "Standard";
+            cboxStandard2.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -951,7 +952,7 @@ namespace BUTTER
             // 
             tpStation3.Controls.Add(txbHoursS3);
             tpStation3.Controls.Add(label20);
-            tpStation3.Controls.Add(checkBox7);
+            tpStation3.Controls.Add(cboxStandard3);
             tpStation3.Controls.Add(label12);
             tpStation3.Controls.Add(nudNumberOfMotions3);
             tpStation3.Controls.Add(groupBoxEasy3);
@@ -981,17 +982,17 @@ namespace BUTTER
             label20.TabIndex = 14;
             label20.Text = "Hours";
             // 
-            // checkBox7
+            // cboxStandard3
             // 
-            checkBox7.AutoSize = true;
-            checkBox7.Checked = true;
-            checkBox7.CheckState = CheckState.Checked;
-            checkBox7.Location = new Point(223, 13);
-            checkBox7.Name = "checkBox7";
-            checkBox7.Size = new Size(73, 19);
-            checkBox7.TabIndex = 7;
-            checkBox7.Text = "Standard";
-            checkBox7.UseVisualStyleBackColor = true;
+            cboxStandard3.AutoSize = true;
+            cboxStandard3.Checked = true;
+            cboxStandard3.CheckState = CheckState.Checked;
+            cboxStandard3.Location = new Point(223, 13);
+            cboxStandard3.Name = "cboxStandard3";
+            cboxStandard3.Size = new Size(73, 19);
+            cboxStandard3.TabIndex = 7;
+            cboxStandard3.Text = "Standard";
+            cboxStandard3.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
@@ -1178,7 +1179,7 @@ namespace BUTTER
             // 
             tpStation4.Controls.Add(txbHoursS4);
             tpStation4.Controls.Add(label21);
-            tpStation4.Controls.Add(checkBox8);
+            tpStation4.Controls.Add(cboxStandard4);
             tpStation4.Controls.Add(label13);
             tpStation4.Controls.Add(nudNumberOfMotions4);
             tpStation4.Controls.Add(groupBoxEasy4);
@@ -1208,17 +1209,17 @@ namespace BUTTER
             label21.TabIndex = 14;
             label21.Text = "Hours";
             // 
-            // checkBox8
+            // cboxStandard4
             // 
-            checkBox8.AutoSize = true;
-            checkBox8.Checked = true;
-            checkBox8.CheckState = CheckState.Checked;
-            checkBox8.Location = new Point(223, 13);
-            checkBox8.Name = "checkBox8";
-            checkBox8.Size = new Size(73, 19);
-            checkBox8.TabIndex = 7;
-            checkBox8.Text = "Standard";
-            checkBox8.UseVisualStyleBackColor = true;
+            cboxStandard4.AutoSize = true;
+            cboxStandard4.Checked = true;
+            cboxStandard4.CheckState = CheckState.Checked;
+            cboxStandard4.Location = new Point(223, 13);
+            cboxStandard4.Name = "cboxStandard4";
+            cboxStandard4.Size = new Size(73, 19);
+            cboxStandard4.TabIndex = 7;
+            cboxStandard4.Text = "Standard";
+            cboxStandard4.UseVisualStyleBackColor = true;
             // 
             // label13
             // 
@@ -1405,7 +1406,7 @@ namespace BUTTER
             // 
             tpStation5.Controls.Add(txbHoursS5);
             tpStation5.Controls.Add(label22);
-            tpStation5.Controls.Add(checkBox9);
+            tpStation5.Controls.Add(cboxStandard5);
             tpStation5.Controls.Add(label15);
             tpStation5.Controls.Add(nudNumberOfMotions5);
             tpStation5.Controls.Add(groupBoxEasy5);
@@ -1435,17 +1436,17 @@ namespace BUTTER
             label22.TabIndex = 14;
             label22.Text = "Hours";
             // 
-            // checkBox9
+            // cboxStandard5
             // 
-            checkBox9.AutoSize = true;
-            checkBox9.Checked = true;
-            checkBox9.CheckState = CheckState.Checked;
-            checkBox9.Location = new Point(223, 12);
-            checkBox9.Name = "checkBox9";
-            checkBox9.Size = new Size(73, 19);
-            checkBox9.TabIndex = 7;
-            checkBox9.Text = "Standard";
-            checkBox9.UseVisualStyleBackColor = true;
+            cboxStandard5.AutoSize = true;
+            cboxStandard5.Checked = true;
+            cboxStandard5.CheckState = CheckState.Checked;
+            cboxStandard5.Location = new Point(223, 12);
+            cboxStandard5.Name = "cboxStandard5";
+            cboxStandard5.Size = new Size(73, 19);
+            cboxStandard5.TabIndex = 7;
+            cboxStandard5.Text = "Standard";
+            cboxStandard5.UseVisualStyleBackColor = true;
             // 
             // label15
             // 
@@ -1632,7 +1633,7 @@ namespace BUTTER
             // 
             tpStation6.Controls.Add(txbHoursS6);
             tpStation6.Controls.Add(label23);
-            tpStation6.Controls.Add(checkBox10);
+            tpStation6.Controls.Add(cboxStandard6);
             tpStation6.Controls.Add(label17);
             tpStation6.Controls.Add(nudNumberOfMotions6);
             tpStation6.Controls.Add(groupBoxEasy6);
@@ -1662,17 +1663,17 @@ namespace BUTTER
             label23.TabIndex = 14;
             label23.Text = "Hours";
             // 
-            // checkBox10
+            // cboxStandard6
             // 
-            checkBox10.AutoSize = true;
-            checkBox10.Checked = true;
-            checkBox10.CheckState = CheckState.Checked;
-            checkBox10.Location = new Point(223, 14);
-            checkBox10.Name = "checkBox10";
-            checkBox10.Size = new Size(73, 19);
-            checkBox10.TabIndex = 7;
-            checkBox10.Text = "Standard";
-            checkBox10.UseVisualStyleBackColor = true;
+            cboxStandard6.AutoSize = true;
+            cboxStandard6.Checked = true;
+            cboxStandard6.CheckState = CheckState.Checked;
+            cboxStandard6.Location = new Point(223, 14);
+            cboxStandard6.Name = "cboxStandard6";
+            cboxStandard6.Size = new Size(73, 19);
+            cboxStandard6.TabIndex = 7;
+            cboxStandard6.Text = "Standard";
+            cboxStandard6.UseVisualStyleBackColor = true;
             // 
             // label17
             // 
@@ -2279,19 +2280,19 @@ namespace BUTTER
         private CheckBox checkBox5;
         private CheckBox checkBox6;
         private TextBox txbHoursS1;
-        private CheckBox checkBox4;
+        private CheckBox cboxStandard2;
         private Label label10;
         private NumericUpDown nudNumberOfMotions2;
-        private CheckBox checkBox7;
+        private CheckBox cboxStandard3;
         private Label label12;
         private NumericUpDown nudNumberOfMotions3;
-        private CheckBox checkBox8;
+        private CheckBox cboxStandard4;
         private Label label13;
         private NumericUpDown nudNumberOfMotions4;
-        private CheckBox checkBox9;
+        private CheckBox cboxStandard5;
         private Label label15;
         private NumericUpDown nudNumberOfMotions5;
-        private CheckBox checkBox10;
+        private CheckBox cboxStandard6;
         private Label label17;
         private NumericUpDown nudNumberOfMotions6;
         private Label label18;
