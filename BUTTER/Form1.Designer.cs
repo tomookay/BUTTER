@@ -14,9 +14,11 @@ namespace BUTTER
 
         private void InitializeComponent()
         {
-            label1 = new Label();
-            tabControl1 = new TabControl();
+            tabControlStations = new TabControl();
             tpBase = new TabPage();
+            groupBox6 = new GroupBox();
+            checkBox5 = new CheckBox();
+            checkBox6 = new CheckBox();
             groupBox2 = new GroupBox();
             checkBox3 = new CheckBox();
             checkBox2 = new CheckBox();
@@ -32,105 +34,134 @@ namespace BUTTER
             label2 = new Label();
             nudPneumatic = new NumericUpDown();
             tpStation1 = new TabPage();
-            lblTotalPercent = new Label();
+            txbHoursS1 = new TextBox();
+            lblS1Hours = new Label();
             groupBox5 = new GroupBox();
+            label18 = new Label();
             lblHardVal = new Label();
             label16 = new Label();
-            tbHard = new TrackBar();
-            numericUpDown6 = new NumericUpDown();
+            tbHard1 = new TrackBar();
+            nudHardHoursTask1 = new NumericUpDown();
             groupBox4 = new GroupBox();
+            label1 = new Label();
             lblMediumVal = new Label();
             label14 = new Label();
-            tbMedium = new TrackBar();
-            numericUpDown5 = new NumericUpDown();
+            tbMedium1 = new TrackBar();
+            nudMediumHoursTask1 = new NumericUpDown();
             groupBox3 = new GroupBox();
+            lblRatio = new Label();
             lblEasyVal = new Label();
             label11 = new Label();
-            tbEasy = new TrackBar();
-            numericUpDown4 = new NumericUpDown();
+            tbEasy1 = new TrackBar();
+            nudEasyHoursTask1 = new NumericUpDown();
+            cboxStandard1 = new CheckBox();
+            lblNumberofMotion1 = new Label();
+            nudNumberOfMotions1 = new NumericUpDown();
+            tpStation2 = new TabPage();
+            txbHoursS2 = new TextBox();
+            label19 = new Label();
             checkBox4 = new CheckBox();
             label10 = new Label();
-            numericUpDown1 = new NumericUpDown();
-            tpStation2 = new TabPage();
+            nudNumberOfMotions2 = new NumericUpDown();
             groupBoxEasy2 = new GroupBox();
             lblEasyVal2 = new Label();
             label11_2 = new Label();
             tbEasy2 = new TrackBar();
-            numericUpDown4_2 = new NumericUpDown();
+            nudEasyHoursTask2 = new NumericUpDown();
             groupBoxMedium2 = new GroupBox();
             lblMediumVal2 = new Label();
             label14_2 = new Label();
             tbMedium2 = new TrackBar();
-            numericUpDown5_2 = new NumericUpDown();
+            nudMediumHoursTask2 = new NumericUpDown();
             groupBoxHard2 = new GroupBox();
             lblHardVal2 = new Label();
             label16_2 = new Label();
             tbHard2 = new TrackBar();
-            numericUpDown6_2 = new NumericUpDown();
+            nudHardHoursTask2 = new NumericUpDown();
             tpStation3 = new TabPage();
+            txbHoursS3 = new TextBox();
+            label20 = new Label();
+            checkBox7 = new CheckBox();
+            label12 = new Label();
+            nudNumberOfMotions3 = new NumericUpDown();
             groupBoxEasy3 = new GroupBox();
             lblEasyVal3 = new Label();
             label11_3 = new Label();
             tbEasy3 = new TrackBar();
-            numericUpDown4_3 = new NumericUpDown();
+            nudEasyHoursTask3 = new NumericUpDown();
             groupBoxMedium3 = new GroupBox();
             lblMediumVal3 = new Label();
             label14_3 = new Label();
             tbMedium3 = new TrackBar();
-            numericUpDown5_3 = new NumericUpDown();
+            nudMediumHoursTask3 = new NumericUpDown();
             groupBoxHard3 = new GroupBox();
             lblHardVal3 = new Label();
             label16_3 = new Label();
             tbHard3 = new TrackBar();
-            numericUpDown6_3 = new NumericUpDown();
+            nudHardHoursTask3 = new NumericUpDown();
             tpStation4 = new TabPage();
+            txbHoursS4 = new TextBox();
+            label21 = new Label();
+            checkBox8 = new CheckBox();
+            label13 = new Label();
+            nudNumberOfMotions4 = new NumericUpDown();
             groupBoxEasy4 = new GroupBox();
             lblEasyVal4 = new Label();
             label11_4 = new Label();
             tbEasy4 = new TrackBar();
-            numericUpDown4_4 = new NumericUpDown();
+            nudEasyHoursTask4 = new NumericUpDown();
             groupBoxMedium4 = new GroupBox();
             lblMediumVal4 = new Label();
             label14_4 = new Label();
             tbMedium4 = new TrackBar();
-            numericUpDown5_4 = new NumericUpDown();
+            nudMediumHoursTask4 = new NumericUpDown();
             groupBoxHard4 = new GroupBox();
             lblHardVal4 = new Label();
             label16_4 = new Label();
             tbHard4 = new TrackBar();
-            numericUpDown6_4 = new NumericUpDown();
+            nudHardHoursTask4 = new NumericUpDown();
             tpStation5 = new TabPage();
+            txbHoursS5 = new TextBox();
+            label22 = new Label();
+            checkBox9 = new CheckBox();
+            label15 = new Label();
+            nudNumberOfMotions5 = new NumericUpDown();
             groupBoxEasy5 = new GroupBox();
             lblEasyVal5 = new Label();
             label11_5 = new Label();
             tbEasy5 = new TrackBar();
-            numericUpDown4_5 = new NumericUpDown();
+            nudEasyHoursTask5 = new NumericUpDown();
             groupBoxMedium5 = new GroupBox();
             lblMediumVal5 = new Label();
             label14_5 = new Label();
             tbMedium5 = new TrackBar();
-            numericUpDown5_5 = new NumericUpDown();
+            nudMediumHoursTask5 = new NumericUpDown();
             groupBoxHard5 = new GroupBox();
             lblHardVal5 = new Label();
             label16_5 = new Label();
             tbHard5 = new TrackBar();
-            numericUpDown6_5 = new NumericUpDown();
+            nudHardHoursTask5 = new NumericUpDown();
             tpStation6 = new TabPage();
+            txbHoursS6 = new TextBox();
+            label23 = new Label();
+            checkBox10 = new CheckBox();
+            label17 = new Label();
+            nudNumberOfMotions6 = new NumericUpDown();
             groupBoxEasy6 = new GroupBox();
             lblEasyVal6 = new Label();
             label11_6 = new Label();
             tbEasy6 = new TrackBar();
-            numericUpDown4_6 = new NumericUpDown();
+            nudEasyHoursTask6 = new NumericUpDown();
             groupBoxMedium6 = new GroupBox();
             lblMediumVal6 = new Label();
             label14_6 = new Label();
             tbMedium6 = new TrackBar();
-            numericUpDown5_6 = new NumericUpDown();
+            nudMediumHoursTask6 = new NumericUpDown();
             groupBoxHard6 = new GroupBox();
             lblHardVal6 = new Label();
             label16_6 = new Label();
             tbHard6 = new TrackBar();
-            numericUpDown6_6 = new NumericUpDown();
+            nudHardHoursTask6 = new NumericUpDown();
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             newToolStripMenuItem = new ToolStripMenuItem();
@@ -147,8 +178,11 @@ namespace BUTTER
             dateTimePicker3 = new DateTimePicker();
             label9 = new Label();
             textBox1 = new TextBox();
-            tabControl1.SuspendLayout();
+            txbTotalHours = new TextBox();
+            lblTotalHours = new Label();
+            tabControlStations.SuspendLayout();
             tpBase.SuspendLayout();
+            groupBox6.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
@@ -158,95 +192,91 @@ namespace BUTTER
             ((System.ComponentModel.ISupportInitialize)nudPneumatic).BeginInit();
             tpStation1.SuspendLayout();
             groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)tbHard).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tbHard1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudHardHoursTask1).BeginInit();
             groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)tbMedium).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tbMedium1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudMediumHoursTask1).BeginInit();
             groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)tbEasy).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tbEasy1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudEasyHoursTask1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudNumberOfMotions1).BeginInit();
             tpStation2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudNumberOfMotions2).BeginInit();
             groupBoxEasy2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbEasy2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4_2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudEasyHoursTask2).BeginInit();
             groupBoxMedium2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbMedium2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5_2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudMediumHoursTask2).BeginInit();
             groupBoxHard2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbHard2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6_2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudHardHoursTask2).BeginInit();
             tpStation3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudNumberOfMotions3).BeginInit();
             groupBoxEasy3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbEasy3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4_3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudEasyHoursTask3).BeginInit();
             groupBoxMedium3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbMedium3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5_3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudMediumHoursTask3).BeginInit();
             groupBoxHard3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbHard3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6_3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudHardHoursTask3).BeginInit();
             tpStation4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudNumberOfMotions4).BeginInit();
             groupBoxEasy4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbEasy4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4_4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudEasyHoursTask4).BeginInit();
             groupBoxMedium4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbMedium4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5_4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudMediumHoursTask4).BeginInit();
             groupBoxHard4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbHard4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6_4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudHardHoursTask4).BeginInit();
             tpStation5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudNumberOfMotions5).BeginInit();
             groupBoxEasy5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbEasy5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4_5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudEasyHoursTask5).BeginInit();
             groupBoxMedium5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbMedium5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5_5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudMediumHoursTask5).BeginInit();
             groupBoxHard5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbHard5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6_5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudHardHoursTask5).BeginInit();
             tpStation6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudNumberOfMotions6).BeginInit();
             groupBoxEasy6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbEasy6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4_6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudEasyHoursTask6).BeginInit();
             groupBoxMedium6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbMedium6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5_6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudMediumHoursTask6).BeginInit();
             groupBoxHard6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbHard6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6_6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudHardHoursTask6).BeginInit();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
+            // tabControlStations
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(199, 26);
-            label1.Name = "label1";
-            label1.Size = new Size(62, 15);
-            label1.TabIndex = 0;
-            label1.Text = "B.U.T.T.E.R";
-            label1.Click += label1_Click;
-            // 
-            // tabControl1
-            // 
-            tabControl1.Controls.Add(tpBase);
-            tabControl1.Controls.Add(tpStation1);
-            tabControl1.Controls.Add(tpStation2);
-            tabControl1.Controls.Add(tpStation3);
-            tabControl1.Controls.Add(tpStation4);
-            tabControl1.Controls.Add(tpStation5);
-            tabControl1.Controls.Add(tpStation6);
-            tabControl1.Location = new Point(55, 52);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(568, 443);
-            tabControl1.TabIndex = 1;
+            tabControlStations.Controls.Add(tpBase);
+            tabControlStations.Controls.Add(tpStation1);
+            tabControlStations.Controls.Add(tpStation2);
+            tabControlStations.Controls.Add(tpStation3);
+            tabControlStations.Controls.Add(tpStation4);
+            tabControlStations.Controls.Add(tpStation5);
+            tabControlStations.Controls.Add(tpStation6);
+            tabControlStations.Location = new Point(55, 52);
+            tabControlStations.Name = "tabControlStations";
+            tabControlStations.SelectedIndex = 0;
+            tabControlStations.Size = new Size(568, 443);
+            tabControlStations.TabIndex = 1;
             // 
             // tpBase
             // 
+            tpBase.Controls.Add(groupBox6);
             tpBase.Controls.Add(groupBox2);
             tpBase.Controls.Add(groupBox1);
             tpBase.Location = new Point(4, 24);
@@ -256,6 +286,37 @@ namespace BUTTER
             tpBase.TabIndex = 0;
             tpBase.Text = "Base";
             tpBase.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            groupBox6.Controls.Add(checkBox5);
+            groupBox6.Controls.Add(checkBox6);
+            groupBox6.Location = new Point(287, 30);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new Size(255, 167);
+            groupBox6.TabIndex = 9;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "Automation";
+            // 
+            // checkBox5
+            // 
+            checkBox5.AutoSize = true;
+            checkBox5.Location = new Point(13, 44);
+            checkBox5.Name = "checkBox5";
+            checkBox5.Size = new Size(131, 19);
+            checkBox5.TabIndex = 8;
+            checkBox5.Text = "has Special devices?";
+            checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            checkBox6.AutoSize = true;
+            checkBox6.Location = new Point(13, 22);
+            checkBox6.Name = "checkBox6";
+            checkBox6.Size = new Size(84, 19);
+            checkBox6.TabIndex = 7;
+            checkBox6.Text = "has Robot?";
+            checkBox6.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -400,13 +461,14 @@ namespace BUTTER
             // 
             // tpStation1
             // 
-            tpStation1.Controls.Add(lblTotalPercent);
+            tpStation1.Controls.Add(txbHoursS1);
+            tpStation1.Controls.Add(lblS1Hours);
             tpStation1.Controls.Add(groupBox5);
             tpStation1.Controls.Add(groupBox4);
             tpStation1.Controls.Add(groupBox3);
-            tpStation1.Controls.Add(checkBox4);
-            tpStation1.Controls.Add(label10);
-            tpStation1.Controls.Add(numericUpDown1);
+            tpStation1.Controls.Add(cboxStandard1);
+            tpStation1.Controls.Add(lblNumberofMotion1);
+            tpStation1.Controls.Add(nudNumberOfMotions1);
             tpStation1.Location = new Point(4, 24);
             tpStation1.Name = "tpStation1";
             tpStation1.Padding = new Padding(3);
@@ -415,27 +477,44 @@ namespace BUTTER
             tpStation1.Text = "Station 1";
             tpStation1.UseVisualStyleBackColor = true;
             // 
-            // lblTotalPercent
+            // txbHoursS1
             // 
-            lblTotalPercent.AutoSize = true;
-            lblTotalPercent.Location = new Point(438, 379);
-            lblTotalPercent.Name = "lblTotalPercent";
-            lblTotalPercent.Size = new Size(13, 15);
-            lblTotalPercent.TabIndex = 12;
-            lblTotalPercent.Text = "0";
+            txbHoursS1.Location = new Point(388, 379);
+            txbHoursS1.Name = "txbHoursS1";
+            txbHoursS1.Size = new Size(100, 23);
+            txbHoursS1.TabIndex = 13;
+            // 
+            // lblS1Hours
+            // 
+            lblS1Hours.AutoSize = true;
+            lblS1Hours.Location = new Point(494, 382);
+            lblS1Hours.Name = "lblS1Hours";
+            lblS1Hours.Size = new Size(39, 15);
+            lblS1Hours.TabIndex = 12;
+            lblS1Hours.Text = "Hours";
             // 
             // groupBox5
             // 
+            groupBox5.Controls.Add(label18);
             groupBox5.Controls.Add(lblHardVal);
             groupBox5.Controls.Add(label16);
-            groupBox5.Controls.Add(tbHard);
-            groupBox5.Controls.Add(numericUpDown6);
+            groupBox5.Controls.Add(tbHard1);
+            groupBox5.Controls.Add(nudHardHoursTask1);
             groupBox5.Location = new Point(23, 262);
             groupBox5.Name = "groupBox5";
             groupBox5.Size = new Size(459, 104);
             groupBox5.TabIndex = 11;
             groupBox5.TabStop = false;
             groupBox5.Text = "Hard";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(377, 47);
+            label18.Name = "label18";
+            label18.Size = new Size(59, 15);
+            label18.TabIndex = 16;
+            label18.Text = "Task Ratio";
             // 
             // lblHardVal
             // 
@@ -455,41 +534,52 @@ namespace BUTTER
             label16.TabIndex = 8;
             label16.Text = "Hours";
             // 
-            // tbHard
+            // tbHard1
             // 
-            tbHard.LargeChange = 1;
-            tbHard.Location = new Point(159, 38);
-            tbHard.Maximum = 100;
-            tbHard.Name = "tbHard";
-            tbHard.Size = new Size(168, 45);
-            tbHard.SmallChange = 5;
-            tbHard.TabIndex = 5;
-            tbHard.TickFrequency = 5;
-            tbHard.Value = 5;
-            tbHard.Scroll += tbHard_Scroll;
+            tbHard1.LargeChange = 1;
+            tbHard1.Location = new Point(159, 38);
+            tbHard1.Maximum = 100;
+            tbHard1.Name = "tbHard1";
+            tbHard1.Size = new Size(168, 45);
+            tbHard1.SmallChange = 5;
+            tbHard1.TabIndex = 5;
+            tbHard1.TickFrequency = 5;
+            tbHard1.Value = 10;
+            tbHard1.Scroll += tbHard_Scroll;
             // 
-            // numericUpDown6
+            // nudHardHoursTask1
             // 
-            numericUpDown6.DecimalPlaces = 1;
-            numericUpDown6.Location = new Point(41, 38);
-            numericUpDown6.Name = "numericUpDown6";
-            numericUpDown6.Size = new Size(51, 23);
-            numericUpDown6.TabIndex = 7;
-            numericUpDown6.TextAlign = HorizontalAlignment.Center;
-            numericUpDown6.Value = new decimal(new int[] { 8, 0, 0, 0 });
+            nudHardHoursTask1.DecimalPlaces = 1;
+            nudHardHoursTask1.Location = new Point(41, 38);
+            nudHardHoursTask1.Minimum = new decimal(new int[] { 1, 0, 0, 65536 });
+            nudHardHoursTask1.Name = "nudHardHoursTask1";
+            nudHardHoursTask1.Size = new Size(51, 23);
+            nudHardHoursTask1.TabIndex = 7;
+            nudHardHoursTask1.TextAlign = HorizontalAlignment.Center;
+            nudHardHoursTask1.Value = new decimal(new int[] { 8, 0, 0, 0 });
             // 
             // groupBox4
             // 
+            groupBox4.Controls.Add(label1);
             groupBox4.Controls.Add(lblMediumVal);
             groupBox4.Controls.Add(label14);
-            groupBox4.Controls.Add(tbMedium);
-            groupBox4.Controls.Add(numericUpDown5);
+            groupBox4.Controls.Add(tbMedium1);
+            groupBox4.Controls.Add(nudMediumHoursTask1);
             groupBox4.Location = new Point(23, 152);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(459, 104);
             groupBox4.TabIndex = 10;
             groupBox4.TabStop = false;
             groupBox4.Text = "Medium";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(377, 47);
+            label1.Name = "label1";
+            label1.Size = new Size(59, 15);
+            label1.TabIndex = 15;
+            label1.Text = "Task Ratio";
             // 
             // lblMediumVal
             // 
@@ -498,7 +588,7 @@ namespace BUTTER
             lblMediumVal.Name = "lblMediumVal";
             lblMediumVal.Size = new Size(32, 15);
             lblMediumVal.TabIndex = 9;
-            lblMediumVal.Text = "75 %";
+            lblMediumVal.Text = "15 %";
             // 
             // label14
             // 
@@ -509,41 +599,52 @@ namespace BUTTER
             label14.TabIndex = 8;
             label14.Text = "Hours";
             // 
-            // tbMedium
+            // tbMedium1
             // 
-            tbMedium.LargeChange = 1;
-            tbMedium.Location = new Point(159, 38);
-            tbMedium.Maximum = 100;
-            tbMedium.Name = "tbMedium";
-            tbMedium.Size = new Size(168, 45);
-            tbMedium.SmallChange = 5;
-            tbMedium.TabIndex = 5;
-            tbMedium.TickFrequency = 5;
-            tbMedium.Value = 10;
-            tbMedium.Scroll += tbMedium_Scroll;
+            tbMedium1.LargeChange = 1;
+            tbMedium1.Location = new Point(159, 38);
+            tbMedium1.Maximum = 100;
+            tbMedium1.Name = "tbMedium1";
+            tbMedium1.Size = new Size(168, 45);
+            tbMedium1.SmallChange = 5;
+            tbMedium1.TabIndex = 5;
+            tbMedium1.TickFrequency = 5;
+            tbMedium1.Value = 20;
+            tbMedium1.Scroll += tbMedium_Scroll;
             // 
-            // numericUpDown5
+            // nudMediumHoursTask1
             // 
-            numericUpDown5.DecimalPlaces = 1;
-            numericUpDown5.Location = new Point(41, 38);
-            numericUpDown5.Name = "numericUpDown5";
-            numericUpDown5.Size = new Size(51, 23);
-            numericUpDown5.TabIndex = 7;
-            numericUpDown5.TextAlign = HorizontalAlignment.Center;
-            numericUpDown5.Value = new decimal(new int[] { 3, 0, 0, 0 });
+            nudMediumHoursTask1.DecimalPlaces = 1;
+            nudMediumHoursTask1.Location = new Point(41, 38);
+            nudMediumHoursTask1.Minimum = new decimal(new int[] { 1, 0, 0, 65536 });
+            nudMediumHoursTask1.Name = "nudMediumHoursTask1";
+            nudMediumHoursTask1.Size = new Size(51, 23);
+            nudMediumHoursTask1.TabIndex = 7;
+            nudMediumHoursTask1.TextAlign = HorizontalAlignment.Center;
+            nudMediumHoursTask1.Value = new decimal(new int[] { 3, 0, 0, 0 });
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(lblRatio);
             groupBox3.Controls.Add(lblEasyVal);
             groupBox3.Controls.Add(label11);
-            groupBox3.Controls.Add(tbEasy);
-            groupBox3.Controls.Add(numericUpDown4);
+            groupBox3.Controls.Add(tbEasy1);
+            groupBox3.Controls.Add(nudEasyHoursTask1);
             groupBox3.Location = new Point(23, 42);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(459, 104);
             groupBox3.TabIndex = 8;
             groupBox3.TabStop = false;
             groupBox3.Text = "Easy";
+            // 
+            // lblRatio
+            // 
+            lblRatio.AutoSize = true;
+            lblRatio.Location = new Point(377, 47);
+            lblRatio.Name = "lblRatio";
+            lblRatio.Size = new Size(59, 15);
+            lblRatio.TabIndex = 14;
+            lblRatio.Text = "Task Ratio";
             // 
             // lblEasyVal
             // 
@@ -553,8 +654,6 @@ namespace BUTTER
             lblEasyVal.Size = new Size(32, 15);
             lblEasyVal.TabIndex = 9;
             lblEasyVal.Text = "75 %";
-            lblEasyVal.TextChanged += lblEasyVal_TextChanged;
-            lblEasyVal.Click += lblEasyVal_Click;
             // 
             // label11
             // 
@@ -565,62 +664,69 @@ namespace BUTTER
             label11.TabIndex = 8;
             label11.Text = "Hours";
             // 
-            // tbEasy
+            // tbEasy1
             // 
-            tbEasy.LargeChange = 1;
-            tbEasy.Location = new Point(159, 38);
-            tbEasy.Maximum = 100;
-            tbEasy.Name = "tbEasy";
-            tbEasy.Size = new Size(168, 45);
-            tbEasy.SmallChange = 5;
-            tbEasy.TabIndex = 5;
-            tbEasy.TickFrequency = 5;
-            tbEasy.Value = 75;
-            tbEasy.Scroll += trackBar1_Scroll;
+            tbEasy1.LargeChange = 1;
+            tbEasy1.Location = new Point(159, 38);
+            tbEasy1.Maximum = 100;
+            tbEasy1.Name = "tbEasy1";
+            tbEasy1.Size = new Size(168, 45);
+            tbEasy1.SmallChange = 5;
+            tbEasy1.TabIndex = 5;
+            tbEasy1.TickFrequency = 5;
+            tbEasy1.Value = 70;
+            tbEasy1.Scroll += trackBar1_Scroll;
             // 
-            // numericUpDown4
+            // nudEasyHoursTask1
             // 
-            numericUpDown4.DecimalPlaces = 1;
-            numericUpDown4.Location = new Point(41, 38);
-            numericUpDown4.Name = "numericUpDown4";
-            numericUpDown4.Size = new Size(51, 23);
-            numericUpDown4.TabIndex = 7;
-            numericUpDown4.TextAlign = HorizontalAlignment.Center;
-            numericUpDown4.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown4.ValueChanged += numericUpDown4_ValueChanged;
+            nudEasyHoursTask1.DecimalPlaces = 1;
+            nudEasyHoursTask1.Location = new Point(41, 38);
+            nudEasyHoursTask1.Minimum = new decimal(new int[] { 1, 0, 0, 65536 });
+            nudEasyHoursTask1.Name = "nudEasyHoursTask1";
+            nudEasyHoursTask1.Size = new Size(51, 23);
+            nudEasyHoursTask1.TabIndex = 7;
+            nudEasyHoursTask1.TextAlign = HorizontalAlignment.Center;
+            nudEasyHoursTask1.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudEasyHoursTask1.ValueChanged += numericUpDown4_ValueChanged;
             // 
-            // checkBox4
+            // cboxStandard1
             // 
-            checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(241, 17);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(73, 19);
-            checkBox4.TabIndex = 4;
-            checkBox4.Text = "Standard";
-            checkBox4.UseVisualStyleBackColor = true;
-            checkBox4.CheckedChanged += checkBox4_CheckedChanged;
+            cboxStandard1.AutoSize = true;
+            cboxStandard1.Checked = true;
+            cboxStandard1.CheckState = CheckState.Checked;
+            cboxStandard1.Location = new Point(223, 12);
+            cboxStandard1.Name = "cboxStandard1";
+            cboxStandard1.Size = new Size(73, 19);
+            cboxStandard1.TabIndex = 4;
+            cboxStandard1.Text = "Standard";
+            cboxStandard1.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // lblNumberofMotion1
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(6, 13);
-            label10.Name = "label10";
-            label10.Size = new Size(112, 15);
-            label10.TabIndex = 3;
-            label10.Text = "Number of Motions";
+            lblNumberofMotion1.AutoSize = true;
+            lblNumberofMotion1.Location = new Point(23, 12);
+            lblNumberofMotion1.Name = "lblNumberofMotion1";
+            lblNumberofMotion1.Size = new Size(112, 15);
+            lblNumberofMotion1.TabIndex = 3;
+            lblNumberofMotion1.Text = "Number of Motions";
             // 
-            // numericUpDown1
+            // nudNumberOfMotions1
             // 
-            numericUpDown1.Location = new Point(124, 13);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(66, 23);
-            numericUpDown1.TabIndex = 2;
-            numericUpDown1.TextAlign = HorizontalAlignment.Center;
-            numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
-            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
+            nudNumberOfMotions1.Location = new Point(138, 10);
+            nudNumberOfMotions1.Name = "nudNumberOfMotions1";
+            nudNumberOfMotions1.Size = new Size(66, 23);
+            nudNumberOfMotions1.TabIndex = 2;
+            nudNumberOfMotions1.TextAlign = HorizontalAlignment.Center;
+            nudNumberOfMotions1.Value = new decimal(new int[] { 10, 0, 0, 0 });
+            nudNumberOfMotions1.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // tpStation2
             // 
+            tpStation2.Controls.Add(txbHoursS2);
+            tpStation2.Controls.Add(label19);
+            tpStation2.Controls.Add(checkBox4);
+            tpStation2.Controls.Add(label10);
+            tpStation2.Controls.Add(nudNumberOfMotions2);
             tpStation2.Controls.Add(groupBoxEasy2);
             tpStation2.Controls.Add(groupBoxMedium2);
             tpStation2.Controls.Add(groupBoxHard2);
@@ -632,12 +738,59 @@ namespace BUTTER
             tpStation2.Text = "Station 2";
             tpStation2.UseVisualStyleBackColor = true;
             // 
+            // txbHoursS2
+            // 
+            txbHoursS2.Location = new Point(409, 386);
+            txbHoursS2.Name = "txbHoursS2";
+            txbHoursS2.Size = new Size(100, 23);
+            txbHoursS2.TabIndex = 15;
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(515, 389);
+            label19.Name = "label19";
+            label19.Size = new Size(39, 15);
+            label19.TabIndex = 14;
+            label19.Text = "Hours";
+            // 
+            // checkBox4
+            // 
+            checkBox4.AutoSize = true;
+            checkBox4.Checked = true;
+            checkBox4.CheckState = CheckState.Checked;
+            checkBox4.Location = new Point(223, 14);
+            checkBox4.Name = "checkBox4";
+            checkBox4.Size = new Size(73, 19);
+            checkBox4.TabIndex = 7;
+            checkBox4.Text = "Standard";
+            checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(23, 14);
+            label10.Name = "label10";
+            label10.Size = new Size(112, 15);
+            label10.TabIndex = 6;
+            label10.Text = "Number of Motions";
+            // 
+            // nudNumberOfMotions2
+            // 
+            nudNumberOfMotions2.Location = new Point(138, 12);
+            nudNumberOfMotions2.Name = "nudNumberOfMotions2";
+            nudNumberOfMotions2.Size = new Size(66, 23);
+            nudNumberOfMotions2.TabIndex = 5;
+            nudNumberOfMotions2.TextAlign = HorizontalAlignment.Center;
+            nudNumberOfMotions2.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudNumberOfMotions2.ValueChanged += nudNumberOfMotions2_ValueChanged;
+            // 
             // groupBoxEasy2
             // 
             groupBoxEasy2.Controls.Add(lblEasyVal2);
             groupBoxEasy2.Controls.Add(label11_2);
             groupBoxEasy2.Controls.Add(tbEasy2);
-            groupBoxEasy2.Controls.Add(numericUpDown4_2);
+            groupBoxEasy2.Controls.Add(nudEasyHoursTask2);
             groupBoxEasy2.Location = new Point(23, 42);
             groupBoxEasy2.Name = "groupBoxEasy2";
             groupBoxEasy2.Size = new Size(459, 104);
@@ -676,22 +829,22 @@ namespace BUTTER
             tbEasy2.Value = 75;
             tbEasy2.Scroll += tbEasy2_Scroll;
             // 
-            // numericUpDown4_2
+            // nudEasyHoursTask2
             // 
-            numericUpDown4_2.DecimalPlaces = 1;
-            numericUpDown4_2.Location = new Point(41, 38);
-            numericUpDown4_2.Name = "numericUpDown4_2";
-            numericUpDown4_2.Size = new Size(51, 23);
-            numericUpDown4_2.TabIndex = 3;
-            numericUpDown4_2.TextAlign = HorizontalAlignment.Center;
-            numericUpDown4_2.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudEasyHoursTask2.DecimalPlaces = 1;
+            nudEasyHoursTask2.Location = new Point(41, 38);
+            nudEasyHoursTask2.Name = "nudEasyHoursTask2";
+            nudEasyHoursTask2.Size = new Size(51, 23);
+            nudEasyHoursTask2.TabIndex = 3;
+            nudEasyHoursTask2.TextAlign = HorizontalAlignment.Center;
+            nudEasyHoursTask2.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // groupBoxMedium2
             // 
             groupBoxMedium2.Controls.Add(lblMediumVal2);
             groupBoxMedium2.Controls.Add(label14_2);
             groupBoxMedium2.Controls.Add(tbMedium2);
-            groupBoxMedium2.Controls.Add(numericUpDown5_2);
+            groupBoxMedium2.Controls.Add(nudMediumHoursTask2);
             groupBoxMedium2.Location = new Point(23, 152);
             groupBoxMedium2.Name = "groupBoxMedium2";
             groupBoxMedium2.Size = new Size(459, 104);
@@ -730,22 +883,22 @@ namespace BUTTER
             tbMedium2.Value = 15;
             tbMedium2.Scroll += tbMedium2_Scroll;
             // 
-            // numericUpDown5_2
+            // nudMediumHoursTask2
             // 
-            numericUpDown5_2.DecimalPlaces = 1;
-            numericUpDown5_2.Location = new Point(41, 38);
-            numericUpDown5_2.Name = "numericUpDown5_2";
-            numericUpDown5_2.Size = new Size(51, 23);
-            numericUpDown5_2.TabIndex = 3;
-            numericUpDown5_2.TextAlign = HorizontalAlignment.Center;
-            numericUpDown5_2.Value = new decimal(new int[] { 3, 0, 0, 0 });
+            nudMediumHoursTask2.DecimalPlaces = 1;
+            nudMediumHoursTask2.Location = new Point(41, 38);
+            nudMediumHoursTask2.Name = "nudMediumHoursTask2";
+            nudMediumHoursTask2.Size = new Size(51, 23);
+            nudMediumHoursTask2.TabIndex = 3;
+            nudMediumHoursTask2.TextAlign = HorizontalAlignment.Center;
+            nudMediumHoursTask2.Value = new decimal(new int[] { 3, 0, 0, 0 });
             // 
             // groupBoxHard2
             // 
             groupBoxHard2.Controls.Add(lblHardVal2);
             groupBoxHard2.Controls.Add(label16_2);
             groupBoxHard2.Controls.Add(tbHard2);
-            groupBoxHard2.Controls.Add(numericUpDown6_2);
+            groupBoxHard2.Controls.Add(nudHardHoursTask2);
             groupBoxHard2.Location = new Point(23, 262);
             groupBoxHard2.Name = "groupBoxHard2";
             groupBoxHard2.Size = new Size(459, 104);
@@ -784,18 +937,23 @@ namespace BUTTER
             tbHard2.Value = 10;
             tbHard2.Scroll += tbHard2_Scroll;
             // 
-            // numericUpDown6_2
+            // nudHardHoursTask2
             // 
-            numericUpDown6_2.DecimalPlaces = 1;
-            numericUpDown6_2.Location = new Point(41, 38);
-            numericUpDown6_2.Name = "numericUpDown6_2";
-            numericUpDown6_2.Size = new Size(51, 23);
-            numericUpDown6_2.TabIndex = 3;
-            numericUpDown6_2.TextAlign = HorizontalAlignment.Center;
-            numericUpDown6_2.Value = new decimal(new int[] { 8, 0, 0, 0 });
+            nudHardHoursTask2.DecimalPlaces = 1;
+            nudHardHoursTask2.Location = new Point(41, 38);
+            nudHardHoursTask2.Name = "nudHardHoursTask2";
+            nudHardHoursTask2.Size = new Size(51, 23);
+            nudHardHoursTask2.TabIndex = 3;
+            nudHardHoursTask2.TextAlign = HorizontalAlignment.Center;
+            nudHardHoursTask2.Value = new decimal(new int[] { 8, 0, 0, 0 });
             // 
             // tpStation3
             // 
+            tpStation3.Controls.Add(txbHoursS3);
+            tpStation3.Controls.Add(label20);
+            tpStation3.Controls.Add(checkBox7);
+            tpStation3.Controls.Add(label12);
+            tpStation3.Controls.Add(nudNumberOfMotions3);
             tpStation3.Controls.Add(groupBoxEasy3);
             tpStation3.Controls.Add(groupBoxMedium3);
             tpStation3.Controls.Add(groupBoxHard3);
@@ -807,12 +965,59 @@ namespace BUTTER
             tpStation3.Text = "Station 3";
             tpStation3.UseVisualStyleBackColor = true;
             // 
+            // txbHoursS3
+            // 
+            txbHoursS3.Location = new Point(410, 386);
+            txbHoursS3.Name = "txbHoursS3";
+            txbHoursS3.Size = new Size(100, 23);
+            txbHoursS3.TabIndex = 15;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(516, 389);
+            label20.Name = "label20";
+            label20.Size = new Size(39, 15);
+            label20.TabIndex = 14;
+            label20.Text = "Hours";
+            // 
+            // checkBox7
+            // 
+            checkBox7.AutoSize = true;
+            checkBox7.Checked = true;
+            checkBox7.CheckState = CheckState.Checked;
+            checkBox7.Location = new Point(223, 13);
+            checkBox7.Name = "checkBox7";
+            checkBox7.Size = new Size(73, 19);
+            checkBox7.TabIndex = 7;
+            checkBox7.Text = "Standard";
+            checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(23, 13);
+            label12.Name = "label12";
+            label12.Size = new Size(112, 15);
+            label12.TabIndex = 6;
+            label12.Text = "Number of Motions";
+            // 
+            // nudNumberOfMotions3
+            // 
+            nudNumberOfMotions3.Location = new Point(138, 11);
+            nudNumberOfMotions3.Name = "nudNumberOfMotions3";
+            nudNumberOfMotions3.Size = new Size(66, 23);
+            nudNumberOfMotions3.TabIndex = 5;
+            nudNumberOfMotions3.TextAlign = HorizontalAlignment.Center;
+            nudNumberOfMotions3.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudNumberOfMotions3.ValueChanged += nudNumberOfMotions3_ValueChanged;
+            // 
             // groupBoxEasy3
             // 
             groupBoxEasy3.Controls.Add(lblEasyVal3);
             groupBoxEasy3.Controls.Add(label11_3);
             groupBoxEasy3.Controls.Add(tbEasy3);
-            groupBoxEasy3.Controls.Add(numericUpDown4_3);
+            groupBoxEasy3.Controls.Add(nudEasyHoursTask3);
             groupBoxEasy3.Location = new Point(23, 42);
             groupBoxEasy3.Name = "groupBoxEasy3";
             groupBoxEasy3.Size = new Size(459, 104);
@@ -851,22 +1056,22 @@ namespace BUTTER
             tbEasy3.Value = 75;
             tbEasy3.Scroll += tbEasy3_Scroll;
             // 
-            // numericUpDown4_3
+            // nudEasyHoursTask3
             // 
-            numericUpDown4_3.DecimalPlaces = 1;
-            numericUpDown4_3.Location = new Point(41, 38);
-            numericUpDown4_3.Name = "numericUpDown4_3";
-            numericUpDown4_3.Size = new Size(51, 23);
-            numericUpDown4_3.TabIndex = 3;
-            numericUpDown4_3.TextAlign = HorizontalAlignment.Center;
-            numericUpDown4_3.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudEasyHoursTask3.DecimalPlaces = 1;
+            nudEasyHoursTask3.Location = new Point(41, 38);
+            nudEasyHoursTask3.Name = "nudEasyHoursTask3";
+            nudEasyHoursTask3.Size = new Size(51, 23);
+            nudEasyHoursTask3.TabIndex = 3;
+            nudEasyHoursTask3.TextAlign = HorizontalAlignment.Center;
+            nudEasyHoursTask3.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // groupBoxMedium3
             // 
             groupBoxMedium3.Controls.Add(lblMediumVal3);
             groupBoxMedium3.Controls.Add(label14_3);
             groupBoxMedium3.Controls.Add(tbMedium3);
-            groupBoxMedium3.Controls.Add(numericUpDown5_3);
+            groupBoxMedium3.Controls.Add(nudMediumHoursTask3);
             groupBoxMedium3.Location = new Point(23, 152);
             groupBoxMedium3.Name = "groupBoxMedium3";
             groupBoxMedium3.Size = new Size(459, 104);
@@ -905,22 +1110,22 @@ namespace BUTTER
             tbMedium3.Value = 15;
             tbMedium3.Scroll += tbMedium3_Scroll;
             // 
-            // numericUpDown5_3
+            // nudMediumHoursTask3
             // 
-            numericUpDown5_3.DecimalPlaces = 1;
-            numericUpDown5_3.Location = new Point(41, 38);
-            numericUpDown5_3.Name = "numericUpDown5_3";
-            numericUpDown5_3.Size = new Size(51, 23);
-            numericUpDown5_3.TabIndex = 3;
-            numericUpDown5_3.TextAlign = HorizontalAlignment.Center;
-            numericUpDown5_3.Value = new decimal(new int[] { 3, 0, 0, 0 });
+            nudMediumHoursTask3.DecimalPlaces = 1;
+            nudMediumHoursTask3.Location = new Point(41, 38);
+            nudMediumHoursTask3.Name = "nudMediumHoursTask3";
+            nudMediumHoursTask3.Size = new Size(51, 23);
+            nudMediumHoursTask3.TabIndex = 3;
+            nudMediumHoursTask3.TextAlign = HorizontalAlignment.Center;
+            nudMediumHoursTask3.Value = new decimal(new int[] { 3, 0, 0, 0 });
             // 
             // groupBoxHard3
             // 
             groupBoxHard3.Controls.Add(lblHardVal3);
             groupBoxHard3.Controls.Add(label16_3);
             groupBoxHard3.Controls.Add(tbHard3);
-            groupBoxHard3.Controls.Add(numericUpDown6_3);
+            groupBoxHard3.Controls.Add(nudHardHoursTask3);
             groupBoxHard3.Location = new Point(23, 262);
             groupBoxHard3.Name = "groupBoxHard3";
             groupBoxHard3.Size = new Size(459, 104);
@@ -959,18 +1164,23 @@ namespace BUTTER
             tbHard3.Value = 10;
             tbHard3.Scroll += tbHard3_Scroll;
             // 
-            // numericUpDown6_3
+            // nudHardHoursTask3
             // 
-            numericUpDown6_3.DecimalPlaces = 1;
-            numericUpDown6_3.Location = new Point(41, 38);
-            numericUpDown6_3.Name = "numericUpDown6_3";
-            numericUpDown6_3.Size = new Size(51, 23);
-            numericUpDown6_3.TabIndex = 3;
-            numericUpDown6_3.TextAlign = HorizontalAlignment.Center;
-            numericUpDown6_3.Value = new decimal(new int[] { 8, 0, 0, 0 });
+            nudHardHoursTask3.DecimalPlaces = 1;
+            nudHardHoursTask3.Location = new Point(41, 38);
+            nudHardHoursTask3.Name = "nudHardHoursTask3";
+            nudHardHoursTask3.Size = new Size(51, 23);
+            nudHardHoursTask3.TabIndex = 3;
+            nudHardHoursTask3.TextAlign = HorizontalAlignment.Center;
+            nudHardHoursTask3.Value = new decimal(new int[] { 8, 0, 0, 0 });
             // 
             // tpStation4
             // 
+            tpStation4.Controls.Add(txbHoursS4);
+            tpStation4.Controls.Add(label21);
+            tpStation4.Controls.Add(checkBox8);
+            tpStation4.Controls.Add(label13);
+            tpStation4.Controls.Add(nudNumberOfMotions4);
             tpStation4.Controls.Add(groupBoxEasy4);
             tpStation4.Controls.Add(groupBoxMedium4);
             tpStation4.Controls.Add(groupBoxHard4);
@@ -982,12 +1192,59 @@ namespace BUTTER
             tpStation4.Text = "Station 4";
             tpStation4.UseVisualStyleBackColor = true;
             // 
+            // txbHoursS4
+            // 
+            txbHoursS4.Location = new Point(408, 386);
+            txbHoursS4.Name = "txbHoursS4";
+            txbHoursS4.Size = new Size(100, 23);
+            txbHoursS4.TabIndex = 15;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(514, 389);
+            label21.Name = "label21";
+            label21.Size = new Size(39, 15);
+            label21.TabIndex = 14;
+            label21.Text = "Hours";
+            // 
+            // checkBox8
+            // 
+            checkBox8.AutoSize = true;
+            checkBox8.Checked = true;
+            checkBox8.CheckState = CheckState.Checked;
+            checkBox8.Location = new Point(223, 13);
+            checkBox8.Name = "checkBox8";
+            checkBox8.Size = new Size(73, 19);
+            checkBox8.TabIndex = 7;
+            checkBox8.Text = "Standard";
+            checkBox8.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(23, 13);
+            label13.Name = "label13";
+            label13.Size = new Size(112, 15);
+            label13.TabIndex = 6;
+            label13.Text = "Number of Motions";
+            // 
+            // nudNumberOfMotions4
+            // 
+            nudNumberOfMotions4.Location = new Point(138, 11);
+            nudNumberOfMotions4.Name = "nudNumberOfMotions4";
+            nudNumberOfMotions4.Size = new Size(66, 23);
+            nudNumberOfMotions4.TabIndex = 5;
+            nudNumberOfMotions4.TextAlign = HorizontalAlignment.Center;
+            nudNumberOfMotions4.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudNumberOfMotions4.ValueChanged += nudNumberOfMotions4_ValueChanged;
+            // 
             // groupBoxEasy4
             // 
             groupBoxEasy4.Controls.Add(lblEasyVal4);
             groupBoxEasy4.Controls.Add(label11_4);
             groupBoxEasy4.Controls.Add(tbEasy4);
-            groupBoxEasy4.Controls.Add(numericUpDown4_4);
+            groupBoxEasy4.Controls.Add(nudEasyHoursTask4);
             groupBoxEasy4.Location = new Point(23, 42);
             groupBoxEasy4.Name = "groupBoxEasy4";
             groupBoxEasy4.Size = new Size(459, 104);
@@ -1026,22 +1283,22 @@ namespace BUTTER
             tbEasy4.Value = 75;
             tbEasy4.Scroll += tbEasy4_Scroll;
             // 
-            // numericUpDown4_4
+            // nudEasyHoursTask4
             // 
-            numericUpDown4_4.DecimalPlaces = 1;
-            numericUpDown4_4.Location = new Point(41, 38);
-            numericUpDown4_4.Name = "numericUpDown4_4";
-            numericUpDown4_4.Size = new Size(51, 23);
-            numericUpDown4_4.TabIndex = 3;
-            numericUpDown4_4.TextAlign = HorizontalAlignment.Center;
-            numericUpDown4_4.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudEasyHoursTask4.DecimalPlaces = 1;
+            nudEasyHoursTask4.Location = new Point(41, 38);
+            nudEasyHoursTask4.Name = "nudEasyHoursTask4";
+            nudEasyHoursTask4.Size = new Size(51, 23);
+            nudEasyHoursTask4.TabIndex = 3;
+            nudEasyHoursTask4.TextAlign = HorizontalAlignment.Center;
+            nudEasyHoursTask4.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // groupBoxMedium4
             // 
             groupBoxMedium4.Controls.Add(lblMediumVal4);
             groupBoxMedium4.Controls.Add(label14_4);
             groupBoxMedium4.Controls.Add(tbMedium4);
-            groupBoxMedium4.Controls.Add(numericUpDown5_4);
+            groupBoxMedium4.Controls.Add(nudMediumHoursTask4);
             groupBoxMedium4.Location = new Point(23, 152);
             groupBoxMedium4.Name = "groupBoxMedium4";
             groupBoxMedium4.Size = new Size(459, 104);
@@ -1080,22 +1337,22 @@ namespace BUTTER
             tbMedium4.Value = 15;
             tbMedium4.Scroll += tbMedium4_Scroll;
             // 
-            // numericUpDown5_4
+            // nudMediumHoursTask4
             // 
-            numericUpDown5_4.DecimalPlaces = 1;
-            numericUpDown5_4.Location = new Point(41, 38);
-            numericUpDown5_4.Name = "numericUpDown5_4";
-            numericUpDown5_4.Size = new Size(51, 23);
-            numericUpDown5_4.TabIndex = 3;
-            numericUpDown5_4.TextAlign = HorizontalAlignment.Center;
-            numericUpDown5_4.Value = new decimal(new int[] { 3, 0, 0, 0 });
+            nudMediumHoursTask4.DecimalPlaces = 1;
+            nudMediumHoursTask4.Location = new Point(41, 38);
+            nudMediumHoursTask4.Name = "nudMediumHoursTask4";
+            nudMediumHoursTask4.Size = new Size(51, 23);
+            nudMediumHoursTask4.TabIndex = 3;
+            nudMediumHoursTask4.TextAlign = HorizontalAlignment.Center;
+            nudMediumHoursTask4.Value = new decimal(new int[] { 3, 0, 0, 0 });
             // 
             // groupBoxHard4
             // 
             groupBoxHard4.Controls.Add(lblHardVal4);
             groupBoxHard4.Controls.Add(label16_4);
             groupBoxHard4.Controls.Add(tbHard4);
-            groupBoxHard4.Controls.Add(numericUpDown6_4);
+            groupBoxHard4.Controls.Add(nudHardHoursTask4);
             groupBoxHard4.Location = new Point(23, 262);
             groupBoxHard4.Name = "groupBoxHard4";
             groupBoxHard4.Size = new Size(459, 104);
@@ -1134,18 +1391,23 @@ namespace BUTTER
             tbHard4.Value = 10;
             tbHard4.Scroll += tbHard4_Scroll;
             // 
-            // numericUpDown6_4
+            // nudHardHoursTask4
             // 
-            numericUpDown6_4.DecimalPlaces = 1;
-            numericUpDown6_4.Location = new Point(41, 38);
-            numericUpDown6_4.Name = "numericUpDown6_4";
-            numericUpDown6_4.Size = new Size(51, 23);
-            numericUpDown6_4.TabIndex = 3;
-            numericUpDown6_4.TextAlign = HorizontalAlignment.Center;
-            numericUpDown6_4.Value = new decimal(new int[] { 8, 0, 0, 0 });
+            nudHardHoursTask4.DecimalPlaces = 1;
+            nudHardHoursTask4.Location = new Point(41, 38);
+            nudHardHoursTask4.Name = "nudHardHoursTask4";
+            nudHardHoursTask4.Size = new Size(51, 23);
+            nudHardHoursTask4.TabIndex = 3;
+            nudHardHoursTask4.TextAlign = HorizontalAlignment.Center;
+            nudHardHoursTask4.Value = new decimal(new int[] { 8, 0, 0, 0 });
             // 
             // tpStation5
             // 
+            tpStation5.Controls.Add(txbHoursS5);
+            tpStation5.Controls.Add(label22);
+            tpStation5.Controls.Add(checkBox9);
+            tpStation5.Controls.Add(label15);
+            tpStation5.Controls.Add(nudNumberOfMotions5);
             tpStation5.Controls.Add(groupBoxEasy5);
             tpStation5.Controls.Add(groupBoxMedium5);
             tpStation5.Controls.Add(groupBoxHard5);
@@ -1157,12 +1419,59 @@ namespace BUTTER
             tpStation5.Text = "Station 5";
             tpStation5.UseVisualStyleBackColor = true;
             // 
+            // txbHoursS5
+            // 
+            txbHoursS5.Location = new Point(409, 386);
+            txbHoursS5.Name = "txbHoursS5";
+            txbHoursS5.Size = new Size(100, 23);
+            txbHoursS5.TabIndex = 15;
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Location = new Point(515, 389);
+            label22.Name = "label22";
+            label22.Size = new Size(39, 15);
+            label22.TabIndex = 14;
+            label22.Text = "Hours";
+            // 
+            // checkBox9
+            // 
+            checkBox9.AutoSize = true;
+            checkBox9.Checked = true;
+            checkBox9.CheckState = CheckState.Checked;
+            checkBox9.Location = new Point(223, 12);
+            checkBox9.Name = "checkBox9";
+            checkBox9.Size = new Size(73, 19);
+            checkBox9.TabIndex = 7;
+            checkBox9.Text = "Standard";
+            checkBox9.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(23, 12);
+            label15.Name = "label15";
+            label15.Size = new Size(112, 15);
+            label15.TabIndex = 6;
+            label15.Text = "Number of Motions";
+            // 
+            // nudNumberOfMotions5
+            // 
+            nudNumberOfMotions5.Location = new Point(138, 10);
+            nudNumberOfMotions5.Name = "nudNumberOfMotions5";
+            nudNumberOfMotions5.Size = new Size(66, 23);
+            nudNumberOfMotions5.TabIndex = 5;
+            nudNumberOfMotions5.TextAlign = HorizontalAlignment.Center;
+            nudNumberOfMotions5.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudNumberOfMotions5.ValueChanged += nudNumberOfMotions5_ValueChanged;
+            // 
             // groupBoxEasy5
             // 
             groupBoxEasy5.Controls.Add(lblEasyVal5);
             groupBoxEasy5.Controls.Add(label11_5);
             groupBoxEasy5.Controls.Add(tbEasy5);
-            groupBoxEasy5.Controls.Add(numericUpDown4_5);
+            groupBoxEasy5.Controls.Add(nudEasyHoursTask5);
             groupBoxEasy5.Location = new Point(23, 42);
             groupBoxEasy5.Name = "groupBoxEasy5";
             groupBoxEasy5.Size = new Size(459, 104);
@@ -1201,22 +1510,22 @@ namespace BUTTER
             tbEasy5.Value = 75;
             tbEasy5.Scroll += tbEasy5_Scroll;
             // 
-            // numericUpDown4_5
+            // nudEasyHoursTask5
             // 
-            numericUpDown4_5.DecimalPlaces = 1;
-            numericUpDown4_5.Location = new Point(41, 38);
-            numericUpDown4_5.Name = "numericUpDown4_5";
-            numericUpDown4_5.Size = new Size(51, 23);
-            numericUpDown4_5.TabIndex = 3;
-            numericUpDown4_5.TextAlign = HorizontalAlignment.Center;
-            numericUpDown4_5.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudEasyHoursTask5.DecimalPlaces = 1;
+            nudEasyHoursTask5.Location = new Point(41, 38);
+            nudEasyHoursTask5.Name = "nudEasyHoursTask5";
+            nudEasyHoursTask5.Size = new Size(51, 23);
+            nudEasyHoursTask5.TabIndex = 3;
+            nudEasyHoursTask5.TextAlign = HorizontalAlignment.Center;
+            nudEasyHoursTask5.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // groupBoxMedium5
             // 
             groupBoxMedium5.Controls.Add(lblMediumVal5);
             groupBoxMedium5.Controls.Add(label14_5);
             groupBoxMedium5.Controls.Add(tbMedium5);
-            groupBoxMedium5.Controls.Add(numericUpDown5_5);
+            groupBoxMedium5.Controls.Add(nudMediumHoursTask5);
             groupBoxMedium5.Location = new Point(23, 152);
             groupBoxMedium5.Name = "groupBoxMedium5";
             groupBoxMedium5.Size = new Size(459, 104);
@@ -1255,22 +1564,22 @@ namespace BUTTER
             tbMedium5.Value = 15;
             tbMedium5.Scroll += tbMedium5_Scroll;
             // 
-            // numericUpDown5_5
+            // nudMediumHoursTask5
             // 
-            numericUpDown5_5.DecimalPlaces = 1;
-            numericUpDown5_5.Location = new Point(41, 38);
-            numericUpDown5_5.Name = "numericUpDown5_5";
-            numericUpDown5_5.Size = new Size(51, 23);
-            numericUpDown5_5.TabIndex = 3;
-            numericUpDown5_5.TextAlign = HorizontalAlignment.Center;
-            numericUpDown5_5.Value = new decimal(new int[] { 3, 0, 0, 0 });
+            nudMediumHoursTask5.DecimalPlaces = 1;
+            nudMediumHoursTask5.Location = new Point(41, 38);
+            nudMediumHoursTask5.Name = "nudMediumHoursTask5";
+            nudMediumHoursTask5.Size = new Size(51, 23);
+            nudMediumHoursTask5.TabIndex = 3;
+            nudMediumHoursTask5.TextAlign = HorizontalAlignment.Center;
+            nudMediumHoursTask5.Value = new decimal(new int[] { 3, 0, 0, 0 });
             // 
             // groupBoxHard5
             // 
             groupBoxHard5.Controls.Add(lblHardVal5);
             groupBoxHard5.Controls.Add(label16_5);
             groupBoxHard5.Controls.Add(tbHard5);
-            groupBoxHard5.Controls.Add(numericUpDown6_5);
+            groupBoxHard5.Controls.Add(nudHardHoursTask5);
             groupBoxHard5.Location = new Point(23, 262);
             groupBoxHard5.Name = "groupBoxHard5";
             groupBoxHard5.Size = new Size(459, 104);
@@ -1309,18 +1618,23 @@ namespace BUTTER
             tbHard5.Value = 10;
             tbHard5.Scroll += tbHard5_Scroll;
             // 
-            // numericUpDown6_5
+            // nudHardHoursTask5
             // 
-            numericUpDown6_5.DecimalPlaces = 1;
-            numericUpDown6_5.Location = new Point(41, 38);
-            numericUpDown6_5.Name = "numericUpDown6_5";
-            numericUpDown6_5.Size = new Size(51, 23);
-            numericUpDown6_5.TabIndex = 3;
-            numericUpDown6_5.TextAlign = HorizontalAlignment.Center;
-            numericUpDown6_5.Value = new decimal(new int[] { 8, 0, 0, 0 });
+            nudHardHoursTask5.DecimalPlaces = 1;
+            nudHardHoursTask5.Location = new Point(41, 38);
+            nudHardHoursTask5.Name = "nudHardHoursTask5";
+            nudHardHoursTask5.Size = new Size(51, 23);
+            nudHardHoursTask5.TabIndex = 3;
+            nudHardHoursTask5.TextAlign = HorizontalAlignment.Center;
+            nudHardHoursTask5.Value = new decimal(new int[] { 8, 0, 0, 0 });
             // 
             // tpStation6
             // 
+            tpStation6.Controls.Add(txbHoursS6);
+            tpStation6.Controls.Add(label23);
+            tpStation6.Controls.Add(checkBox10);
+            tpStation6.Controls.Add(label17);
+            tpStation6.Controls.Add(nudNumberOfMotions6);
             tpStation6.Controls.Add(groupBoxEasy6);
             tpStation6.Controls.Add(groupBoxMedium6);
             tpStation6.Controls.Add(groupBoxHard6);
@@ -1332,12 +1646,59 @@ namespace BUTTER
             tpStation6.Text = "Station 6";
             tpStation6.UseVisualStyleBackColor = true;
             // 
+            // txbHoursS6
+            // 
+            txbHoursS6.Location = new Point(409, 386);
+            txbHoursS6.Name = "txbHoursS6";
+            txbHoursS6.Size = new Size(100, 23);
+            txbHoursS6.TabIndex = 15;
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Location = new Point(515, 389);
+            label23.Name = "label23";
+            label23.Size = new Size(39, 15);
+            label23.TabIndex = 14;
+            label23.Text = "Hours";
+            // 
+            // checkBox10
+            // 
+            checkBox10.AutoSize = true;
+            checkBox10.Checked = true;
+            checkBox10.CheckState = CheckState.Checked;
+            checkBox10.Location = new Point(223, 14);
+            checkBox10.Name = "checkBox10";
+            checkBox10.Size = new Size(73, 19);
+            checkBox10.TabIndex = 7;
+            checkBox10.Text = "Standard";
+            checkBox10.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(23, 14);
+            label17.Name = "label17";
+            label17.Size = new Size(112, 15);
+            label17.TabIndex = 6;
+            label17.Text = "Number of Motions";
+            // 
+            // nudNumberOfMotions6
+            // 
+            nudNumberOfMotions6.Location = new Point(138, 12);
+            nudNumberOfMotions6.Name = "nudNumberOfMotions6";
+            nudNumberOfMotions6.Size = new Size(66, 23);
+            nudNumberOfMotions6.TabIndex = 5;
+            nudNumberOfMotions6.TextAlign = HorizontalAlignment.Center;
+            nudNumberOfMotions6.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudNumberOfMotions6.ValueChanged += nudNumberOfMotions6_ValueChanged;
+            // 
             // groupBoxEasy6
             // 
             groupBoxEasy6.Controls.Add(lblEasyVal6);
             groupBoxEasy6.Controls.Add(label11_6);
             groupBoxEasy6.Controls.Add(tbEasy6);
-            groupBoxEasy6.Controls.Add(numericUpDown4_6);
+            groupBoxEasy6.Controls.Add(nudEasyHoursTask6);
             groupBoxEasy6.Location = new Point(23, 42);
             groupBoxEasy6.Name = "groupBoxEasy6";
             groupBoxEasy6.Size = new Size(459, 104);
@@ -1376,22 +1737,22 @@ namespace BUTTER
             tbEasy6.Value = 75;
             tbEasy6.Scroll += tbEasy6_Scroll;
             // 
-            // numericUpDown4_6
+            // nudEasyHoursTask6
             // 
-            numericUpDown4_6.DecimalPlaces = 1;
-            numericUpDown4_6.Location = new Point(41, 38);
-            numericUpDown4_6.Name = "numericUpDown4_6";
-            numericUpDown4_6.Size = new Size(51, 23);
-            numericUpDown4_6.TabIndex = 3;
-            numericUpDown4_6.TextAlign = HorizontalAlignment.Center;
-            numericUpDown4_6.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudEasyHoursTask6.DecimalPlaces = 1;
+            nudEasyHoursTask6.Location = new Point(41, 38);
+            nudEasyHoursTask6.Name = "nudEasyHoursTask6";
+            nudEasyHoursTask6.Size = new Size(51, 23);
+            nudEasyHoursTask6.TabIndex = 3;
+            nudEasyHoursTask6.TextAlign = HorizontalAlignment.Center;
+            nudEasyHoursTask6.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // groupBoxMedium6
             // 
             groupBoxMedium6.Controls.Add(lblMediumVal6);
             groupBoxMedium6.Controls.Add(label14_6);
             groupBoxMedium6.Controls.Add(tbMedium6);
-            groupBoxMedium6.Controls.Add(numericUpDown5_6);
+            groupBoxMedium6.Controls.Add(nudMediumHoursTask6);
             groupBoxMedium6.Location = new Point(23, 152);
             groupBoxMedium6.Name = "groupBoxMedium6";
             groupBoxMedium6.Size = new Size(459, 104);
@@ -1430,22 +1791,22 @@ namespace BUTTER
             tbMedium6.Value = 15;
             tbMedium6.Scroll += tbMedium6_Scroll;
             // 
-            // numericUpDown5_6
+            // nudMediumHoursTask6
             // 
-            numericUpDown5_6.DecimalPlaces = 1;
-            numericUpDown5_6.Location = new Point(41, 38);
-            numericUpDown5_6.Name = "numericUpDown5_6";
-            numericUpDown5_6.Size = new Size(51, 23);
-            numericUpDown5_6.TabIndex = 3;
-            numericUpDown5_6.TextAlign = HorizontalAlignment.Center;
-            numericUpDown5_6.Value = new decimal(new int[] { 3, 0, 0, 0 });
+            nudMediumHoursTask6.DecimalPlaces = 1;
+            nudMediumHoursTask6.Location = new Point(41, 38);
+            nudMediumHoursTask6.Name = "nudMediumHoursTask6";
+            nudMediumHoursTask6.Size = new Size(51, 23);
+            nudMediumHoursTask6.TabIndex = 3;
+            nudMediumHoursTask6.TextAlign = HorizontalAlignment.Center;
+            nudMediumHoursTask6.Value = new decimal(new int[] { 3, 0, 0, 0 });
             // 
             // groupBoxHard6
             // 
             groupBoxHard6.Controls.Add(lblHardVal6);
             groupBoxHard6.Controls.Add(label16_6);
             groupBoxHard6.Controls.Add(tbHard6);
-            groupBoxHard6.Controls.Add(numericUpDown6_6);
+            groupBoxHard6.Controls.Add(nudHardHoursTask6);
             groupBoxHard6.Location = new Point(23, 262);
             groupBoxHard6.Name = "groupBoxHard6";
             groupBoxHard6.Size = new Size(459, 104);
@@ -1484,15 +1845,15 @@ namespace BUTTER
             tbHard6.Value = 10;
             tbHard6.Scroll += tbHard6_Scroll;
             // 
-            // numericUpDown6_6
+            // nudHardHoursTask6
             // 
-            numericUpDown6_6.DecimalPlaces = 1;
-            numericUpDown6_6.Location = new Point(41, 38);
-            numericUpDown6_6.Name = "numericUpDown6_6";
-            numericUpDown6_6.Size = new Size(51, 23);
-            numericUpDown6_6.TabIndex = 3;
-            numericUpDown6_6.TextAlign = HorizontalAlignment.Center;
-            numericUpDown6_6.Value = new decimal(new int[] { 8, 0, 0, 0 });
+            nudHardHoursTask6.DecimalPlaces = 1;
+            nudHardHoursTask6.Location = new Point(41, 38);
+            nudHardHoursTask6.Name = "nudHardHoursTask6";
+            nudHardHoursTask6.Size = new Size(51, 23);
+            nudHardHoursTask6.TabIndex = 3;
+            nudHardHoursTask6.TextAlign = HorizontalAlignment.Center;
+            nudHardHoursTask6.Value = new decimal(new int[] { 8, 0, 0, 0 });
             // 
             // menuStrip1
             // 
@@ -1509,7 +1870,6 @@ namespace BUTTER
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(37, 20);
             fileToolStripMenuItem.Text = "File";
-            fileToolStripMenuItem.Click += fileToolStripMenuItem_Click;
             // 
             // newToolStripMenuItem
             // 
@@ -1554,7 +1914,7 @@ namespace BUTTER
             // lblToday
             // 
             lblToday.AutoSize = true;
-            lblToday.Location = new Point(59, 514);
+            lblToday.Location = new Point(41, 595);
             lblToday.Name = "lblToday";
             lblToday.Size = new Size(70, 15);
             lblToday.TabIndex = 4;
@@ -1563,7 +1923,7 @@ namespace BUTTER
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(553, 514);
+            label5.Location = new Point(535, 595);
             label5.Name = "label5";
             label5.Size = new Size(109, 15);
             label5.TabIndex = 5;
@@ -1571,7 +1931,7 @@ namespace BUTTER
             // 
             // dateTimePicker2
             // 
-            dateTimePicker2.Location = new Point(64, 532);
+            dateTimePicker2.Location = new Point(46, 613);
             dateTimePicker2.Name = "dateTimePicker2";
             dateTimePicker2.Size = new Size(143, 23);
             dateTimePicker2.TabIndex = 8;
@@ -1579,7 +1939,7 @@ namespace BUTTER
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(213, 514);
+            label8.Location = new Point(195, 595);
             label8.Name = "label8";
             label8.Size = new Size(58, 15);
             label8.TabIndex = 9;
@@ -1587,14 +1947,14 @@ namespace BUTTER
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(213, 532);
+            dateTimePicker1.Location = new Point(195, 613);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(143, 23);
             dateTimePicker1.TabIndex = 10;
             // 
             // dateTimePicker3
             // 
-            dateTimePicker3.Location = new Point(519, 532);
+            dateTimePicker3.Location = new Point(501, 613);
             dateTimePicker3.Name = "dateTimePicker3";
             dateTimePicker3.Size = new Size(143, 23);
             dateTimePicker3.TabIndex = 11;
@@ -1602,23 +1962,40 @@ namespace BUTTER
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(359, 514);
+            label9.Location = new Point(341, 595);
             label9.Name = "label9";
             label9.Size = new Size(55, 15);
             label9.TabIndex = 12;
             label9.Text = "Days Left";
-            label9.Click += label9_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(359, 532);
+            textBox1.Location = new Point(341, 613);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 13;
             // 
+            // txbTotalHours
+            // 
+            txbTotalHours.Location = new Point(468, 530);
+            txbTotalHours.Name = "txbTotalHours";
+            txbTotalHours.Size = new Size(100, 23);
+            txbTotalHours.TabIndex = 17;
+            // 
+            // lblTotalHours
+            // 
+            lblTotalHours.AutoSize = true;
+            lblTotalHours.Location = new Point(574, 533);
+            lblTotalHours.Name = "lblTotalHours";
+            lblTotalHours.Size = new Size(67, 15);
+            lblTotalHours.TabIndex = 16;
+            lblTotalHours.Text = "Total Hours";
+            // 
             // Form1
             // 
-            ClientSize = new Size(834, 601);
+            ClientSize = new Size(834, 680);
+            Controls.Add(txbTotalHours);
+            Controls.Add(lblTotalHours);
             Controls.Add(textBox1);
             Controls.Add(label9);
             Controls.Add(dateTimePicker3);
@@ -1628,15 +2005,16 @@ namespace BUTTER
             Controls.Add(label5);
             Controls.Add(lblToday);
             Controls.Add(checkBox1);
-            Controls.Add(tabControl1);
-            Controls.Add(label1);
+            Controls.Add(tabControlStations);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Form1";
-            Text = "frmMain";
+            Text = "B.U.T.T.E.R";
             Load += Form1_Load;
-            tabControl1.ResumeLayout(false);
+            tabControlStations.ResumeLayout(false);
             tpBase.ResumeLayout(false);
+            groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
@@ -1650,82 +2028,92 @@ namespace BUTTER
             tpStation1.PerformLayout();
             groupBox5.ResumeLayout(false);
             groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)tbHard).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tbHard1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudHardHoursTask1).EndInit();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)tbMedium).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tbMedium1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudMediumHoursTask1).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)tbEasy).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tbEasy1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudEasyHoursTask1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudNumberOfMotions1).EndInit();
             tpStation2.ResumeLayout(false);
+            tpStation2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudNumberOfMotions2).EndInit();
             groupBoxEasy2.ResumeLayout(false);
             groupBoxEasy2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbEasy2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4_2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudEasyHoursTask2).EndInit();
             groupBoxMedium2.ResumeLayout(false);
             groupBoxMedium2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbMedium2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5_2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudMediumHoursTask2).EndInit();
             groupBoxHard2.ResumeLayout(false);
             groupBoxHard2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbHard2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6_2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudHardHoursTask2).EndInit();
             tpStation3.ResumeLayout(false);
+            tpStation3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudNumberOfMotions3).EndInit();
             groupBoxEasy3.ResumeLayout(false);
             groupBoxEasy3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbEasy3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4_3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudEasyHoursTask3).EndInit();
             groupBoxMedium3.ResumeLayout(false);
             groupBoxMedium3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbMedium3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5_3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudMediumHoursTask3).EndInit();
             groupBoxHard3.ResumeLayout(false);
             groupBoxHard3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbHard3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6_3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudHardHoursTask3).EndInit();
             tpStation4.ResumeLayout(false);
+            tpStation4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudNumberOfMotions4).EndInit();
             groupBoxEasy4.ResumeLayout(false);
             groupBoxEasy4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbEasy4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4_4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudEasyHoursTask4).EndInit();
             groupBoxMedium4.ResumeLayout(false);
             groupBoxMedium4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbMedium4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5_4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudMediumHoursTask4).EndInit();
             groupBoxHard4.ResumeLayout(false);
             groupBoxHard4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbHard4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6_4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudHardHoursTask4).EndInit();
             tpStation5.ResumeLayout(false);
+            tpStation5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudNumberOfMotions5).EndInit();
             groupBoxEasy5.ResumeLayout(false);
             groupBoxEasy5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbEasy5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4_5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudEasyHoursTask5).EndInit();
             groupBoxMedium5.ResumeLayout(false);
             groupBoxMedium5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbMedium5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5_5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudMediumHoursTask5).EndInit();
             groupBoxHard5.ResumeLayout(false);
             groupBoxHard5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbHard5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6_5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudHardHoursTask5).EndInit();
             tpStation6.ResumeLayout(false);
+            tpStation6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudNumberOfMotions6).EndInit();
             groupBoxEasy6.ResumeLayout(false);
             groupBoxEasy6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbEasy6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown4_6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudEasyHoursTask6).EndInit();
             groupBoxMedium6.ResumeLayout(false);
             groupBoxMedium6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbMedium6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown5_6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudMediumHoursTask6).EndInit();
             groupBoxHard6.ResumeLayout(false);
             groupBoxHard6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)tbHard6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown6_6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudHardHoursTask6).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -1745,10 +2133,7 @@ namespace BUTTER
             }
             base.Dispose(disposing);
         }
-
-        // existing fields
-        private Label label1;
-        private TabControl tabControl1;
+        private TabControl tabControlStations;
         private TabPage tpBase;
         private TabPage tpStation1;
         private TabPage tpStation2;
@@ -1786,109 +2171,143 @@ namespace BUTTER
         private DateTimePicker dateTimePicker3;
         private Label label9;
         private TextBox textBox1;
-        private Label label10;
-        private NumericUpDown numericUpDown1;
-        private TrackBar tbEasy;
-        private CheckBox checkBox4;
+        private Label lblNumberofMotion1;
+        private NumericUpDown nudNumberOfMotions1;
+        private TrackBar tbEasy1;
+        private CheckBox cboxStandard1;
         private GroupBox groupBox3;
         private Label label11;
-        private NumericUpDown numericUpDown4;
+        private NumericUpDown nudEasyHoursTask1;
         private Label lblEasyVal;
         private GroupBox groupBox5;
         private Label lblHardVal;
         private Label label16;
-        private TrackBar tbHard;
-        private NumericUpDown numericUpDown6;
+        private TrackBar tbHard1;
+        private NumericUpDown nudHardHoursTask1;
         private GroupBox groupBox4;
         private Label lblMediumVal;
         private Label label14;
-        private TrackBar tbMedium;
-        private NumericUpDown numericUpDown5;
-        private Label lblTotalPercent;
+        private TrackBar tbMedium1;
+        private NumericUpDown nudMediumHoursTask1;
+        private Label lblS1Hours;
 
         // Station2 fields
         private GroupBox groupBoxEasy2;
         private Label lblEasyVal2;
         private Label label11_2;
         private TrackBar tbEasy2;
-        private NumericUpDown numericUpDown4_2;
+        private NumericUpDown nudEasyHoursTask2;
         private GroupBox groupBoxMedium2;
         private Label lblMediumVal2;
         private Label label14_2;
         private TrackBar tbMedium2;
-        private NumericUpDown numericUpDown5_2;
+        private NumericUpDown nudMediumHoursTask2;
         private GroupBox groupBoxHard2;
         private Label lblHardVal2;
         private Label label16_2;
         private TrackBar tbHard2;
-        private NumericUpDown numericUpDown6_2;
+        private NumericUpDown nudHardHoursTask2;
 
         // Station3 fields
         private GroupBox groupBoxEasy3;
         private Label lblEasyVal3;
         private Label label11_3;
         private TrackBar tbEasy3;
-        private NumericUpDown numericUpDown4_3;
+        private NumericUpDown nudEasyHoursTask3;
         private GroupBox groupBoxMedium3;
         private Label lblMediumVal3;
         private Label label14_3;
         private TrackBar tbMedium3;
-        private NumericUpDown numericUpDown5_3;
+        private NumericUpDown nudMediumHoursTask3;
         private GroupBox groupBoxHard3;
         private Label lblHardVal3;
         private Label label16_3;
         private TrackBar tbHard3;
-        private NumericUpDown numericUpDown6_3;
+        private NumericUpDown nudHardHoursTask3;
 
         // Station4 fields
         private GroupBox groupBoxEasy4;
         private Label lblEasyVal4;
         private Label label11_4;
         private TrackBar tbEasy4;
-        private NumericUpDown numericUpDown4_4;
+        private NumericUpDown nudEasyHoursTask4;
         private GroupBox groupBoxMedium4;
         private Label lblMediumVal4;
         private Label label14_4;
         private TrackBar tbMedium4;
-        private NumericUpDown numericUpDown5_4;
+        private NumericUpDown nudMediumHoursTask4;
         private GroupBox groupBoxHard4;
         private Label lblHardVal4;
         private Label label16_4;
         private TrackBar tbHard4;
-        private NumericUpDown numericUpDown6_4;
+        private NumericUpDown nudHardHoursTask4;
 
         // Station5 fields
         private GroupBox groupBoxEasy5;
         private Label lblEasyVal5;
         private Label label11_5;
         private TrackBar tbEasy5;
-        private NumericUpDown numericUpDown4_5;
+        private NumericUpDown nudEasyHoursTask5;
         private GroupBox groupBoxMedium5;
         private Label lblMediumVal5;
         private Label label14_5;
         private TrackBar tbMedium5;
-        private NumericUpDown numericUpDown5_5;
+        private NumericUpDown nudMediumHoursTask5;
         private GroupBox groupBoxHard5;
         private Label lblHardVal5;
         private Label label16_5;
         private TrackBar tbHard5;
-        private NumericUpDown numericUpDown6_5;
+        private NumericUpDown nudHardHoursTask5;
 
         // Station6 fields
         private GroupBox groupBoxEasy6;
         private Label lblEasyVal6;
         private Label label11_6;
         private TrackBar tbEasy6;
-        private NumericUpDown numericUpDown4_6;
+        private NumericUpDown nudEasyHoursTask6;
         private GroupBox groupBoxMedium6;
         private Label lblMediumVal6;
         private Label label14_6;
         private TrackBar tbMedium6;
-        private NumericUpDown numericUpDown5_6;
+        private NumericUpDown nudMediumHoursTask6;
         private GroupBox groupBoxHard6;
         private Label lblHardVal6;
         private Label label16_6;
         private TrackBar tbHard6;
-        private NumericUpDown numericUpDown6_6;
+        private NumericUpDown nudHardHoursTask6;
+        private GroupBox groupBox6;
+        private CheckBox checkBox5;
+        private CheckBox checkBox6;
+        private TextBox txbHoursS1;
+        private CheckBox checkBox4;
+        private Label label10;
+        private NumericUpDown nudNumberOfMotions2;
+        private CheckBox checkBox7;
+        private Label label12;
+        private NumericUpDown nudNumberOfMotions3;
+        private CheckBox checkBox8;
+        private Label label13;
+        private NumericUpDown nudNumberOfMotions4;
+        private CheckBox checkBox9;
+        private Label label15;
+        private NumericUpDown nudNumberOfMotions5;
+        private CheckBox checkBox10;
+        private Label label17;
+        private NumericUpDown nudNumberOfMotions6;
+        private Label label18;
+        private Label label1;
+        private Label lblRatio;
+        private TextBox txbHoursS2;
+        private Label label19;
+        private TextBox txbHoursS3;
+        private Label label20;
+        private TextBox txbHoursS4;
+        private Label label21;
+        private TextBox txbHoursS5;
+        private Label label22;
+        private TextBox txbHoursS6;
+        private Label label23;
+        private TextBox txbTotalHours;
+        private Label lblTotalHours;
     }
 }
