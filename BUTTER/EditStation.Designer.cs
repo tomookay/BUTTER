@@ -49,6 +49,28 @@
             textBox8 = new TextBox();
             textBox9 = new TextBox();
             textBox10 = new TextBox();
+            button5 = new Button();
+            button6 = new Button();
+            textBox11 = new TextBox();
+            textBox12 = new TextBox();
+            textBox13 = new TextBox();
+            textBox14 = new TextBox();
+            textBox15 = new TextBox();
+            button7 = new Button();
+            button8 = new Button();
+            textBox16 = new TextBox();
+            textBox17 = new TextBox();
+            textBox18 = new TextBox();
+            textBox19 = new TextBox();
+            textBox20 = new TextBox();
+            button9 = new Button();
+            button10 = new Button();
+            textBox21 = new TextBox();
+            textBox22 = new TextBox();
+            textBox23 = new TextBox();
+            textBox24 = new TextBox();
+            textBox25 = new TextBox();
+            vScrollBar1 = new VScrollBar();
             SuspendLayout();
             // 
             // btnOrderReturn
@@ -234,11 +256,223 @@
             textBox10.TabIndex = 29;
             textBox10.Text = "Advance";
             // 
+            // button5
+            // 
+            button5.Location = new Point(411, 307);
+            button5.Name = "button5";
+            button5.Size = new Size(75, 53);
+            button5.TabIndex = 56;
+            button5.Text = "2";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(12, 307);
+            button6.Name = "button6";
+            button6.Size = new Size(75, 53);
+            button6.TabIndex = 55;
+            button6.Text = "1";
+            button6.UseVisualStyleBackColor = true;
+            // 
+            // textBox11
+            // 
+            textBox11.Location = new Point(305, 337);
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(100, 23);
+            textBox11.TabIndex = 54;
+            textBox11.Text = "Returned";
+            textBox11.TextAlign = HorizontalAlignment.Right;
+            // 
+            // textBox12
+            // 
+            textBox12.Location = new Point(305, 308);
+            textBox12.Name = "textBox12";
+            textBox12.Size = new Size(100, 23);
+            textBox12.TabIndex = 53;
+            textBox12.Text = "Return";
+            textBox12.TextAlign = HorizontalAlignment.Right;
+            // 
+            // textBox13
+            // 
+            textBox13.Location = new Point(199, 308);
+            textBox13.Name = "textBox13";
+            textBox13.Size = new Size(100, 23);
+            textBox13.TabIndex = 52;
+            textBox13.Text = "Motion Name";
+            textBox13.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox14
+            // 
+            textBox14.Location = new Point(93, 337);
+            textBox14.Name = "textBox14";
+            textBox14.Size = new Size(100, 23);
+            textBox14.TabIndex = 51;
+            textBox14.Text = "Advanced";
+            // 
+            // textBox15
+            // 
+            textBox15.Location = new Point(93, 308);
+            textBox15.Name = "textBox15";
+            textBox15.Size = new Size(100, 23);
+            textBox15.TabIndex = 50;
+            textBox15.Text = "Advance";
+            // 
+            // button7
+            // 
+            button7.Location = new Point(411, 248);
+            button7.Name = "button7";
+            button7.Size = new Size(75, 53);
+            button7.TabIndex = 49;
+            button7.Text = "2";
+            button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            button8.Location = new Point(12, 248);
+            button8.Name = "button8";
+            button8.Size = new Size(75, 53);
+            button8.TabIndex = 48;
+            button8.Text = "1";
+            button8.UseVisualStyleBackColor = true;
+            // 
+            // textBox16
+            // 
+            textBox16.Location = new Point(305, 278);
+            textBox16.Name = "textBox16";
+            textBox16.Size = new Size(100, 23);
+            textBox16.TabIndex = 47;
+            textBox16.Text = "Returned";
+            textBox16.TextAlign = HorizontalAlignment.Right;
+            // 
+            // textBox17
+            // 
+            textBox17.Location = new Point(305, 249);
+            textBox17.Name = "textBox17";
+            textBox17.Size = new Size(100, 23);
+            textBox17.TabIndex = 46;
+            textBox17.Text = "Return";
+            textBox17.TextAlign = HorizontalAlignment.Right;
+            // 
+            // textBox18
+            // 
+            textBox18.Location = new Point(199, 249);
+            textBox18.Name = "textBox18";
+            textBox18.Size = new Size(100, 23);
+            textBox18.TabIndex = 45;
+            textBox18.Text = "Motion Name";
+            textBox18.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox19
+            // 
+            textBox19.Location = new Point(93, 278);
+            textBox19.Name = "textBox19";
+            textBox19.Size = new Size(100, 23);
+            textBox19.TabIndex = 44;
+            textBox19.Text = "Advanced";
+            // 
+            // textBox20
+            // 
+            textBox20.Location = new Point(93, 249);
+            textBox20.Name = "textBox20";
+            textBox20.Size = new Size(100, 23);
+            textBox20.TabIndex = 43;
+            textBox20.Text = "Advance";
+            // 
+            // button9
+            // 
+            button9.Location = new Point(411, 189);
+            button9.Name = "button9";
+            button9.Size = new Size(75, 53);
+            button9.TabIndex = 42;
+            button9.Text = "2";
+            button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            button10.Location = new Point(12, 189);
+            button10.Name = "button10";
+            button10.Size = new Size(75, 53);
+            button10.TabIndex = 41;
+            button10.Text = "1";
+            button10.UseVisualStyleBackColor = true;
+            // 
+            // textBox21
+            // 
+            textBox21.Location = new Point(305, 219);
+            textBox21.Name = "textBox21";
+            textBox21.Size = new Size(100, 23);
+            textBox21.TabIndex = 40;
+            textBox21.Text = "Returned";
+            textBox21.TextAlign = HorizontalAlignment.Right;
+            // 
+            // textBox22
+            // 
+            textBox22.Location = new Point(305, 190);
+            textBox22.Name = "textBox22";
+            textBox22.Size = new Size(100, 23);
+            textBox22.TabIndex = 39;
+            textBox22.Text = "Return";
+            textBox22.TextAlign = HorizontalAlignment.Right;
+            // 
+            // textBox23
+            // 
+            textBox23.Location = new Point(199, 190);
+            textBox23.Name = "textBox23";
+            textBox23.Size = new Size(100, 23);
+            textBox23.TabIndex = 38;
+            textBox23.Text = "Motion Name";
+            textBox23.TextAlign = HorizontalAlignment.Center;
+            // 
+            // textBox24
+            // 
+            textBox24.Location = new Point(93, 219);
+            textBox24.Name = "textBox24";
+            textBox24.Size = new Size(100, 23);
+            textBox24.TabIndex = 37;
+            textBox24.Text = "Advanced";
+            // 
+            // textBox25
+            // 
+            textBox25.Location = new Point(93, 190);
+            textBox25.Name = "textBox25";
+            textBox25.Size = new Size(100, 23);
+            textBox25.TabIndex = 36;
+            textBox25.Text = "Advance";
+            // 
+            // vScrollBar1
+            // 
+            vScrollBar1.Location = new Point(489, 12);
+            vScrollBar1.Name = "vScrollBar1";
+            vScrollBar1.Size = new Size(23, 348);
+            vScrollBar1.TabIndex = 57;
+            // 
             // EditStation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(vScrollBar1);
+            Controls.Add(button5);
+            Controls.Add(button6);
+            Controls.Add(textBox11);
+            Controls.Add(textBox12);
+            Controls.Add(textBox13);
+            Controls.Add(textBox14);
+            Controls.Add(textBox15);
+            Controls.Add(button7);
+            Controls.Add(button8);
+            Controls.Add(textBox16);
+            Controls.Add(textBox17);
+            Controls.Add(textBox18);
+            Controls.Add(textBox19);
+            Controls.Add(textBox20);
+            Controls.Add(button9);
+            Controls.Add(button10);
+            Controls.Add(textBox21);
+            Controls.Add(textBox22);
+            Controls.Add(textBox23);
+            Controls.Add(textBox24);
+            Controls.Add(textBox25);
             Controls.Add(button3);
             Controls.Add(button4);
             Controls.Add(textBox6);
@@ -289,5 +523,27 @@
         private TextBox textBox8;
         private TextBox textBox9;
         private TextBox textBox10;
+        private Button button5;
+        private Button button6;
+        private TextBox textBox11;
+        private TextBox textBox12;
+        private TextBox textBox13;
+        private TextBox textBox14;
+        private TextBox textBox15;
+        private Button button7;
+        private Button button8;
+        private TextBox textBox16;
+        private TextBox textBox17;
+        private TextBox textBox18;
+        private TextBox textBox19;
+        private TextBox textBox20;
+        private Button button9;
+        private Button button10;
+        private TextBox textBox21;
+        private TextBox textBox22;
+        private TextBox textBox23;
+        private TextBox textBox24;
+        private TextBox textBox25;
+        private VScrollBar vScrollBar1;
     }
 }
