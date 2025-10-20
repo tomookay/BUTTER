@@ -8,6 +8,15 @@ namespace BUTTER
     public partial class Form1 : Form
     {
         private bool _isUpdating = false;
+        //text data for all stations
+        MotionRow[] Station1Rows = new MotionRow[99];
+        MotionRow[] Station2Rows = new MotionRow[99];
+        MotionRow[] Station3Rows = new MotionRow[99];
+        MotionRow[] Station4Rows = new MotionRow[99];
+        MotionRow[] Station5Rows = new MotionRow[99];
+        MotionRow[] Station6Rows = new MotionRow[99];
+
+
 
         public Form1()
         {
@@ -16,6 +25,8 @@ namespace BUTTER
             // Wire the checkbox event here so the handler works without modifying the Designer file.
             if (cboxStandard1 != null)
                 cboxStandard1.CheckedChanged += cboxStandard1_CheckedChanged;
+
+          
         }
 
         private void Form1_Load(object sender, EventArgs e)

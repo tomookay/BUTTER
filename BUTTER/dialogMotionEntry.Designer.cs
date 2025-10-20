@@ -28,103 +28,104 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
-            button1 = new Button();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            btnOrderReturn = new Button();
+            btnOrderAdvance = new Button();
+            txbReturned = new TextBox();
+            txbReturn = new TextBox();
+            txbMotionName = new TextBox();
+            txbAdvanced = new TextBox();
+            txbAdvance = new TextBox();
             SuspendLayout();
             // 
-            // button2
+            // btnOrderReturn
             // 
-            button2.Location = new Point(411, 12);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 53);
-            button2.TabIndex = 14;
-            button2.Text = "2";
-            button2.UseVisualStyleBackColor = true;
+            btnOrderReturn.Location = new Point(411, 12);
+            btnOrderReturn.Name = "btnOrderReturn";
+            btnOrderReturn.Size = new Size(75, 53);
+            btnOrderReturn.TabIndex = 14;
+            btnOrderReturn.Text = "2";
+            btnOrderReturn.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnOrderAdvance
             // 
-            button1.Location = new Point(12, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 53);
-            button1.TabIndex = 13;
-            button1.Text = "1";
-            button1.UseVisualStyleBackColor = true;
+            btnOrderAdvance.Location = new Point(12, 12);
+            btnOrderAdvance.Name = "btnOrderAdvance";
+            btnOrderAdvance.Size = new Size(75, 53);
+            btnOrderAdvance.TabIndex = 13;
+            btnOrderAdvance.Text = "1";
+            btnOrderAdvance.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // txbReturned
             // 
-            textBox5.Location = new Point(305, 42);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 12;
-            textBox5.Text = "Returned";
-            textBox5.TextAlign = HorizontalAlignment.Right;
+            txbReturned.Location = new Point(305, 42);
+            txbReturned.Name = "txbReturned";
+            txbReturned.Size = new Size(100, 23);
+            txbReturned.TabIndex = 12;
+            txbReturned.Text = "Returned";
+            txbReturned.TextAlign = HorizontalAlignment.Right;
             // 
-            // textBox4
+            // txbReturn
             // 
-            textBox4.Location = new Point(305, 13);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 11;
-            textBox4.Text = "Return";
-            textBox4.TextAlign = HorizontalAlignment.Right;
+            txbReturn.Location = new Point(305, 13);
+            txbReturn.Name = "txbReturn";
+            txbReturn.Size = new Size(100, 23);
+            txbReturn.TabIndex = 11;
+            txbReturn.Text = "Return";
+            txbReturn.TextAlign = HorizontalAlignment.Right;
             // 
-            // textBox3
+            // txbMotionName
             // 
-            textBox3.Location = new Point(199, 13);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 10;
-            textBox3.Text = "Motion Name";
-            textBox3.TextAlign = HorizontalAlignment.Center;
+            txbMotionName.Location = new Point(199, 13);
+            txbMotionName.Name = "txbMotionName";
+            txbMotionName.Size = new Size(100, 23);
+            txbMotionName.TabIndex = 10;
+            txbMotionName.Text = "Motion Name";
+            txbMotionName.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox2
+            // txbAdvanced
             // 
-            textBox2.Location = new Point(93, 42);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 9;
-            textBox2.Text = "Advanced";
+            txbAdvanced.Location = new Point(93, 42);
+            txbAdvanced.Name = "txbAdvanced";
+            txbAdvanced.Size = new Size(100, 23);
+            txbAdvanced.TabIndex = 9;
+            txbAdvanced.Text = "Advanced";
             // 
-            // textBox1
+            // txbAdvance
             // 
-            textBox1.Location = new Point(93, 13);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 8;
-            textBox1.Text = "Advance";
+            txbAdvance.Location = new Point(93, 13);
+            txbAdvance.Name = "txbAdvance";
+            txbAdvance.Size = new Size(100, 23);
+            txbAdvance.TabIndex = 8;
+            txbAdvance.Text = "Advance";
             // 
             // dialogMotionEntry
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(504, 76);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(btnOrderReturn);
+            Controls.Add(btnOrderAdvance);
+            Controls.Add(txbReturned);
+            Controls.Add(txbReturn);
+            Controls.Add(txbMotionName);
+            Controls.Add(txbAdvanced);
+            Controls.Add(txbAdvance);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "dialogMotionEntry";
             Text = "dialogMotionEntry";
+            Load += dialogMotionEntry_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button2;
-        private Button button1;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private Button btnOrderReturn;
+        private Button btnOrderAdvance;
+        private TextBox txbReturned;
+        private TextBox txbReturn;
+        private TextBox txbMotionName;
+        private TextBox txbAdvanced;
+        private TextBox txbAdvance;
     }
 }

@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace BUTTER
 {
-
-    
-    public partial class dialogMotionEntry : Form
+    public partial class EditStation : Form
     {
-        public dialogMotionEntry()
+        public EditStation()
         {
             InitializeComponent();
-        }
-
-        private void dialogMotionEntry_Load(object sender, EventArgs e)
-        {
-          
-
         }
     }
 }
