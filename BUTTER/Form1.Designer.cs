@@ -34,6 +34,7 @@ namespace BUTTER
             label2 = new Label();
             nudPneumatic = new NumericUpDown();
             tpStation1 = new TabPage();
+            button1 = new Button();
             txbHoursS1 = new TextBox();
             lblS1Hours = new Label();
             groupBox5 = new GroupBox();
@@ -461,6 +462,7 @@ namespace BUTTER
             // 
             // tpStation1
             // 
+            tpStation1.Controls.Add(button1);
             tpStation1.Controls.Add(txbHoursS1);
             tpStation1.Controls.Add(lblS1Hours);
             tpStation1.Controls.Add(groupBox5);
@@ -476,6 +478,16 @@ namespace BUTTER
             tpStation1.TabIndex = 1;
             tpStation1.Text = "Station 1";
             tpStation1.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(458, 8);
+            button1.Name = "button1";
+            button1.Size = new Size(93, 23);
+            button1.TabIndex = 14;
+            button1.Text = "Edit Motions";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // txbHoursS1
             // 
@@ -2310,5 +2322,6 @@ namespace BUTTER
         private Label label23;
         private TextBox txbTotalHours;
         private Label lblTotalHours;
+        private Button button1;
     }
 }

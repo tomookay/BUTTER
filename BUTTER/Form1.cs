@@ -26,7 +26,7 @@ namespace BUTTER
             if (cboxStandard1 != null)
                 cboxStandard1.CheckedChanged += cboxStandard1_CheckedChanged;
 
-          
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -64,6 +64,41 @@ namespace BUTTER
             tbMedium1.Enabled = false;
             tbHard1.Enabled = false;
 
+            PopulateStation1TestData();
+
+
+        }
+
+        /// <summary>
+        /// Fill Station1Rows with deterministic test data so EditStation and other UI can display sample entries.
+        /// </summary>
+        private void PopulateStation1TestData()
+        {
+            for (int i = 0; i < Station1Rows.Length; i++)
+            {
+                Station1Rows[i] = new MotionRow
+                {
+                    Motion = new Motion
+                    {
+                        textAdvance = $"Advance {i + 1}",
+                        textAdvanced = $"Advanced {i + 1}",
+                        textReturn = $"Return {i + 1}",
+                        textReturned = $"Returned {i + 1}",
+                        MotionName = $"Motion Name {i + 1}"
+                    },
+                    Units = (i % 3) switch
+                    {
+                        0 => "mm",
+                        1 => "deg",
+                        _ => "LU"
+                    },
+                    // AdvanceOrder = (i % 2) == 0 ? 1 : 2,
+                    //ReturnOrder = (i % 2) == 0 ? 2 : 1
+                    AdvanceOrder = i + 1,
+                    ReturnOrder = i + 1
+
+                };
+            }
 
         }
 
@@ -145,11 +180,11 @@ namespace BUTTER
                     nudEasyHoursTask1, nudMediumHoursTask1, nudHardHoursTask1, txbHoursS1);
 
                 KeepTotalAt100(tbEasy1, tbMedium1, tbHard1, lblEasyVal, lblMediumVal, lblHardVal);
-               
+
             }
 
             else
-                   {
+            {
                 // Re-enable the NumericUpDowns and TrackBars for manual editing
                 nudEasyHoursTask1.Enabled = true;
                 nudMediumHoursTask1.Enabled = true;
@@ -594,6 +629,12 @@ namespace BUTTER
                     txbTotalHours.Text = "0";
             }
         }
+     
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var dlg = new EditStation(Station1Rows);
+            dlg.Show(this);
+        }
     }
 }
