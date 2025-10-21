@@ -64,7 +64,14 @@ namespace BUTTER
             tbMedium1.Enabled = false;
             tbHard1.Enabled = false;
 
-            PopulateStation1TestData();
+            //creat test data for all stations
+            PopulateStationTestData(Station1Rows);
+            PopulateStationTestData(Station2Rows);
+            PopulateStationTestData(Station3Rows);
+            PopulateStationTestData(Station4Rows);
+            PopulateStationTestData(Station5Rows);
+            PopulateStationTestData(Station6Rows);
+
 
 
         }
@@ -72,11 +79,17 @@ namespace BUTTER
         /// <summary>
         /// Fill Station1Rows with deterministic test data so EditStation and other UI can display sample entries.
         /// </summary>
-        private void PopulateStation1TestData()
+        /// <summary>
+        /// Fill the provided MotionRow array with deterministic test data so EditStation and other UI can display sample entries.
+        /// Can be reused for Station1Rows, Station2Rows, etc.
+        /// </summary>
+        private void PopulateStationTestData(MotionRow[] rows)
         {
-            for (int i = 0; i < Station1Rows.Length; i++)
+            if (rows == null) return;
+
+            for (int i = 0; i < rows.Length; i++)
             {
-                Station1Rows[i] = new MotionRow
+                rows[i] = new MotionRow
                 {
                     Motion = new Motion
                     {
@@ -92,14 +105,10 @@ namespace BUTTER
                         1 => "deg",
                         _ => "LU"
                     },
-                    // AdvanceOrder = (i % 2) == 0 ? 1 : 2,
-                    //ReturnOrder = (i % 2) == 0 ? 2 : 1
                     AdvanceOrder = i + 1,
                     ReturnOrder = i + 1
-
                 };
             }
-
         }
 
         private void label1_Click(object sender, EventArgs e) { }
@@ -629,11 +638,41 @@ namespace BUTTER
                     txbTotalHours.Text = "0";
             }
         }
-     
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             var dlg = new EditStation(Station1Rows);
+            dlg.Show(this);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var dlg = new EditStation(Station2Rows);
+            dlg.Show(this);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var dlg = new EditStation(Station3Rows);
+            dlg.Show(this);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var dlg = new EditStation(Station4Rows);
+            dlg.Show(this);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            var dlg = new EditStation(Station5Rows);
+            dlg.Show(this);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            var dlg = new EditStation(Station6Rows);
             dlg.Show(this);
         }
     }

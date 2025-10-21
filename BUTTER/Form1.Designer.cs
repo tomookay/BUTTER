@@ -59,6 +59,7 @@ namespace BUTTER
             lblNumberofMotion1 = new Label();
             nudNumberOfMotions1 = new NumericUpDown();
             tpStation2 = new TabPage();
+            button2 = new Button();
             txbHoursS2 = new TextBox();
             label19 = new Label();
             cboxStandard2 = new CheckBox();
@@ -80,6 +81,7 @@ namespace BUTTER
             tbHard2 = new TrackBar();
             nudHardHoursTask2 = new NumericUpDown();
             tpStation3 = new TabPage();
+            button3 = new Button();
             txbHoursS3 = new TextBox();
             label20 = new Label();
             cboxStandard3 = new CheckBox();
@@ -101,6 +103,7 @@ namespace BUTTER
             tbHard3 = new TrackBar();
             nudHardHoursTask3 = new NumericUpDown();
             tpStation4 = new TabPage();
+            button4 = new Button();
             txbHoursS4 = new TextBox();
             label21 = new Label();
             cboxStandard4 = new CheckBox();
@@ -122,6 +125,7 @@ namespace BUTTER
             tbHard4 = new TrackBar();
             nudHardHoursTask4 = new NumericUpDown();
             tpStation5 = new TabPage();
+            button5 = new Button();
             txbHoursS5 = new TextBox();
             label22 = new Label();
             cboxStandard5 = new CheckBox();
@@ -143,6 +147,7 @@ namespace BUTTER
             tbHard5 = new TrackBar();
             nudHardHoursTask5 = new NumericUpDown();
             tpStation6 = new TabPage();
+            button6 = new Button();
             txbHoursS6 = new TextBox();
             label23 = new Label();
             cboxStandard6 = new CheckBox();
@@ -167,6 +172,9 @@ namespace BUTTER
             fileToolStripMenuItem = new ToolStripMenuItem();
             newToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
+            exportToolStripMenuItem = new ToolStripMenuItem();
+            toTwinCAT3ToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator2 = new ToolStripSeparator();
             exitToolStripMenuItem = new ToolStripMenuItem();
             editToolStripMenuItem = new ToolStripMenuItem();
             timeBaseToolStripMenuItem = new ToolStripMenuItem();
@@ -735,6 +743,7 @@ namespace BUTTER
             // 
             // tpStation2
             // 
+            tpStation2.Controls.Add(button2);
             tpStation2.Controls.Add(txbHoursS2);
             tpStation2.Controls.Add(label19);
             tpStation2.Controls.Add(cboxStandard2);
@@ -750,6 +759,16 @@ namespace BUTTER
             tpStation2.TabIndex = 2;
             tpStation2.Text = "Station 2";
             tpStation2.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(461, 6);
+            button2.Name = "button2";
+            button2.Size = new Size(93, 23);
+            button2.TabIndex = 16;
+            button2.Text = "Edit Motions";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // txbHoursS2
             // 
@@ -962,6 +981,7 @@ namespace BUTTER
             // 
             // tpStation3
             // 
+            tpStation3.Controls.Add(button3);
             tpStation3.Controls.Add(txbHoursS3);
             tpStation3.Controls.Add(label20);
             tpStation3.Controls.Add(cboxStandard3);
@@ -977,6 +997,16 @@ namespace BUTTER
             tpStation3.TabIndex = 3;
             tpStation3.Text = "Station 3";
             tpStation3.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(461, 6);
+            button3.Name = "button3";
+            button3.Size = new Size(93, 23);
+            button3.TabIndex = 16;
+            button3.Text = "Edit Motions";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // txbHoursS3
             // 
@@ -1189,6 +1219,7 @@ namespace BUTTER
             // 
             // tpStation4
             // 
+            tpStation4.Controls.Add(button4);
             tpStation4.Controls.Add(txbHoursS4);
             tpStation4.Controls.Add(label21);
             tpStation4.Controls.Add(cboxStandard4);
@@ -1204,6 +1235,16 @@ namespace BUTTER
             tpStation4.TabIndex = 4;
             tpStation4.Text = "Station 4";
             tpStation4.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(461, 6);
+            button4.Name = "button4";
+            button4.Size = new Size(93, 23);
+            button4.TabIndex = 16;
+            button4.Text = "Edit Motions";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // txbHoursS4
             // 
@@ -1416,6 +1457,7 @@ namespace BUTTER
             // 
             // tpStation5
             // 
+            tpStation5.Controls.Add(button5);
             tpStation5.Controls.Add(txbHoursS5);
             tpStation5.Controls.Add(label22);
             tpStation5.Controls.Add(cboxStandard5);
@@ -1431,6 +1473,16 @@ namespace BUTTER
             tpStation5.TabIndex = 5;
             tpStation5.Text = "Station 5";
             tpStation5.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(461, 3);
+            button5.Name = "button5";
+            button5.Size = new Size(93, 23);
+            button5.TabIndex = 16;
+            button5.Text = "Edit Motions";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // txbHoursS5
             // 
@@ -1643,6 +1695,7 @@ namespace BUTTER
             // 
             // tpStation6
             // 
+            tpStation6.Controls.Add(button6);
             tpStation6.Controls.Add(txbHoursS6);
             tpStation6.Controls.Add(label23);
             tpStation6.Controls.Add(cboxStandard6);
@@ -1658,6 +1711,16 @@ namespace BUTTER
             tpStation6.TabIndex = 6;
             tpStation6.Text = "Station 6";
             tpStation6.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(461, 6);
+            button6.Name = "button6";
+            button6.Size = new Size(93, 23);
+            button6.TabIndex = 16;
+            button6.Text = "Edit Motions";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
             // txbHoursS6
             // 
@@ -1879,7 +1942,7 @@ namespace BUTTER
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, toolStripSeparator1, exitToolStripMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, toolStripSeparator1, exportToolStripMenuItem, toolStripSeparator2, exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(37, 20);
             fileToolStripMenuItem.Text = "File";
@@ -1887,18 +1950,36 @@ namespace BUTTER
             // newToolStripMenuItem
             // 
             newToolStripMenuItem.Name = "newToolStripMenuItem";
-            newToolStripMenuItem.Size = new Size(98, 22);
+            newToolStripMenuItem.Size = new Size(108, 22);
             newToolStripMenuItem.Text = "New";
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(95, 6);
+            toolStripSeparator1.Size = new Size(105, 6);
+            // 
+            // exportToolStripMenuItem
+            // 
+            exportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toTwinCAT3ToolStripMenuItem });
+            exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            exportToolStripMenuItem.Size = new Size(108, 22);
+            exportToolStripMenuItem.Text = "Export";
+            // 
+            // toTwinCAT3ToolStripMenuItem
+            // 
+            toTwinCAT3ToolStripMenuItem.Name = "toTwinCAT3ToolStripMenuItem";
+            toTwinCAT3ToolStripMenuItem.Size = new Size(139, 22);
+            toTwinCAT3ToolStripMenuItem.Text = "to TwinCAT3";
+            // 
+            // toolStripSeparator2
+            // 
+            toolStripSeparator2.Name = "toolStripSeparator2";
+            toolStripSeparator2.Size = new Size(105, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(98, 22);
+            exitToolStripMenuItem.Size = new Size(108, 22);
             exitToolStripMenuItem.Text = "Exit";
             // 
             // editToolStripMenuItem
@@ -2323,5 +2404,13 @@ namespace BUTTER
         private TextBox txbTotalHours;
         private Label lblTotalHours;
         private Button button1;
+        private ToolStripMenuItem exportToolStripMenuItem;
+        private ToolStripMenuItem toTwinCAT3ToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator2;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Button button5;
+        private Button button6;
     }
 }
