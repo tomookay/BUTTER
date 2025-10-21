@@ -66,17 +66,26 @@ namespace BUTTER
             label10 = new Label();
             nudNumberOfMotions2 = new NumericUpDown();
             groupBoxEasy2 = new GroupBox();
+            label24 = new Label();
+            label25 = new Label();
+            label26 = new Label();
             lblEasyVal2 = new Label();
             label11_2 = new Label();
             tbEasy2 = new TrackBar();
             nudEasyHoursTask2 = new NumericUpDown();
             groupBoxMedium2 = new GroupBox();
+            label27 = new Label();
+            label28 = new Label();
             lblMediumVal2 = new Label();
+            label29 = new Label();
             label14_2 = new Label();
             tbMedium2 = new TrackBar();
             nudMediumHoursTask2 = new NumericUpDown();
             groupBoxHard2 = new GroupBox();
+            label30 = new Label();
+            label31 = new Label();
             lblHardVal2 = new Label();
+            label32 = new Label();
             label16_2 = new Label();
             tbHard2 = new TrackBar();
             nudHardHoursTask2 = new NumericUpDown();
@@ -88,16 +97,23 @@ namespace BUTTER
             label12 = new Label();
             nudNumberOfMotions3 = new NumericUpDown();
             groupBoxEasy3 = new GroupBox();
+            label33 = new Label();
+            label34 = new Label();
+            label35 = new Label();
             lblEasyVal3 = new Label();
             label11_3 = new Label();
             tbEasy3 = new TrackBar();
             nudEasyHoursTask3 = new NumericUpDown();
             groupBoxMedium3 = new GroupBox();
+            label36 = new Label();
+            label37 = new Label();
+            label38 = new Label();
             lblMediumVal3 = new Label();
             label14_3 = new Label();
             tbMedium3 = new TrackBar();
             nudMediumHoursTask3 = new NumericUpDown();
             groupBoxHard3 = new GroupBox();
+            label39 = new Label();
             lblHardVal3 = new Label();
             label16_3 = new Label();
             tbHard3 = new TrackBar();
@@ -110,16 +126,19 @@ namespace BUTTER
             label13 = new Label();
             nudNumberOfMotions4 = new NumericUpDown();
             groupBoxEasy4 = new GroupBox();
+            label42 = new Label();
             lblEasyVal4 = new Label();
             label11_4 = new Label();
             tbEasy4 = new TrackBar();
             nudEasyHoursTask4 = new NumericUpDown();
             groupBoxMedium4 = new GroupBox();
+            label43 = new Label();
             lblMediumVal4 = new Label();
             label14_4 = new Label();
             tbMedium4 = new TrackBar();
             nudMediumHoursTask4 = new NumericUpDown();
             groupBoxHard4 = new GroupBox();
+            label44 = new Label();
             lblHardVal4 = new Label();
             label16_4 = new Label();
             tbHard4 = new TrackBar();
@@ -132,16 +151,19 @@ namespace BUTTER
             label15 = new Label();
             nudNumberOfMotions5 = new NumericUpDown();
             groupBoxEasy5 = new GroupBox();
+            label45 = new Label();
             lblEasyVal5 = new Label();
             label11_5 = new Label();
             tbEasy5 = new TrackBar();
             nudEasyHoursTask5 = new NumericUpDown();
             groupBoxMedium5 = new GroupBox();
+            label46 = new Label();
             lblMediumVal5 = new Label();
             label14_5 = new Label();
             tbMedium5 = new TrackBar();
             nudMediumHoursTask5 = new NumericUpDown();
             groupBoxHard5 = new GroupBox();
+            label47 = new Label();
             lblHardVal5 = new Label();
             label16_5 = new Label();
             tbHard5 = new TrackBar();
@@ -154,16 +176,19 @@ namespace BUTTER
             label17 = new Label();
             nudNumberOfMotions6 = new NumericUpDown();
             groupBoxEasy6 = new GroupBox();
+            label48 = new Label();
             lblEasyVal6 = new Label();
             label11_6 = new Label();
             tbEasy6 = new TrackBar();
             nudEasyHoursTask6 = new NumericUpDown();
             groupBoxMedium6 = new GroupBox();
+            label49 = new Label();
             lblMediumVal6 = new Label();
             label14_6 = new Label();
             tbMedium6 = new TrackBar();
             nudMediumHoursTask6 = new NumericUpDown();
             groupBoxHard6 = new GroupBox();
+            label50 = new Label();
             lblHardVal6 = new Label();
             label16_6 = new Label();
             tbHard6 = new TrackBar();
@@ -486,10 +511,11 @@ namespace BUTTER
             tpStation1.TabIndex = 1;
             tpStation1.Text = "Station 1";
             tpStation1.UseVisualStyleBackColor = true;
+            tpStation1.Click += tpStation1_Click_1;
             // 
             // button1
             // 
-            button1.Location = new Point(458, 8);
+            button1.Location = new Point(461, 6);
             button1.Name = "button1";
             button1.Size = new Size(93, 23);
             button1.TabIndex = 14;
@@ -499,7 +525,7 @@ namespace BUTTER
             // 
             // txbHoursS1
             // 
-            txbHoursS1.Location = new Point(388, 379);
+            txbHoursS1.Location = new Point(409, 386);
             txbHoursS1.Name = "txbHoursS1";
             txbHoursS1.Size = new Size(100, 23);
             txbHoursS1.TabIndex = 13;
@@ -507,7 +533,7 @@ namespace BUTTER
             // lblS1Hours
             // 
             lblS1Hours.AutoSize = true;
-            lblS1Hours.Location = new Point(494, 382);
+            lblS1Hours.Location = new Point(515, 389);
             lblS1Hours.Name = "lblS1Hours";
             lblS1Hours.Size = new Size(39, 15);
             lblS1Hours.TabIndex = 12;
@@ -714,7 +740,7 @@ namespace BUTTER
             cboxStandard1.AutoSize = true;
             cboxStandard1.Checked = true;
             cboxStandard1.CheckState = CheckState.Checked;
-            cboxStandard1.Location = new Point(223, 12);
+            cboxStandard1.Location = new Point(221, 8);
             cboxStandard1.Name = "cboxStandard1";
             cboxStandard1.Size = new Size(73, 19);
             cboxStandard1.TabIndex = 4;
@@ -725,7 +751,7 @@ namespace BUTTER
             // lblNumberofMotion1
             // 
             lblNumberofMotion1.AutoSize = true;
-            lblNumberofMotion1.Location = new Point(23, 12);
+            lblNumberofMotion1.Location = new Point(21, 10);
             lblNumberofMotion1.Name = "lblNumberofMotion1";
             lblNumberofMotion1.Size = new Size(112, 15);
             lblNumberofMotion1.TabIndex = 3;
@@ -733,7 +759,7 @@ namespace BUTTER
             // 
             // nudNumberOfMotions1
             // 
-            nudNumberOfMotions1.Location = new Point(138, 10);
+            nudNumberOfMotions1.Location = new Point(136, 6);
             nudNumberOfMotions1.Name = "nudNumberOfMotions1";
             nudNumberOfMotions1.Size = new Size(66, 23);
             nudNumberOfMotions1.TabIndex = 2;
@@ -791,7 +817,7 @@ namespace BUTTER
             cboxStandard2.AutoSize = true;
             cboxStandard2.Checked = true;
             cboxStandard2.CheckState = CheckState.Checked;
-            cboxStandard2.Location = new Point(223, 14);
+            cboxStandard2.Location = new Point(221, 8);
             cboxStandard2.Name = "cboxStandard2";
             cboxStandard2.Size = new Size(73, 19);
             cboxStandard2.TabIndex = 7;
@@ -801,7 +827,7 @@ namespace BUTTER
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(23, 14);
+            label10.Location = new Point(21, 10);
             label10.Name = "label10";
             label10.Size = new Size(112, 15);
             label10.TabIndex = 6;
@@ -809,7 +835,7 @@ namespace BUTTER
             // 
             // nudNumberOfMotions2
             // 
-            nudNumberOfMotions2.Location = new Point(138, 12);
+            nudNumberOfMotions2.Location = new Point(136, 6);
             nudNumberOfMotions2.Name = "nudNumberOfMotions2";
             nudNumberOfMotions2.Size = new Size(66, 23);
             nudNumberOfMotions2.TabIndex = 5;
@@ -819,6 +845,9 @@ namespace BUTTER
             // 
             // groupBoxEasy2
             // 
+            groupBoxEasy2.Controls.Add(label24);
+            groupBoxEasy2.Controls.Add(label25);
+            groupBoxEasy2.Controls.Add(label26);
             groupBoxEasy2.Controls.Add(lblEasyVal2);
             groupBoxEasy2.Controls.Add(label11_2);
             groupBoxEasy2.Controls.Add(tbEasy2);
@@ -830,14 +859,41 @@ namespace BUTTER
             groupBoxEasy2.TabStop = false;
             groupBoxEasy2.Text = "Easy";
             // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new Point(377, 47);
+            label24.Name = "label24";
+            label24.Size = new Size(75, 15);
+            label24.TabIndex = 19;
+            label24.Text = "%  Task Ratio";
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Location = new Point(377, 47);
+            label25.Name = "label25";
+            label25.Size = new Size(75, 15);
+            label25.TabIndex = 18;
+            label25.Text = "%  Task Ratio";
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Location = new Point(377, 47);
+            label26.Name = "label26";
+            label26.Size = new Size(75, 15);
+            label26.TabIndex = 17;
+            label26.Text = "%  Task Ratio";
+            // 
             // lblEasyVal2
             // 
             lblEasyVal2.AutoSize = true;
             lblEasyVal2.Location = new Point(339, 47);
             lblEasyVal2.Name = "lblEasyVal2";
-            lblEasyVal2.Size = new Size(32, 15);
+            lblEasyVal2.Size = new Size(19, 15);
             lblEasyVal2.TabIndex = 0;
-            lblEasyVal2.Text = "75 %";
+            lblEasyVal2.Text = "75";
             // 
             // label11_2
             // 
@@ -873,7 +929,10 @@ namespace BUTTER
             // 
             // groupBoxMedium2
             // 
+            groupBoxMedium2.Controls.Add(label27);
+            groupBoxMedium2.Controls.Add(label28);
             groupBoxMedium2.Controls.Add(lblMediumVal2);
+            groupBoxMedium2.Controls.Add(label29);
             groupBoxMedium2.Controls.Add(label14_2);
             groupBoxMedium2.Controls.Add(tbMedium2);
             groupBoxMedium2.Controls.Add(nudMediumHoursTask2);
@@ -884,14 +943,41 @@ namespace BUTTER
             groupBoxMedium2.TabStop = false;
             groupBoxMedium2.Text = "Medium";
             // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Location = new Point(377, 47);
+            label27.Name = "label27";
+            label27.Size = new Size(75, 15);
+            label27.TabIndex = 22;
+            label27.Text = "%  Task Ratio";
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Location = new Point(377, 47);
+            label28.Name = "label28";
+            label28.Size = new Size(75, 15);
+            label28.TabIndex = 21;
+            label28.Text = "%  Task Ratio";
+            // 
             // lblMediumVal2
             // 
             lblMediumVal2.AutoSize = true;
             lblMediumVal2.Location = new Point(339, 47);
             lblMediumVal2.Name = "lblMediumVal2";
-            lblMediumVal2.Size = new Size(32, 15);
+            lblMediumVal2.Size = new Size(19, 15);
             lblMediumVal2.TabIndex = 0;
-            lblMediumVal2.Text = "15 %";
+            lblMediumVal2.Text = "15";
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Location = new Point(377, 47);
+            label29.Name = "label29";
+            label29.Size = new Size(75, 15);
+            label29.TabIndex = 20;
+            label29.Text = "%  Task Ratio";
             // 
             // label14_2
             // 
@@ -927,7 +1013,10 @@ namespace BUTTER
             // 
             // groupBoxHard2
             // 
+            groupBoxHard2.Controls.Add(label30);
+            groupBoxHard2.Controls.Add(label31);
             groupBoxHard2.Controls.Add(lblHardVal2);
+            groupBoxHard2.Controls.Add(label32);
             groupBoxHard2.Controls.Add(label16_2);
             groupBoxHard2.Controls.Add(tbHard2);
             groupBoxHard2.Controls.Add(nudHardHoursTask2);
@@ -938,14 +1027,41 @@ namespace BUTTER
             groupBoxHard2.TabStop = false;
             groupBoxHard2.Text = "Hard";
             // 
+            // label30
+            // 
+            label30.AutoSize = true;
+            label30.Location = new Point(377, 47);
+            label30.Name = "label30";
+            label30.Size = new Size(75, 15);
+            label30.TabIndex = 25;
+            label30.Text = "%  Task Ratio";
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.Location = new Point(377, 47);
+            label31.Name = "label31";
+            label31.Size = new Size(75, 15);
+            label31.TabIndex = 24;
+            label31.Text = "%  Task Ratio";
+            // 
             // lblHardVal2
             // 
             lblHardVal2.AutoSize = true;
             lblHardVal2.Location = new Point(339, 47);
             lblHardVal2.Name = "lblHardVal2";
-            lblHardVal2.Size = new Size(32, 15);
+            lblHardVal2.Size = new Size(19, 15);
             lblHardVal2.TabIndex = 0;
-            lblHardVal2.Text = "10 %";
+            lblHardVal2.Text = "10";
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.Location = new Point(377, 47);
+            label32.Name = "label32";
+            label32.Size = new Size(75, 15);
+            label32.TabIndex = 23;
+            label32.Text = "%  Task Ratio";
             // 
             // label16_2
             // 
@@ -1010,7 +1126,7 @@ namespace BUTTER
             // 
             // txbHoursS3
             // 
-            txbHoursS3.Location = new Point(410, 386);
+            txbHoursS3.Location = new Point(409, 386);
             txbHoursS3.Name = "txbHoursS3";
             txbHoursS3.Size = new Size(100, 23);
             txbHoursS3.TabIndex = 15;
@@ -1018,7 +1134,7 @@ namespace BUTTER
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(516, 389);
+            label20.Location = new Point(515, 389);
             label20.Name = "label20";
             label20.Size = new Size(39, 15);
             label20.TabIndex = 14;
@@ -1029,7 +1145,7 @@ namespace BUTTER
             cboxStandard3.AutoSize = true;
             cboxStandard3.Checked = true;
             cboxStandard3.CheckState = CheckState.Checked;
-            cboxStandard3.Location = new Point(223, 13);
+            cboxStandard3.Location = new Point(221, 8);
             cboxStandard3.Name = "cboxStandard3";
             cboxStandard3.Size = new Size(73, 19);
             cboxStandard3.TabIndex = 7;
@@ -1039,7 +1155,7 @@ namespace BUTTER
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(23, 13);
+            label12.Location = new Point(21, 10);
             label12.Name = "label12";
             label12.Size = new Size(112, 15);
             label12.TabIndex = 6;
@@ -1047,7 +1163,7 @@ namespace BUTTER
             // 
             // nudNumberOfMotions3
             // 
-            nudNumberOfMotions3.Location = new Point(138, 11);
+            nudNumberOfMotions3.Location = new Point(136, 6);
             nudNumberOfMotions3.Name = "nudNumberOfMotions3";
             nudNumberOfMotions3.Size = new Size(66, 23);
             nudNumberOfMotions3.TabIndex = 5;
@@ -1057,6 +1173,9 @@ namespace BUTTER
             // 
             // groupBoxEasy3
             // 
+            groupBoxEasy3.Controls.Add(label33);
+            groupBoxEasy3.Controls.Add(label34);
+            groupBoxEasy3.Controls.Add(label35);
             groupBoxEasy3.Controls.Add(lblEasyVal3);
             groupBoxEasy3.Controls.Add(label11_3);
             groupBoxEasy3.Controls.Add(tbEasy3);
@@ -1068,14 +1187,41 @@ namespace BUTTER
             groupBoxEasy3.TabStop = false;
             groupBoxEasy3.Text = "Easy";
             // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.Location = new Point(378, 47);
+            label33.Name = "label33";
+            label33.Size = new Size(75, 15);
+            label33.TabIndex = 19;
+            label33.Text = "%  Task Ratio";
+            // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.Location = new Point(378, 47);
+            label34.Name = "label34";
+            label34.Size = new Size(75, 15);
+            label34.TabIndex = 18;
+            label34.Text = "%  Task Ratio";
+            // 
+            // label35
+            // 
+            label35.AutoSize = true;
+            label35.Location = new Point(378, 47);
+            label35.Name = "label35";
+            label35.Size = new Size(75, 15);
+            label35.TabIndex = 17;
+            label35.Text = "%  Task Ratio";
+            // 
             // lblEasyVal3
             // 
             lblEasyVal3.AutoSize = true;
             lblEasyVal3.Location = new Point(339, 47);
             lblEasyVal3.Name = "lblEasyVal3";
-            lblEasyVal3.Size = new Size(32, 15);
+            lblEasyVal3.Size = new Size(19, 15);
             lblEasyVal3.TabIndex = 0;
-            lblEasyVal3.Text = "75 %";
+            lblEasyVal3.Text = "75";
             // 
             // label11_3
             // 
@@ -1111,6 +1257,9 @@ namespace BUTTER
             // 
             // groupBoxMedium3
             // 
+            groupBoxMedium3.Controls.Add(label36);
+            groupBoxMedium3.Controls.Add(label37);
+            groupBoxMedium3.Controls.Add(label38);
             groupBoxMedium3.Controls.Add(lblMediumVal3);
             groupBoxMedium3.Controls.Add(label14_3);
             groupBoxMedium3.Controls.Add(tbMedium3);
@@ -1122,14 +1271,41 @@ namespace BUTTER
             groupBoxMedium3.TabStop = false;
             groupBoxMedium3.Text = "Medium";
             // 
+            // label36
+            // 
+            label36.AutoSize = true;
+            label36.Location = new Point(377, 47);
+            label36.Name = "label36";
+            label36.Size = new Size(75, 15);
+            label36.TabIndex = 19;
+            label36.Text = "%  Task Ratio";
+            // 
+            // label37
+            // 
+            label37.AutoSize = true;
+            label37.Location = new Point(377, 47);
+            label37.Name = "label37";
+            label37.Size = new Size(75, 15);
+            label37.TabIndex = 18;
+            label37.Text = "%  Task Ratio";
+            // 
+            // label38
+            // 
+            label38.AutoSize = true;
+            label38.Location = new Point(377, 47);
+            label38.Name = "label38";
+            label38.Size = new Size(75, 15);
+            label38.TabIndex = 17;
+            label38.Text = "%  Task Ratio";
+            // 
             // lblMediumVal3
             // 
             lblMediumVal3.AutoSize = true;
             lblMediumVal3.Location = new Point(339, 47);
             lblMediumVal3.Name = "lblMediumVal3";
-            lblMediumVal3.Size = new Size(32, 15);
+            lblMediumVal3.Size = new Size(19, 15);
             lblMediumVal3.TabIndex = 0;
-            lblMediumVal3.Text = "15 %";
+            lblMediumVal3.Text = "15";
             // 
             // label14_3
             // 
@@ -1165,6 +1341,7 @@ namespace BUTTER
             // 
             // groupBoxHard3
             // 
+            groupBoxHard3.Controls.Add(label39);
             groupBoxHard3.Controls.Add(lblHardVal3);
             groupBoxHard3.Controls.Add(label16_3);
             groupBoxHard3.Controls.Add(tbHard3);
@@ -1176,14 +1353,23 @@ namespace BUTTER
             groupBoxHard3.TabStop = false;
             groupBoxHard3.Text = "Hard";
             // 
+            // label39
+            // 
+            label39.AutoSize = true;
+            label39.Location = new Point(377, 47);
+            label39.Name = "label39";
+            label39.Size = new Size(75, 15);
+            label39.TabIndex = 19;
+            label39.Text = "%  Task Ratio";
+            // 
             // lblHardVal3
             // 
             lblHardVal3.AutoSize = true;
             lblHardVal3.Location = new Point(339, 47);
             lblHardVal3.Name = "lblHardVal3";
-            lblHardVal3.Size = new Size(32, 15);
+            lblHardVal3.Size = new Size(19, 15);
             lblHardVal3.TabIndex = 0;
-            lblHardVal3.Text = "10 %";
+            lblHardVal3.Text = "10";
             // 
             // label16_3
             // 
@@ -1248,7 +1434,7 @@ namespace BUTTER
             // 
             // txbHoursS4
             // 
-            txbHoursS4.Location = new Point(408, 386);
+            txbHoursS4.Location = new Point(409, 386);
             txbHoursS4.Name = "txbHoursS4";
             txbHoursS4.Size = new Size(100, 23);
             txbHoursS4.TabIndex = 15;
@@ -1256,7 +1442,7 @@ namespace BUTTER
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(514, 389);
+            label21.Location = new Point(515, 389);
             label21.Name = "label21";
             label21.Size = new Size(39, 15);
             label21.TabIndex = 14;
@@ -1267,7 +1453,7 @@ namespace BUTTER
             cboxStandard4.AutoSize = true;
             cboxStandard4.Checked = true;
             cboxStandard4.CheckState = CheckState.Checked;
-            cboxStandard4.Location = new Point(223, 13);
+            cboxStandard4.Location = new Point(221, 8);
             cboxStandard4.Name = "cboxStandard4";
             cboxStandard4.Size = new Size(73, 19);
             cboxStandard4.TabIndex = 7;
@@ -1277,7 +1463,7 @@ namespace BUTTER
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(23, 13);
+            label13.Location = new Point(21, 10);
             label13.Name = "label13";
             label13.Size = new Size(112, 15);
             label13.TabIndex = 6;
@@ -1285,7 +1471,7 @@ namespace BUTTER
             // 
             // nudNumberOfMotions4
             // 
-            nudNumberOfMotions4.Location = new Point(138, 11);
+            nudNumberOfMotions4.Location = new Point(136, 6);
             nudNumberOfMotions4.Name = "nudNumberOfMotions4";
             nudNumberOfMotions4.Size = new Size(66, 23);
             nudNumberOfMotions4.TabIndex = 5;
@@ -1295,6 +1481,7 @@ namespace BUTTER
             // 
             // groupBoxEasy4
             // 
+            groupBoxEasy4.Controls.Add(label42);
             groupBoxEasy4.Controls.Add(lblEasyVal4);
             groupBoxEasy4.Controls.Add(label11_4);
             groupBoxEasy4.Controls.Add(tbEasy4);
@@ -1306,14 +1493,23 @@ namespace BUTTER
             groupBoxEasy4.TabStop = false;
             groupBoxEasy4.Text = "Easy";
             // 
+            // label42
+            // 
+            label42.AutoSize = true;
+            label42.Location = new Point(377, 47);
+            label42.Name = "label42";
+            label42.Size = new Size(75, 15);
+            label42.TabIndex = 20;
+            label42.Text = "%  Task Ratio";
+            // 
             // lblEasyVal4
             // 
             lblEasyVal4.AutoSize = true;
             lblEasyVal4.Location = new Point(339, 47);
             lblEasyVal4.Name = "lblEasyVal4";
-            lblEasyVal4.Size = new Size(32, 15);
+            lblEasyVal4.Size = new Size(19, 15);
             lblEasyVal4.TabIndex = 0;
-            lblEasyVal4.Text = "75 %";
+            lblEasyVal4.Text = "75";
             // 
             // label11_4
             // 
@@ -1349,6 +1545,7 @@ namespace BUTTER
             // 
             // groupBoxMedium4
             // 
+            groupBoxMedium4.Controls.Add(label43);
             groupBoxMedium4.Controls.Add(lblMediumVal4);
             groupBoxMedium4.Controls.Add(label14_4);
             groupBoxMedium4.Controls.Add(tbMedium4);
@@ -1360,14 +1557,23 @@ namespace BUTTER
             groupBoxMedium4.TabStop = false;
             groupBoxMedium4.Text = "Medium";
             // 
+            // label43
+            // 
+            label43.AutoSize = true;
+            label43.Location = new Point(378, 47);
+            label43.Name = "label43";
+            label43.Size = new Size(75, 15);
+            label43.TabIndex = 20;
+            label43.Text = "%  Task Ratio";
+            // 
             // lblMediumVal4
             // 
             lblMediumVal4.AutoSize = true;
             lblMediumVal4.Location = new Point(339, 47);
             lblMediumVal4.Name = "lblMediumVal4";
-            lblMediumVal4.Size = new Size(32, 15);
+            lblMediumVal4.Size = new Size(19, 15);
             lblMediumVal4.TabIndex = 0;
-            lblMediumVal4.Text = "15 %";
+            lblMediumVal4.Text = "15";
             // 
             // label14_4
             // 
@@ -1403,6 +1609,7 @@ namespace BUTTER
             // 
             // groupBoxHard4
             // 
+            groupBoxHard4.Controls.Add(label44);
             groupBoxHard4.Controls.Add(lblHardVal4);
             groupBoxHard4.Controls.Add(label16_4);
             groupBoxHard4.Controls.Add(tbHard4);
@@ -1414,14 +1621,23 @@ namespace BUTTER
             groupBoxHard4.TabStop = false;
             groupBoxHard4.Text = "Hard";
             // 
+            // label44
+            // 
+            label44.AutoSize = true;
+            label44.Location = new Point(378, 47);
+            label44.Name = "label44";
+            label44.Size = new Size(75, 15);
+            label44.TabIndex = 20;
+            label44.Text = "%  Task Ratio";
+            // 
             // lblHardVal4
             // 
             lblHardVal4.AutoSize = true;
             lblHardVal4.Location = new Point(339, 47);
             lblHardVal4.Name = "lblHardVal4";
-            lblHardVal4.Size = new Size(32, 15);
+            lblHardVal4.Size = new Size(19, 15);
             lblHardVal4.TabIndex = 0;
-            lblHardVal4.Text = "10 %";
+            lblHardVal4.Text = "10";
             // 
             // label16_4
             // 
@@ -1476,7 +1692,7 @@ namespace BUTTER
             // 
             // button5
             // 
-            button5.Location = new Point(461, 3);
+            button5.Location = new Point(461, 6);
             button5.Name = "button5";
             button5.Size = new Size(93, 23);
             button5.TabIndex = 16;
@@ -1505,7 +1721,7 @@ namespace BUTTER
             cboxStandard5.AutoSize = true;
             cboxStandard5.Checked = true;
             cboxStandard5.CheckState = CheckState.Checked;
-            cboxStandard5.Location = new Point(223, 12);
+            cboxStandard5.Location = new Point(221, 8);
             cboxStandard5.Name = "cboxStandard5";
             cboxStandard5.Size = new Size(73, 19);
             cboxStandard5.TabIndex = 7;
@@ -1515,7 +1731,7 @@ namespace BUTTER
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(23, 12);
+            label15.Location = new Point(21, 10);
             label15.Name = "label15";
             label15.Size = new Size(112, 15);
             label15.TabIndex = 6;
@@ -1523,7 +1739,7 @@ namespace BUTTER
             // 
             // nudNumberOfMotions5
             // 
-            nudNumberOfMotions5.Location = new Point(138, 10);
+            nudNumberOfMotions5.Location = new Point(136, 6);
             nudNumberOfMotions5.Name = "nudNumberOfMotions5";
             nudNumberOfMotions5.Size = new Size(66, 23);
             nudNumberOfMotions5.TabIndex = 5;
@@ -1533,6 +1749,7 @@ namespace BUTTER
             // 
             // groupBoxEasy5
             // 
+            groupBoxEasy5.Controls.Add(label45);
             groupBoxEasy5.Controls.Add(lblEasyVal5);
             groupBoxEasy5.Controls.Add(label11_5);
             groupBoxEasy5.Controls.Add(tbEasy5);
@@ -1544,14 +1761,23 @@ namespace BUTTER
             groupBoxEasy5.TabStop = false;
             groupBoxEasy5.Text = "Easy";
             // 
+            // label45
+            // 
+            label45.AutoSize = true;
+            label45.Location = new Point(378, 47);
+            label45.Name = "label45";
+            label45.Size = new Size(75, 15);
+            label45.TabIndex = 20;
+            label45.Text = "%  Task Ratio";
+            // 
             // lblEasyVal5
             // 
             lblEasyVal5.AutoSize = true;
             lblEasyVal5.Location = new Point(339, 47);
             lblEasyVal5.Name = "lblEasyVal5";
-            lblEasyVal5.Size = new Size(32, 15);
+            lblEasyVal5.Size = new Size(19, 15);
             lblEasyVal5.TabIndex = 0;
-            lblEasyVal5.Text = "75 %";
+            lblEasyVal5.Text = "75";
             // 
             // label11_5
             // 
@@ -1587,6 +1813,7 @@ namespace BUTTER
             // 
             // groupBoxMedium5
             // 
+            groupBoxMedium5.Controls.Add(label46);
             groupBoxMedium5.Controls.Add(lblMediumVal5);
             groupBoxMedium5.Controls.Add(label14_5);
             groupBoxMedium5.Controls.Add(tbMedium5);
@@ -1598,14 +1825,23 @@ namespace BUTTER
             groupBoxMedium5.TabStop = false;
             groupBoxMedium5.Text = "Medium";
             // 
+            // label46
+            // 
+            label46.AutoSize = true;
+            label46.Location = new Point(377, 47);
+            label46.Name = "label46";
+            label46.Size = new Size(75, 15);
+            label46.TabIndex = 20;
+            label46.Text = "%  Task Ratio";
+            // 
             // lblMediumVal5
             // 
             lblMediumVal5.AutoSize = true;
             lblMediumVal5.Location = new Point(339, 47);
             lblMediumVal5.Name = "lblMediumVal5";
-            lblMediumVal5.Size = new Size(32, 15);
+            lblMediumVal5.Size = new Size(19, 15);
             lblMediumVal5.TabIndex = 0;
-            lblMediumVal5.Text = "15 %";
+            lblMediumVal5.Text = "15";
             // 
             // label14_5
             // 
@@ -1641,6 +1877,7 @@ namespace BUTTER
             // 
             // groupBoxHard5
             // 
+            groupBoxHard5.Controls.Add(label47);
             groupBoxHard5.Controls.Add(lblHardVal5);
             groupBoxHard5.Controls.Add(label16_5);
             groupBoxHard5.Controls.Add(tbHard5);
@@ -1652,14 +1889,23 @@ namespace BUTTER
             groupBoxHard5.TabStop = false;
             groupBoxHard5.Text = "Hard";
             // 
+            // label47
+            // 
+            label47.AutoSize = true;
+            label47.Location = new Point(377, 47);
+            label47.Name = "label47";
+            label47.Size = new Size(75, 15);
+            label47.TabIndex = 20;
+            label47.Text = "%  Task Ratio";
+            // 
             // lblHardVal5
             // 
             lblHardVal5.AutoSize = true;
             lblHardVal5.Location = new Point(339, 47);
             lblHardVal5.Name = "lblHardVal5";
-            lblHardVal5.Size = new Size(32, 15);
+            lblHardVal5.Size = new Size(19, 15);
             lblHardVal5.TabIndex = 0;
-            lblHardVal5.Text = "10 %";
+            lblHardVal5.Text = "10";
             // 
             // label16_5
             // 
@@ -1743,7 +1989,7 @@ namespace BUTTER
             cboxStandard6.AutoSize = true;
             cboxStandard6.Checked = true;
             cboxStandard6.CheckState = CheckState.Checked;
-            cboxStandard6.Location = new Point(223, 14);
+            cboxStandard6.Location = new Point(221, 8);
             cboxStandard6.Name = "cboxStandard6";
             cboxStandard6.Size = new Size(73, 19);
             cboxStandard6.TabIndex = 7;
@@ -1753,7 +1999,7 @@ namespace BUTTER
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(23, 14);
+            label17.Location = new Point(21, 10);
             label17.Name = "label17";
             label17.Size = new Size(112, 15);
             label17.TabIndex = 6;
@@ -1761,7 +2007,7 @@ namespace BUTTER
             // 
             // nudNumberOfMotions6
             // 
-            nudNumberOfMotions6.Location = new Point(138, 12);
+            nudNumberOfMotions6.Location = new Point(136, 6);
             nudNumberOfMotions6.Name = "nudNumberOfMotions6";
             nudNumberOfMotions6.Size = new Size(66, 23);
             nudNumberOfMotions6.TabIndex = 5;
@@ -1771,6 +2017,7 @@ namespace BUTTER
             // 
             // groupBoxEasy6
             // 
+            groupBoxEasy6.Controls.Add(label48);
             groupBoxEasy6.Controls.Add(lblEasyVal6);
             groupBoxEasy6.Controls.Add(label11_6);
             groupBoxEasy6.Controls.Add(tbEasy6);
@@ -1782,14 +2029,23 @@ namespace BUTTER
             groupBoxEasy6.TabStop = false;
             groupBoxEasy6.Text = "Easy";
             // 
+            // label48
+            // 
+            label48.AutoSize = true;
+            label48.Location = new Point(378, 47);
+            label48.Name = "label48";
+            label48.Size = new Size(75, 15);
+            label48.TabIndex = 20;
+            label48.Text = "%  Task Ratio";
+            // 
             // lblEasyVal6
             // 
             lblEasyVal6.AutoSize = true;
             lblEasyVal6.Location = new Point(339, 47);
             lblEasyVal6.Name = "lblEasyVal6";
-            lblEasyVal6.Size = new Size(32, 15);
+            lblEasyVal6.Size = new Size(19, 15);
             lblEasyVal6.TabIndex = 0;
-            lblEasyVal6.Text = "75 %";
+            lblEasyVal6.Text = "75";
             // 
             // label11_6
             // 
@@ -1825,6 +2081,7 @@ namespace BUTTER
             // 
             // groupBoxMedium6
             // 
+            groupBoxMedium6.Controls.Add(label49);
             groupBoxMedium6.Controls.Add(lblMediumVal6);
             groupBoxMedium6.Controls.Add(label14_6);
             groupBoxMedium6.Controls.Add(tbMedium6);
@@ -1836,14 +2093,23 @@ namespace BUTTER
             groupBoxMedium6.TabStop = false;
             groupBoxMedium6.Text = "Medium";
             // 
+            // label49
+            // 
+            label49.AutoSize = true;
+            label49.Location = new Point(378, 47);
+            label49.Name = "label49";
+            label49.Size = new Size(75, 15);
+            label49.TabIndex = 20;
+            label49.Text = "%  Task Ratio";
+            // 
             // lblMediumVal6
             // 
             lblMediumVal6.AutoSize = true;
             lblMediumVal6.Location = new Point(339, 47);
             lblMediumVal6.Name = "lblMediumVal6";
-            lblMediumVal6.Size = new Size(32, 15);
+            lblMediumVal6.Size = new Size(19, 15);
             lblMediumVal6.TabIndex = 0;
-            lblMediumVal6.Text = "15 %";
+            lblMediumVal6.Text = "15";
             // 
             // label14_6
             // 
@@ -1879,6 +2145,7 @@ namespace BUTTER
             // 
             // groupBoxHard6
             // 
+            groupBoxHard6.Controls.Add(label50);
             groupBoxHard6.Controls.Add(lblHardVal6);
             groupBoxHard6.Controls.Add(label16_6);
             groupBoxHard6.Controls.Add(tbHard6);
@@ -1890,14 +2157,23 @@ namespace BUTTER
             groupBoxHard6.TabStop = false;
             groupBoxHard6.Text = "Hard";
             // 
+            // label50
+            // 
+            label50.AutoSize = true;
+            label50.Location = new Point(377, 47);
+            label50.Name = "label50";
+            label50.Size = new Size(75, 15);
+            label50.TabIndex = 20;
+            label50.Text = "%  Task Ratio";
+            // 
             // lblHardVal6
             // 
             lblHardVal6.AutoSize = true;
             lblHardVal6.Location = new Point(339, 47);
             lblHardVal6.Name = "lblHardVal6";
-            lblHardVal6.Size = new Size(32, 15);
+            lblHardVal6.Size = new Size(19, 15);
             lblHardVal6.TabIndex = 0;
-            lblHardVal6.Text = "10 %";
+            lblHardVal6.Text = "10";
             // 
             // label16_6
             // 
@@ -2412,5 +2688,30 @@ namespace BUTTER
         private Button button4;
         private Button button5;
         private Button button6;
+        private Label label24;
+        private Label label25;
+        private Label label26;
+        private Label label27;
+        private Label label28;
+        private Label label29;
+        private Label label30;
+        private Label label31;
+        private Label label32;
+        private Label label33;
+        private Label label34;
+        private Label label35;
+        private Label label36;
+        private Label label37;
+        private Label label38;
+        private Label label39;
+        private Label label42;
+        private Label label43;
+        private Label label44;
+        private Label label45;
+        private Label label46;
+        private Label label47;
+        private Label label48;
+        private Label label49;
+        private Label label50;
     }
 }

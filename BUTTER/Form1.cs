@@ -16,17 +16,223 @@ namespace BUTTER
         MotionRow[] Station5Rows = new MotionRow[99];
         MotionRow[] Station6Rows = new MotionRow[99];
 
-
-
         public Form1()
         {
             InitializeComponent();
 
             // Wire the checkbox event here so the handler works without modifying the Designer file.
             if (cboxStandard1 != null)
-                cboxStandard1.CheckedChanged += cboxStandard1_CheckedChanged;
+                cboxStandard1.CheckedChanged += cboxStandard_CheckedChanged;
 
+            if (cboxStandard2 != null)
+                cboxStandard2.CheckedChanged += cboxStandard_CheckedChanged;
 
+            if (cboxStandard3 != null)
+                cboxStandard3.CheckedChanged += cboxStandard_CheckedChanged;
+
+            if (cboxStandard4 != null)
+                cboxStandard4.CheckedChanged += cboxStandard_CheckedChanged;
+
+            if (cboxStandard5 != null)
+                cboxStandard5.CheckedChanged += cboxStandard_CheckedChanged;
+
+            if (cboxStandard6 != null)
+                cboxStandard6.CheckedChanged += cboxStandard_CheckedChanged;
+
+        }
+
+        // New generic handler for all station "standard" checkboxes (1..6)
+        private void cboxStandard_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sender is not CheckBox cb) return;
+
+            int station = cb.Name switch
+            {
+                "cboxStandard1" => 1,
+                "cboxStandard2" => 2,
+                "cboxStandard3" => 3,
+                "cboxStandard4" => 4,
+                "cboxStandard5" => 5,
+                "cboxStandard6" => 6,
+                _ => 0
+            };
+            if (station == 0) return;
+
+            ApplyStandardToStation(station, cb.Checked);
+        }
+
+        // Apply or remove the "standard" preset for a given station number (1..6)
+        private void ApplyStandardToStation(int station, bool applyStandard)
+        {
+            switch (station)
+            {
+                //i have no idea why the AI wanted to do it this way, but it works... 
+                case 1:
+                    if (applyStandard)
+                    {
+                        SetNumericUpDownValueSafe(nudEasyHoursTask1, 1.0m);
+                        SetNumericUpDownValueSafe(nudMediumHoursTask1, 3.0m);
+                        SetNumericUpDownValueSafe(nudHardHoursTask1, 8.0m);
+
+                        SetTrackBarValueSafe(tbEasy1, 75);
+                        SetTrackBarValueSafe(tbMedium1, 15);
+                        SetTrackBarValueSafe(tbHard1, 10);
+                    }
+                    else
+                    {
+                        // Re-enable the NumericUpDowns and TrackBars for manual editing
+                        nudEasyHoursTask1.Enabled = true;
+                        nudMediumHoursTask1.Enabled = true;
+                        nudHardHoursTask1.Enabled = true;
+                        tbEasy1.Enabled = true;
+                        tbMedium1.Enabled = true;
+                        tbHard1.Enabled = true;
+                    }
+
+                    UpdateHoursForStation(nudNumberOfMotions1, tbEasy1, tbMedium1, tbHard1,
+                        nudEasyHoursTask1, nudMediumHoursTask1, nudHardHoursTask1, txbHoursS1);
+
+                    KeepTotalAt100(tbEasy1, tbMedium1, tbHard1, lblEasyVal, lblMediumVal, lblHardVal);
+                    break;
+
+                case 2:
+                    if (applyStandard)
+                    {
+                        SetNumericUpDownValueSafe(nudEasyHoursTask2, 1.0m);
+                        SetNumericUpDownValueSafe(nudMediumHoursTask2, 3.0m);
+                        SetNumericUpDownValueSafe(nudHardHoursTask2, 8.0m);
+
+                        SetTrackBarValueSafe(tbEasy2, 75);
+                        SetTrackBarValueSafe(tbMedium2, 15);
+                        SetTrackBarValueSafe(tbHard2, 10);
+                    }
+                    else
+                    {
+                        nudEasyHoursTask2.Enabled = true;
+                        nudMediumHoursTask2.Enabled = true;
+                        nudHardHoursTask2.Enabled = true;
+                        tbEasy2.Enabled = true;
+                        tbMedium2.Enabled = true;
+                        tbHard2.Enabled = true;
+                    }
+
+                    UpdateHoursForStation(nudNumberOfMotions2, tbEasy2, tbMedium2, tbHard2,
+                        nudEasyHoursTask2, nudMediumHoursTask2, nudHardHoursTask2, txbHoursS2);
+
+                    KeepTotalAt100(tbEasy2, tbMedium2, tbHard2, lblEasyVal2, lblMediumVal2, lblHardVal2);
+                    break;
+
+                case 3:
+                    if (applyStandard)
+                    {
+                        SetNumericUpDownValueSafe(nudEasyHoursTask3, 1.0m);
+                        SetNumericUpDownValueSafe(nudMediumHoursTask3, 3.0m);
+                        SetNumericUpDownValueSafe(nudHardHoursTask3, 8.0m);
+
+                        SetTrackBarValueSafe(tbEasy3, 75);
+                        SetTrackBarValueSafe(tbMedium3, 15);
+                        SetTrackBarValueSafe(tbHard3, 10);
+                    }
+                    else
+                    {
+                        nudEasyHoursTask3.Enabled = true;
+                        nudMediumHoursTask3.Enabled = true;
+                        nudHardHoursTask3.Enabled = true;
+                        tbEasy3.Enabled = true;
+                        tbMedium3.Enabled = true;
+                        tbHard3.Enabled = true;
+                    }
+
+                    UpdateHoursForStation(nudNumberOfMotions3, tbEasy3, tbMedium3, tbHard3,
+                        nudEasyHoursTask3, nudMediumHoursTask3, nudHardHoursTask3, txbHoursS3);
+
+                    KeepTotalAt100(tbEasy3, tbMedium3, tbHard3, lblEasyVal3, lblMediumVal3, lblHardVal3);
+                    break;
+
+                case 4:
+                    if (applyStandard)
+                    {
+                        SetNumericUpDownValueSafe(nudEasyHoursTask4, 1.0m);
+                        SetNumericUpDownValueSafe(nudMediumHoursTask4, 3.0m);
+                        SetNumericUpDownValueSafe(nudHardHoursTask4, 8.0m);
+
+                        SetTrackBarValueSafe(tbEasy4, 75);
+                        SetTrackBarValueSafe(tbMedium4, 15);
+                        SetTrackBarValueSafe(tbHard4, 10);
+                    }
+                    else
+                    {
+                        nudEasyHoursTask4.Enabled = true;
+                        nudMediumHoursTask4.Enabled = true;
+                        nudHardHoursTask4.Enabled = true;
+                        tbEasy4.Enabled = true;
+                        tbMedium4.Enabled = true;
+                        tbHard4.Enabled = true;
+                    }
+
+                    UpdateHoursForStation(nudNumberOfMotions4, tbEasy4, tbMedium4, tbHard4,
+                        nudEasyHoursTask4, nudMediumHoursTask4, nudHardHoursTask4, txbHoursS4);
+
+                    KeepTotalAt100(tbEasy4, tbMedium4, tbHard4, lblEasyVal4, lblMediumVal4, lblHardVal4);
+                    break;
+
+                case 5:
+                    if (applyStandard)
+                    {
+                        SetNumericUpDownValueSafe(nudEasyHoursTask5, 1.0m);
+                        SetNumericUpDownValueSafe(nudMediumHoursTask5, 3.0m);
+                        SetNumericUpDownValueSafe(nudHardHoursTask5, 8.0m);
+
+                        SetTrackBarValueSafe(tbEasy5, 75);
+                        SetTrackBarValueSafe(tbMedium5, 15);
+                        SetTrackBarValueSafe(tbHard5, 10);
+                    }
+                    else
+                    {
+                        nudEasyHoursTask5.Enabled = true;
+                        nudMediumHoursTask5.Enabled = true;
+                        nudHardHoursTask5.Enabled = true;
+                        tbEasy5.Enabled = true;
+                        tbMedium5.Enabled = true;
+                        tbHard5.Enabled = true;
+                    }
+
+                    UpdateHoursForStation(nudNumberOfMotions5, tbEasy5, tbMedium5, tbHard5,
+                        nudEasyHoursTask5, nudMediumHoursTask5, nudHardHoursTask5, txbHoursS5);
+
+                    KeepTotalAt100(tbEasy5, tbMedium5, tbHard5, lblEasyVal5, lblMediumVal5, lblHardVal5);
+                    break;
+
+                case 6:
+                    if (applyStandard)
+                    {
+                        SetNumericUpDownValueSafe(nudEasyHoursTask6, 1.0m);
+                        SetNumericUpDownValueSafe(nudMediumHoursTask6, 3.0m);
+                        SetNumericUpDownValueSafe(nudHardHoursTask6, 8.0m);
+
+                        SetTrackBarValueSafe(tbEasy6, 75);
+                        SetTrackBarValueSafe(tbMedium6, 15);
+                        SetTrackBarValueSafe(tbHard6, 10);
+                    }
+                    else
+                    {
+                        nudEasyHoursTask6.Enabled = true;
+                        nudMediumHoursTask6.Enabled = true;
+                        nudHardHoursTask6.Enabled = true;
+                        tbEasy6.Enabled = true;
+                        tbMedium6.Enabled = true;
+                        tbHard6.Enabled = true;
+                    }
+
+                    UpdateHoursForStation(nudNumberOfMotions6, tbEasy6, tbMedium6, tbHard6,
+                        nudEasyHoursTask6, nudMediumHoursTask6, nudHardHoursTask6, txbHoursS6);
+
+                    KeepTotalAt100(tbEasy6, tbMedium6, tbHard6, lblEasyVal6, lblMediumVal6, lblHardVal6);
+                    break;
+            }
+
+            // Always refresh overall total after any station change
+            UpdateTotalHours();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -64,6 +270,41 @@ namespace BUTTER
             tbMedium1.Enabled = false;
             tbHard1.Enabled = false;
 
+            nudEasyHoursTask2.Enabled = false;
+            nudMediumHoursTask2.Enabled = false;
+            nudHardHoursTask2.Enabled = false;
+            tbEasy2.Enabled = false;
+            tbMedium2.Enabled = false;
+            tbHard2.Enabled = false;
+
+            nudEasyHoursTask3.Enabled = false;
+            nudMediumHoursTask3.Enabled = false;
+            nudHardHoursTask3.Enabled = false;
+            tbEasy3.Enabled = false;
+            tbMedium3.Enabled = false;
+            tbHard3.Enabled = false;
+
+            nudEasyHoursTask4.Enabled = false;
+            nudMediumHoursTask4.Enabled = false;
+            nudHardHoursTask4.Enabled = false;
+            tbEasy4.Enabled = false;
+            tbMedium4.Enabled = false;
+            tbHard4.Enabled = false;
+
+            nudEasyHoursTask5.Enabled = false;
+            nudMediumHoursTask5.Enabled = false;
+            nudHardHoursTask5.Enabled = false;
+            tbEasy5.Enabled = false;
+            tbMedium5.Enabled = false;
+            tbHard5.Enabled = false;
+
+            nudEasyHoursTask6.Enabled = false;
+            nudMediumHoursTask6.Enabled = false;
+            nudHardHoursTask6.Enabled = false;
+            tbEasy6.Enabled = false;
+            tbMedium6.Enabled = false;
+            tbHard6.Enabled = false;
+
             //creat test data for all stations
             PopulateStationTestData(Station1Rows);
             PopulateStationTestData(Station2Rows);
@@ -71,9 +312,6 @@ namespace BUTTER
             PopulateStationTestData(Station4Rows);
             PopulateStationTestData(Station5Rows);
             PopulateStationTestData(Station6Rows);
-
-
-
         }
 
         /// <summary>
@@ -674,6 +912,11 @@ namespace BUTTER
         {
             var dlg = new EditStation(Station6Rows);
             dlg.Show(this);
+        }
+
+        private void tpStation1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
