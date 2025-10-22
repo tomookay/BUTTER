@@ -207,14 +207,16 @@ namespace BUTTER
             checkBox1 = new CheckBox();
             lblToday = new Label();
             label5 = new Label();
-            dateTimePicker2 = new DateTimePicker();
+            dateToday = new DateTimePicker();
             label8 = new Label();
-            dateTimePicker1 = new DateTimePicker();
-            dateTimePicker3 = new DateTimePicker();
+            dateProjectStartDate = new DateTimePicker();
+            dateEstimatedCompleteProject = new DateTimePicker();
             label9 = new Label();
-            textBox1 = new TextBox();
+            txbDaysLeft = new TextBox();
             txbTotalHours = new TextBox();
             lblTotalHours = new Label();
+            txbHoursPerWeek = new TextBox();
+            lblHoursPerWeek = new Label();
             tabControlStations.SuspendLayout();
             tpBase.SuspendLayout();
             groupBox6.SuspendLayout();
@@ -2268,13 +2270,13 @@ namespace BUTTER
             // timeBaseToolStripMenuItem
             // 
             timeBaseToolStripMenuItem.Name = "timeBaseToolStripMenuItem";
-            timeBaseToolStripMenuItem.Size = new Size(180, 22);
+            timeBaseToolStripMenuItem.Size = new Size(127, 22);
             timeBaseToolStripMenuItem.Text = "Time Base";
             // 
             // weekToolStripMenuItem
             // 
             weekToolStripMenuItem.Name = "weekToolStripMenuItem";
-            weekToolStripMenuItem.Size = new Size(180, 22);
+            weekToolStripMenuItem.Size = new Size(127, 22);
             weekToolStripMenuItem.Text = "Week";
             weekToolStripMenuItem.Click += weekToolStripMenuItem_Click;
             // 
@@ -2291,7 +2293,7 @@ namespace BUTTER
             // lblToday
             // 
             lblToday.AutoSize = true;
-            lblToday.Location = new Point(41, 595);
+            lblToday.Location = new Point(54, 504);
             lblToday.Name = "lblToday";
             lblToday.Size = new Size(70, 15);
             lblToday.TabIndex = 4;
@@ -2300,85 +2302,119 @@ namespace BUTTER
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(535, 595);
+            label5.Location = new Point(361, 565);
             label5.Name = "label5";
             label5.Size = new Size(109, 15);
             label5.TabIndex = 5;
             label5.Text = "Estimated End Date";
             // 
-            // dateTimePicker2
+            // dateToday
             // 
-            dateTimePicker2.Location = new Point(46, 613);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(143, 23);
-            dateTimePicker2.TabIndex = 8;
+            dateToday.Enabled = false;
+            dateToday.Location = new Point(131, 501);
+            dateToday.Name = "dateToday";
+            dateToday.Size = new Size(143, 23);
+            dateToday.TabIndex = 8;
+            dateToday.ValueChanged += dateToday_ValueChanged;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(195, 595);
+            label8.Location = new Point(55, 533);
             label8.Name = "label8";
             label8.Size = new Size(58, 15);
             label8.TabIndex = 9;
             label8.Text = "Start Date";
             // 
-            // dateTimePicker1
+            // dateProjectStartDate
             // 
-            dateTimePicker1.Location = new Point(195, 613);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(143, 23);
-            dateTimePicker1.TabIndex = 10;
+            dateProjectStartDate.Location = new Point(131, 530);
+            dateProjectStartDate.Name = "dateProjectStartDate";
+            dateProjectStartDate.Size = new Size(143, 23);
+            dateProjectStartDate.TabIndex = 10;
+            dateProjectStartDate.ValueChanged += dateProjectStartDate_ValueChanged;
             // 
-            // dateTimePicker3
+            // dateEstimatedCompleteProject
             // 
-            dateTimePicker3.Location = new Point(501, 613);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(143, 23);
-            dateTimePicker3.TabIndex = 11;
+            dateEstimatedCompleteProject.Enabled = false;
+            dateEstimatedCompleteProject.Location = new Point(476, 559);
+            dateEstimatedCompleteProject.Name = "dateEstimatedCompleteProject";
+            dateEstimatedCompleteProject.Size = new Size(143, 23);
+            dateEstimatedCompleteProject.TabIndex = 11;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(341, 595);
+            label9.Location = new Point(291, 504);
             label9.Name = "label9";
             label9.Size = new Size(55, 15);
             label9.TabIndex = 12;
             label9.Text = "Days Left";
             // 
-            // textBox1
+            // txbDaysLeft
             // 
-            textBox1.Location = new Point(341, 613);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 13;
+            txbDaysLeft.Enabled = false;
+            txbDaysLeft.Location = new Point(291, 530);
+            txbDaysLeft.Name = "txbDaysLeft";
+            txbDaysLeft.Size = new Size(55, 23);
+            txbDaysLeft.TabIndex = 13;
+            txbDaysLeft.Text = "1";
+            txbDaysLeft.TextAlign = HorizontalAlignment.Center;
+            txbDaysLeft.TextChanged += txbDaysLeft_TextChanged;
             // 
             // txbTotalHours
             // 
-            txbTotalHours.Location = new Point(468, 530);
+            txbTotalHours.Enabled = false;
+            txbTotalHours.Location = new Point(519, 501);
             txbTotalHours.Name = "txbTotalHours";
             txbTotalHours.Size = new Size(100, 23);
             txbTotalHours.TabIndex = 17;
+            txbTotalHours.Text = "100";
+            txbTotalHours.TextAlign = HorizontalAlignment.Center;
+            txbTotalHours.TextChanged += txbTotalHours_TextChanged;
             // 
             // lblTotalHours
             // 
             lblTotalHours.AutoSize = true;
-            lblTotalHours.Location = new Point(574, 533);
+            lblTotalHours.Location = new Point(446, 504);
             lblTotalHours.Name = "lblTotalHours";
             lblTotalHours.Size = new Size(67, 15);
             lblTotalHours.TabIndex = 16;
             lblTotalHours.Text = "Total Hours";
             // 
+            // txbHoursPerWeek
+            // 
+            txbHoursPerWeek.Enabled = false;
+            txbHoursPerWeek.Location = new Point(519, 530);
+            txbHoursPerWeek.Name = "txbHoursPerWeek";
+            txbHoursPerWeek.Size = new Size(100, 23);
+            txbHoursPerWeek.TabIndex = 19;
+            txbHoursPerWeek.Text = "37.5";
+            txbHoursPerWeek.TextAlign = HorizontalAlignment.Center;
+            txbHoursPerWeek.TextChanged += txbHoursPerWeek_TextChanged;
+            // 
+            // lblHoursPerWeek
+            // 
+            lblHoursPerWeek.AutoSize = true;
+            lblHoursPerWeek.Location = new Point(423, 533);
+            lblHoursPerWeek.Name = "lblHoursPerWeek";
+            lblHoursPerWeek.Size = new Size(91, 15);
+            lblHoursPerWeek.TabIndex = 18;
+            lblHoursPerWeek.Text = "Hours Per Week";
+            // 
             // Form1
             // 
             ClientSize = new Size(834, 680);
+            Controls.Add(txbHoursPerWeek);
+            Controls.Add(lblHoursPerWeek);
             Controls.Add(txbTotalHours);
             Controls.Add(lblTotalHours);
-            Controls.Add(textBox1);
+            Controls.Add(txbDaysLeft);
             Controls.Add(label9);
-            Controls.Add(dateTimePicker3);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(dateEstimatedCompleteProject);
+            Controls.Add(dateProjectStartDate);
             Controls.Add(label8);
-            Controls.Add(dateTimePicker2);
+            Controls.Add(dateToday);
             Controls.Add(label5);
             Controls.Add(lblToday);
             Controls.Add(checkBox1);
@@ -2542,12 +2578,12 @@ namespace BUTTER
         private CheckBox checkBox3;
         private Label lblToday;
         private Label label5;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dateToday;
         private Label label8;
-        private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker3;
+        private DateTimePicker dateProjectStartDate;
+        private DateTimePicker dateEstimatedCompleteProject;
         private Label label9;
-        private TextBox textBox1;
+        private TextBox txbDaysLeft;
         private Label lblNumberofMotion1;
         private NumericUpDown nudNumberOfMotions1;
         private TrackBar tbEasy1;
@@ -2721,5 +2757,7 @@ namespace BUTTER
         private Label label49;
         private Label label50;
         private ToolStripMenuItem weekToolStripMenuItem;
+        private TextBox txbHoursPerWeek;
+        private Label lblHoursPerWeek;
     }
 }

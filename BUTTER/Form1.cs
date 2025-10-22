@@ -801,7 +801,6 @@ namespace BUTTER
             if (v > nud.Maximum) v = nud.Maximum;
             nud.Value = (int)v;
             nud.Enabled = false;
-
         }
 
         private void tpStation1_Click(object sender, EventArgs e) { }
@@ -918,6 +917,100 @@ namespace BUTTER
         {
             frmEditWeek frm = new frmEditWeek();
             frm.ShowDialog();
+        }
+
+        /// <summary>
+        /// Called when any input that affects the estimate changes (total hours, hours/week, start date).
+        /// </summary>
+        private void AnyEstimateInputsChanged(object? sender, EventArgs e)
+        {
+            UpdateEstimatedCompletion();
+        }
+
+        /// <summary>
+        /// Calculate estimated completion date based on:
+        ///   - total hours from txbTotalHours
+        ///   - hours per week from txbHoursPerWeek
+        ///   - start date from dateToday
+        /// Result is written to dateEstimatedCompleteProject and days left displayed in textBox1.
+        /// Logic: weeksNeeded = totalHours / hoursPerWeek; days = ceil(weeksNeeded * 7)
+        /// </summary>
+        private void UpdateEstimatedCompletion()
+        {
+            try
+            {
+                if (dateEstimatedCompleteProject == null || dateProjectStartDate == null || txbTotalHours == null || txbHoursPerWeek == null)
+                    return;
+
+                decimal totalHours = ParseDecimalSafe(txbTotalHours.Text);
+                decimal hoursPerWeek = ParseDecimalSafe(txbHoursPerWeek.Text);
+
+                // If hoursPerWeek is zero or negative, we cannot compute a meaningful estimate.
+                if (hoursPerWeek <= 0 || totalHours <= 0)
+                {
+                    // Respect DateTimePicker limits when assigning; fallback to start date.
+                    DateTime start = dateProjectStartDate.Value.Date;
+                    dateEstimatedCompleteProject.Value = ClampDateToPickerRange(dateEstimatedCompleteProject, start);
+                    txbDaysLeft.Text = "0";
+                    return;
+                }
+
+                decimal weeksNeeded = totalHours / hoursPerWeek;
+                decimal daysNeededDecimal = weeksNeeded * 7m;
+                int daysNeeded = (int)Math.Ceiling((double)daysNeededDecimal);
+
+                DateTime startDate = dateProjectStartDate.Value.Date;
+                DateTime estimated = startDate.AddDays(daysNeeded);
+
+                dateEstimatedCompleteProject.Value = ClampDateToPickerRange(dateEstimatedCompleteProject, estimated);
+                txbDaysLeft.Text = daysNeeded.ToString();
+            }
+            catch
+            {
+                // On any error, fallback to today's date and clear days
+                if (dateEstimatedCompleteProject != null && dateProjectStartDate != null)
+                    dateEstimatedCompleteProject.Value = ClampDateToPickerRange(dateEstimatedCompleteProject, dateToday.Value);
+                if (txbDaysLeft != null)
+                    txbDaysLeft.Text = "";
+            }
+        }
+
+        /// <summary>
+        /// Ensure a DateTime value fits within a DateTimePicker's MinDate/MaxDate range.
+        /// </summary>
+        private DateTime ClampDateToPickerRange(DateTimePicker picker, DateTime value)
+        {
+            if (picker == null) return value;
+            if (value < picker.MinDate) return picker.MinDate;
+            if (value > picker.MaxDate) return picker.MaxDate;
+            return value;
+        }
+
+        private void txbTotalHours_TextChanged(object sender, EventArgs e)
+        {
+            // Recompute estimated completion when total changes
+            UpdateEstimatedCompletion();
+        }
+
+        private void txbHoursPerWeek_TextChanged(object sender, EventArgs e)
+        {
+            // Recompute estimated completion when total changes
+            UpdateEstimatedCompletion();
+        }
+
+        private void txbDaysLeft_TextChanged(object sender, EventArgs e)
+        {
+            UpdateEstimatedCompletion();
+        }
+
+        private void dateToday_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateEstimatedCompletion();
+        }
+
+        private void dateProjectStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateEstimatedCompletion();
         }
     }
 }
