@@ -203,6 +203,7 @@ namespace BUTTER
             exitToolStripMenuItem = new ToolStripMenuItem();
             editToolStripMenuItem = new ToolStripMenuItem();
             timeBaseToolStripMenuItem = new ToolStripMenuItem();
+            weekToolStripMenuItem = new ToolStripMenuItem();
             checkBox1 = new CheckBox();
             lblToday = new Label();
             label5 = new Label();
@@ -511,7 +512,6 @@ namespace BUTTER
             tpStation1.TabIndex = 1;
             tpStation1.Text = "Station 1";
             tpStation1.UseVisualStyleBackColor = true;
-            tpStation1.Click += tpStation1_Click_1;
             // 
             // button1
             // 
@@ -2260,7 +2260,7 @@ namespace BUTTER
             // 
             // editToolStripMenuItem
             // 
-            editToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { timeBaseToolStripMenuItem });
+            editToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { timeBaseToolStripMenuItem, weekToolStripMenuItem });
             editToolStripMenuItem.Name = "editToolStripMenuItem";
             editToolStripMenuItem.Size = new Size(39, 20);
             editToolStripMenuItem.Text = "Edit";
@@ -2268,8 +2268,15 @@ namespace BUTTER
             // timeBaseToolStripMenuItem
             // 
             timeBaseToolStripMenuItem.Name = "timeBaseToolStripMenuItem";
-            timeBaseToolStripMenuItem.Size = new Size(127, 22);
+            timeBaseToolStripMenuItem.Size = new Size(180, 22);
             timeBaseToolStripMenuItem.Text = "Time Base";
+            // 
+            // weekToolStripMenuItem
+            // 
+            weekToolStripMenuItem.Name = "weekToolStripMenuItem";
+            weekToolStripMenuItem.Size = new Size(180, 22);
+            weekToolStripMenuItem.Text = "Week";
+            weekToolStripMenuItem.Click += weekToolStripMenuItem_Click;
             // 
             // checkBox1
             // 
@@ -2713,5 +2720,6 @@ namespace BUTTER
         private Label label48;
         private Label label49;
         private Label label50;
+        private ToolStripMenuItem weekToolStripMenuItem;
     }
 }

@@ -914,9 +914,10 @@ namespace BUTTER
             dlg.Show(this);
         }
 
-        private void tpStation1_Click_1(object sender, EventArgs e)
+        private void weekToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmEditWeek frm = new frmEditWeek();
+            frm.ShowDialog();
         }
     }
 }
