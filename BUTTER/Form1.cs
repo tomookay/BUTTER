@@ -1012,5 +1012,13 @@ namespace BUTTER
         {
             UpdateEstimatedCompletion();
         }
+
+       
+
+        private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+        MessageBox.Show(Text + "\n\nDeveloped by REDACTED_NAME.\n\n© REDACTED_COMPANY_NAME. All rights reserved.", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
     }
 }
