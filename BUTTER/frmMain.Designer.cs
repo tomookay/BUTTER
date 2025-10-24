@@ -205,6 +205,7 @@ namespace BUTTER
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             newToolStripMenuItem = new ToolStripMenuItem();
+            loadToolStripMenuItem = new ToolStripMenuItem();
             saveToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             exportToolStripMenuItem = new ToolStripMenuItem();
@@ -232,7 +233,6 @@ namespace BUTTER
             saveFileDialog1 = new SaveFileDialog();
             statusStrip1 = new StatusStrip();
             tslFilePath = new ToolStripStatusLabel();
-            loadToolStripMenuItem = new ToolStripMenuItem();
             tabControlStations.SuspendLayout();
             tpBase.SuspendLayout();
             groupBox7.SuspendLayout();
@@ -465,6 +465,7 @@ namespace BUTTER
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 15;
+            textBox1.TextChanged += this.textBox1_TextChanged;
             // 
             // label40
             // 
@@ -2340,6 +2341,13 @@ namespace BUTTER
             newToolStripMenuItem.Size = new Size(180, 22);
             newToolStripMenuItem.Text = "New";
             // 
+            // loadToolStripMenuItem
+            // 
+            loadToolStripMenuItem.Name = "loadToolStripMenuItem";
+            loadToolStripMenuItem.Size = new Size(180, 22);
+            loadToolStripMenuItem.Text = "Load";
+            loadToolStripMenuItem.Click += loadToolStripMenuItem_Click_1;
+            // 
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
@@ -2548,14 +2556,7 @@ namespace BUTTER
             tslFilePath.Size = new Size(87, 17);
             tslFilePath.Text = "No file loaded..";
             // 
-            // loadToolStripMenuItem
-            // 
-            loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            loadToolStripMenuItem.Size = new Size(180, 22);
-            loadToolStripMenuItem.Text = "Load";
-            loadToolStripMenuItem.Click += loadToolStripMenuItem_Click_1;
-            // 
-            // Form1
+            // frmMain
             // 
             ClientSize = new Size(590, 614);
             Controls.Add(statusStrip1);
@@ -2575,7 +2576,7 @@ namespace BUTTER
             Controls.Add(tabControlStations);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Name = "Form1";
+            Name = "frmMain";
             Text = "B.U.T.T.E.R";
             Load += Form1_Load;
             tabControlStations.ResumeLayout(false);

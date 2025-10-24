@@ -89,5 +89,15 @@ namespace BUTTER
             Close();
 
         }
+
+        private void lblTotalHours_Changed(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTotalHours_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

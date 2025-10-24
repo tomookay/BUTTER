@@ -211,6 +211,8 @@
             lblTotalHours.Size = new Size(13, 15);
             lblTotalHours.TabIndex = 15;
             lblTotalHours.Text = "0";
+            lblTotalHours.TextChanged += lblTotalHours_Changed;
+            lblTotalHours.Click += lblTotalHours_Click;
             // 
             // button1
             // 
