@@ -205,6 +205,7 @@ namespace BUTTER
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             newToolStripMenuItem = new ToolStripMenuItem();
+            saveToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             exportToolStripMenuItem = new ToolStripMenuItem();
             toTwinCAT3ToolStripMenuItem = new ToolStripMenuItem();
@@ -213,6 +214,8 @@ namespace BUTTER
             editToolStripMenuItem = new ToolStripMenuItem();
             timeBaseToolStripMenuItem = new ToolStripMenuItem();
             weekToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem1 = new ToolStripMenuItem();
             checkBox1 = new CheckBox();
             lblToday = new Label();
             label5 = new Label();
@@ -226,8 +229,9 @@ namespace BUTTER
             lblTotalHours = new Label();
             txbHoursPerWeek = new TextBox();
             lblHoursPerWeek = new Label();
-            aboutToolStripMenuItem = new ToolStripMenuItem();
-            aboutToolStripMenuItem1 = new ToolStripMenuItem();
+            saveFileDialog1 = new SaveFileDialog();
+            statusStrip1 = new StatusStrip();
+            tslFilePath = new ToolStripStatusLabel();
             tabControlStations.SuspendLayout();
             tpBase.SuspendLayout();
             groupBox7.SuspendLayout();
@@ -309,6 +313,7 @@ namespace BUTTER
             ((System.ComponentModel.ISupportInitialize)tbHard6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudHardHoursTask6).BeginInit();
             menuStrip1.SuspendLayout();
+            statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // tabControlStations
@@ -510,7 +515,6 @@ namespace BUTTER
             groupBox2.TabIndex = 6;
             groupBox2.TabStop = false;
             groupBox2.Text = "PLC Attributes";
-
             // 
             // label6
             // 
@@ -2324,7 +2328,7 @@ namespace BUTTER
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, toolStripSeparator1, exportToolStripMenuItem, toolStripSeparator2, exitToolStripMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, saveToolStripMenuItem, toolStripSeparator1, exportToolStripMenuItem, toolStripSeparator2, exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(37, 20);
             fileToolStripMenuItem.Text = "File";
@@ -2332,19 +2336,26 @@ namespace BUTTER
             // newToolStripMenuItem
             // 
             newToolStripMenuItem.Name = "newToolStripMenuItem";
-            newToolStripMenuItem.Size = new Size(108, 22);
+            newToolStripMenuItem.Size = new Size(180, 22);
             newToolStripMenuItem.Text = "New";
+            // 
+            // saveToolStripMenuItem
+            // 
+            saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            saveToolStripMenuItem.Size = new Size(180, 22);
+            saveToolStripMenuItem.Text = "Save";
+            saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(105, 6);
+            toolStripSeparator1.Size = new Size(177, 6);
             // 
             // exportToolStripMenuItem
             // 
             exportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toTwinCAT3ToolStripMenuItem });
             exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            exportToolStripMenuItem.Size = new Size(108, 22);
+            exportToolStripMenuItem.Size = new Size(180, 22);
             exportToolStripMenuItem.Text = "Export";
             // 
             // toTwinCAT3ToolStripMenuItem
@@ -2356,12 +2367,12 @@ namespace BUTTER
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(105, 6);
+            toolStripSeparator2.Size = new Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(108, 22);
+            exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "Exit";
             // 
             // editToolStripMenuItem
@@ -2383,6 +2394,21 @@ namespace BUTTER
             weekToolStripMenuItem.Size = new Size(127, 22);
             weekToolStripMenuItem.Text = "Week";
             weekToolStripMenuItem.Click += weekToolStripMenuItem_Click;
+            // 
+            // aboutToolStripMenuItem
+            // 
+            aboutToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
+            aboutToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem1 });
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(52, 20);
+            aboutToolStripMenuItem.Text = "About";
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            aboutToolStripMenuItem1.Size = new Size(107, 22);
+            aboutToolStripMenuItem1.Text = "About";
+            aboutToolStripMenuItem1.Click += aboutToolStripMenuItem1_Click;
             // 
             // checkBox1
             // 
@@ -2506,24 +2532,25 @@ namespace BUTTER
             lblHoursPerWeek.TabIndex = 18;
             lblHoursPerWeek.Text = "Hours Per Week";
             // 
-            // aboutToolStripMenuItem
+            // statusStrip1
             // 
-            aboutToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
-            aboutToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem1 });
-            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(52, 20);
-            aboutToolStripMenuItem.Text = "About";
+            statusStrip1.Items.AddRange(new ToolStripItem[] { tslFilePath });
+            statusStrip1.Location = new Point(0, 592);
+            statusStrip1.Name = "statusStrip1";
+            statusStrip1.Size = new Size(590, 22);
+            statusStrip1.TabIndex = 20;
+            statusStrip1.Text = "statusStrip1";
             // 
-            // aboutToolStripMenuItem1
+            // tslFilePath
             // 
-            aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            aboutToolStripMenuItem1.Size = new Size(180, 22);
-            aboutToolStripMenuItem1.Text = "About";
-            aboutToolStripMenuItem1.Click += aboutToolStripMenuItem1_Click;
+            tslFilePath.Name = "tslFilePath";
+            tslFilePath.Size = new Size(87, 17);
+            tslFilePath.Text = "No file loaded..";
             // 
             // Form1
             // 
-            ClientSize = new Size(590, 595);
+            ClientSize = new Size(590, 614);
+            Controls.Add(statusStrip1);
             Controls.Add(txbHoursPerWeek);
             Controls.Add(lblHoursPerWeek);
             Controls.Add(txbTotalHours);
@@ -2654,6 +2681,8 @@ namespace BUTTER
             ((System.ComponentModel.ISupportInitialize)nudHardHoursTask6).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            statusStrip1.ResumeLayout(false);
+            statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -2895,5 +2924,9 @@ namespace BUTTER
         private NumericUpDown nudLightCurtains;
         private ToolStripMenuItem aboutToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem1;
+        private ToolStripMenuItem saveToolStripMenuItem;
+        private SaveFileDialog saveFileDialog1;
+        private StatusStrip statusStrip1;
+        private ToolStripStatusLabel tslFilePath;
     }
 }

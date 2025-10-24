@@ -15,6 +15,8 @@ namespace BUTTER
         MotionRow[] Station4Rows = new MotionRow[99];
         MotionRow[] Station5Rows = new MotionRow[99];
         MotionRow[] Station6Rows = new MotionRow[99];
+        
+
 
         public Form1()
         {
@@ -1013,12 +1015,26 @@ namespace BUTTER
             UpdateEstimatedCompletion();
         }
 
-       
+
 
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-        MessageBox.Show(Text + "\n\nDeveloped by REDACTED_NAME.\n\n© REDACTED_COMPANY_NAME. All rights reserved.", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(Text + "\n\nDeveloped by REDACTED_NAME.\n\n© REDACTED_COMPANY_NAME. All rights reserved.", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.InitialDirectory = "";
+            saveFileDialog1.Title = "Save Butter Estimation File";
+            saveFileDialog1.DefaultExt = "butt";
+            saveFileDialog1.Filter = "Butter files (*.butt)|"; // huhuhuhuhuhuhh
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                tslFilePath.Text = saveFileDialog1.FileName;
+            }
         }
     }
 }
