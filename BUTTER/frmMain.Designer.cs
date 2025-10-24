@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace BUTTER
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -232,6 +232,7 @@ namespace BUTTER
             saveFileDialog1 = new SaveFileDialog();
             statusStrip1 = new StatusStrip();
             tslFilePath = new ToolStripStatusLabel();
+            loadToolStripMenuItem = new ToolStripMenuItem();
             tabControlStations.SuspendLayout();
             tpBase.SuspendLayout();
             groupBox7.SuspendLayout();
@@ -2328,7 +2329,7 @@ namespace BUTTER
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, saveToolStripMenuItem, toolStripSeparator1, exportToolStripMenuItem, toolStripSeparator2, exitToolStripMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newToolStripMenuItem, loadToolStripMenuItem, saveToolStripMenuItem, toolStripSeparator1, exportToolStripMenuItem, toolStripSeparator2, exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(37, 20);
             fileToolStripMenuItem.Text = "File";
@@ -2546,6 +2547,13 @@ namespace BUTTER
             tslFilePath.Name = "tslFilePath";
             tslFilePath.Size = new Size(87, 17);
             tslFilePath.Text = "No file loaded..";
+            // 
+            // loadToolStripMenuItem
+            // 
+            loadToolStripMenuItem.Name = "loadToolStripMenuItem";
+            loadToolStripMenuItem.Size = new Size(180, 22);
+            loadToolStripMenuItem.Text = "Load";
+            loadToolStripMenuItem.Click += loadToolStripMenuItem_Click_1;
             // 
             // Form1
             // 
@@ -2928,5 +2936,6 @@ namespace BUTTER
         private SaveFileDialog saveFileDialog1;
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel tslFilePath;
+        private ToolStripMenuItem loadToolStripMenuItem;
     }
 }

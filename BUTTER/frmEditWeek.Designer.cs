@@ -214,7 +214,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(505, 99);
+            button1.Location = new Point(731, 12);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 16;
@@ -225,7 +225,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(608, 14);
+            label1.Location = new Point(617, 14);
             label1.Name = "label1";
             label1.Size = new Size(79, 15);
             label1.TabIndex = 17;
@@ -235,7 +235,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(750, 149);
+            ClientSize = new Size(828, 69);
             Controls.Add(label1);
             Controls.Add(button1);
             Controls.Add(lblTotalHours);
@@ -254,7 +254,7 @@
             Controls.Add(lblTuesday);
             Controls.Add(lblMonday);
             Name = "frmEditWeek";
-            Text = "frmEditWeek";
+            Text = "Edit Week";
             Load += frmEditWeek_Load;
             ((System.ComponentModel.ISupportInitialize)nudTuesday).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudWednesday).EndInit();

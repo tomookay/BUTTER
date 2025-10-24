@@ -1,11 +1,19 @@
+using BUTTER;
 using System;
 using System.Diagnostics.Eventing.Reader;
 using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Text;
 using System.Windows.Forms;
+using System.Xml.Serialization;
+
+
+
 
 namespace BUTTER
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
         private bool _isUpdating = false;
         //text data for all stations
@@ -15,10 +23,10 @@ namespace BUTTER
         MotionRow[] Station4Rows = new MotionRow[99];
         MotionRow[] Station5Rows = new MotionRow[99];
         MotionRow[] Station6Rows = new MotionRow[99];
-        
 
 
-        public Form1()
+
+        public frmMain()
         {
             InitializeComponent();
 
@@ -1028,13 +1036,134 @@ namespace BUTTER
             saveFileDialog1.InitialDirectory = "";
             saveFileDialog1.Title = "Save Butter Estimation File";
             saveFileDialog1.DefaultExt = "butt";
-            saveFileDialog1.Filter = "Butter files (*.butt)|"; // huhuhuhuhuhuhh
-            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.Filter = "Butter files (*.butt)|*.butt";
+            saveFileDialog1.FilterIndex = 1;
             saveFileDialog1.RestoreDirectory = true;
+
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-                tslFilePath.Text = saveFileDialog1.FileName;
+                string path = saveFileDialog1.FileName;
+                tslFilePath.Text = path;
+
+                try
+                {
+                    SaveStationsToXml(path);
+                    MessageBox.Show("Saved stations to XML successfully.", "Save", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Failed to save stations: " + ex.Message, "Save Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
+
+        // Add this helper method inside the Form1 class.
+        private void SaveStationsToXml(string path)
+        {
+            if (string.IsNullOrWhiteSpace(path))
+                throw new ArgumentException("Invalid path", nameof(path));
+
+            // Build a container object with non-null rows for each station.
+            var data = new ButterData
+            {
+                Station1 = Station1Rows?.Where(r => r != null).ToList() ?? new List<MotionRow>(),
+                Station2 = Station2Rows?.Where(r => r != null).ToList() ?? new List<MotionRow>(),
+                Station3 = Station3Rows?.Where(r => r != null).ToList() ?? new List<MotionRow>(),
+                Station4 = Station4Rows?.Where(r => r != null).ToList() ?? new List<MotionRow>(),
+                Station5 = Station5Rows?.Where(r => r != null).ToList() ?? new List<MotionRow>(),
+                Station6 = Station6Rows?.Where(r => r != null).ToList() ?? new List<MotionRow>()
+            };
+
+            var serializer = new XmlSerializer(typeof(ButterData));
+
+            // Ensure directory exists
+            var dir = Path.GetDirectoryName(path);
+            if (!string.IsNullOrEmpty(dir) && !Directory.Exists(dir))
+                Directory.CreateDirectory(dir);
+
+            // Write indented UTF-8 XML
+            using var stream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None);
+            using var writer = new StreamWriter(stream, Encoding.UTF8);
+            serializer.Serialize(writer, data);
+        }
+
+
+
+
+
+
+        // Add these methods inside the Form1 class (near SaveStationsToXml)
+        private void LoadStationsFromXml(string path)
+        {
+            if (string.IsNullOrWhiteSpace(path))
+                throw new ArgumentException("Invalid path", nameof(path));
+
+            var serializer = new XmlSerializer(typeof(ButterData));
+            using var fs = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read);
+            var data = serializer.Deserialize(fs) as ButterData ?? new ButterData();
+
+            // copy lists back into the fixed-size arrays (preserve array length 99)
+            CopyListToArray(data.Station1, Station1Rows);
+            CopyListToArray(data.Station2, Station2Rows);
+            CopyListToArray(data.Station3, Station3Rows);
+            CopyListToArray(data.Station4, Station4Rows);
+            CopyListToArray(data.Station5, Station5Rows);
+            CopyListToArray(data.Station6, Station6Rows);
+
+            // If UI should reflect loaded data immediately, refresh here.
+            // For example, update total hours or any dependent views:
+            UpdateTotalHours();
+        }
+
+        private void CopyListToArray(System.Collections.Generic.List<MotionRow>? src, MotionRow[] dest)
+        {
+            // Clear destination first
+            for (int i = 0; i < dest.Length; i++)
+                dest[i] = null;
+
+            if (src == null) return;
+
+            int n = Math.Min(src.Count, dest.Length);
+            for (int i = 0; i < n; i++)
+                dest[i] = src[i];
+        }
+
+        private void loadToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+
+            using var ofd = new OpenFileDialog
+            {
+                Title = "Open Butter Estimation File",
+                Filter = "Butter files (*.butt)|*.butt|XML files (*.xml)|*.xml|All files (*.*)|*.*",
+                FilterIndex = 1,
+                RestoreDirectory = true
+            };
+
+            if (ofd.ShowDialog() != DialogResult.OK) return;
+
+            string path = ofd.FileName;
+            tslFilePath.Text = path;
+
+            try
+            {
+                LoadStationsFromXml(path);
+                MessageBox.Show("Loaded stations from XML successfully.", "Load", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to load stations: " + ex.Message, "Load Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
+
 }
+
+
+
+
+
+
+
+
+ 
