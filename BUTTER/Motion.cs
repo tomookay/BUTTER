@@ -30,5 +30,27 @@ namespace BUTTER
     }
 
 
+    public class MachineData
+    {
+        public int numPneumatics;
+        public int numHydraulics;
+        public int numLube;
+
+        public int numIOmodules;
+        public bool hasRobot;
+        public bool hasSpecialDevices;
+
+        public bool hasAutoScanIO;
+        public bool hasSoftwareSafetyProgram;
+        public int numSafeyZones;
+        public int numEStopButtons;
+        public int numSafetyDoors;
+        public int numLightCurtains;
+
+
+
+    }
+
+
 
 }

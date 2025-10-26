@@ -23,6 +23,9 @@ namespace BUTTER
         MotionRow[] Station4Rows = new MotionRow[99];
         MotionRow[] Station5Rows = new MotionRow[99];
         MotionRow[] Station6Rows = new MotionRow[99];
+        MachineData[] machineData0Rows = new MachineData[99];
+
+
 
 
 
@@ -1071,7 +1074,10 @@ namespace BUTTER
                 Station3 = Station3Rows?.Where(r => r != null).ToList() ?? new List<MotionRow>(),
                 Station4 = Station4Rows?.Where(r => r != null).ToList() ?? new List<MotionRow>(),
                 Station5 = Station5Rows?.Where(r => r != null).ToList() ?? new List<MotionRow>(),
-                Station6 = Station6Rows?.Where(r => r != null).ToList() ?? new List<MotionRow>()
+                Station6 = Station6Rows?.Where(r => r != null).ToList() ?? new List<MotionRow>(),
+                MachineDataList = machineData0Rows?.Where(r => r != null).ToList() ?? new List<MachineData>()
+
+
             };
 
             var serializer = new XmlSerializer(typeof(ButterData));
@@ -1109,6 +1115,8 @@ namespace BUTTER
             CopyListToArray(data.Station4, Station4Rows);
             CopyListToArray(data.Station5, Station5Rows);
             CopyListToArray(data.Station6, Station6Rows);
+           
+
 
             // If UI should reflect loaded data immediately, refresh here.
             // For example, update total hours or any dependent views:

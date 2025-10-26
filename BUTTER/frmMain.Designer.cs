@@ -465,7 +465,6 @@ namespace BUTTER
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 15;
-            textBox1.TextChanged += this.textBox1_TextChanged;
             // 
             // label40
             // 

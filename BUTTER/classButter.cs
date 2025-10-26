@@ -20,5 +20,6 @@ namespace BUTTER
         public List<MotionRow> Station4 { get; set; } = new();
         public List<MotionRow> Station5 { get; set; } = new();
         public List<MotionRow> Station6 { get; set; } = new();
+        public List<MachineData> MachineDataList { get; set; } = new();
     }
 }
