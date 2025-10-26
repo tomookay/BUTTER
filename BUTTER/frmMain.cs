@@ -8,9 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
-
-
-
 namespace BUTTER
 {
     public partial class frmMain : Form
@@ -23,11 +20,7 @@ namespace BUTTER
         MotionRow[] Station4Rows = new MotionRow[99];
         MotionRow[] Station5Rows = new MotionRow[99];
         MotionRow[] Station6Rows = new MotionRow[99];
-        MachineData[] machineData0Rows = new MachineData[99];
-
-
-
-
+        MachineData[] machineData0Rows = new MachineData[1]; //1 because just copy the array listing logic
 
         public frmMain()
         {
@@ -325,6 +318,7 @@ namespace BUTTER
             PopulateStationTestData(Station4Rows);
             PopulateStationTestData(Station5Rows);
             PopulateStationTestData(Station6Rows);
+         
         }
 
         /// <summary>
@@ -362,11 +356,27 @@ namespace BUTTER
             }
         }
 
-        private void label1_Click(object sender, EventArgs e) { }
+        private void PopulateMachineData(MachineData[] rows)
+        //just populate the xml from the globals on the form, only use 1 index of the array to keep the same implem.
+        {
+            rows[0] = new MachineData
+            { 
+                      
+            numPneumatics = (int)nudPneumatic.Value,
+            numLube = (int)nudLube.Value,
+            numHydraulics = (int)nudHydraulic.Value,
+            numSafetyDoors = (int)nudSafetyDoors.Value,
+            numEStopButtons = (int)nudEStopButtons.Value,
+            numLightCurtains = (int)nudLightCurtains.Value,
+            hasRobot = cboxHasRobot.Checked,
+            hasSpecialDevices = cboxSpecialDevices.Checked,
+            hasAutoScanIO = cboxAutoScanIO.Checked,
+            hasSoftwareSafetyProgram = cboxSoftwareSafetyProgram.Checked,
+            numSafeyZones = (int)nudSafetyZones.Value
 
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e) { }
+            };
 
-        private void label9_Click(object sender, EventArgs e) { }
+        }
 
         // -------------------------
         // Station1 handlers
@@ -816,30 +826,24 @@ namespace BUTTER
             nud.Enabled = false;
         }
 
-        private void tpStation1_Click(object sender, EventArgs e) { }
-
         private void nudNumberOfMotions2_ValueChanged(object sender, EventArgs e)
         {
             UpdateHoursForStation(nudNumberOfMotions2, tbEasy2, tbMedium2, tbHard2, nudEasyHoursTask2, nudMediumHoursTask2, nudHardHoursTask2, txbHoursS2);
-
         }
 
         private void nudNumberOfMotions3_ValueChanged(object sender, EventArgs e)
         {
             UpdateHoursForStation(nudNumberOfMotions3, tbEasy3, tbMedium3, tbHard3, nudEasyHoursTask3, nudMediumHoursTask3, nudHardHoursTask3, txbHoursS3);
-
         }
 
         private void nudNumberOfMotions4_ValueChanged(object sender, EventArgs e)
         {
             UpdateHoursForStation(nudNumberOfMotions4, tbEasy4, tbMedium4, tbHard4, nudEasyHoursTask4, nudMediumHoursTask4, nudHardHoursTask4, txbHoursS4);
-
         }
 
         private void nudNumberOfMotions5_ValueChanged(object sender, EventArgs e)
         {
             UpdateHoursForStation(nudNumberOfMotions5, tbEasy5, tbMedium5, tbHard5, nudEasyHoursTask5, nudMediumHoursTask5, nudHardHoursTask5, txbHoursS5);
-
         }
 
         private void nudNumberOfMotions6_ValueChanged(object sender, EventArgs e)
@@ -1026,16 +1030,16 @@ namespace BUTTER
             UpdateEstimatedCompletion();
         }
 
-
-
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Text + "\n\nDeveloped by REDACTED_NAME.\n\n© REDACTED_COMPANY_NAME. All rights reserved.", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            MessageBox.Show(Text + "\n\nDeveloped by Thomas O'Kane.\n\n© Integration Associates. All rights reserved.", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //save the state of the windows form to memory
+            PopulateMachineData(machineData0Rows);
+
             saveFileDialog1.InitialDirectory = "";
             saveFileDialog1.Title = "Save Butter Estimation File";
             saveFileDialog1.DefaultExt = "butt";
@@ -1076,8 +1080,6 @@ namespace BUTTER
                 Station5 = Station5Rows?.Where(r => r != null).ToList() ?? new List<MotionRow>(),
                 Station6 = Station6Rows?.Where(r => r != null).ToList() ?? new List<MotionRow>(),
                 MachineDataList = machineData0Rows?.Where(r => r != null).ToList() ?? new List<MachineData>()
-
-
             };
 
             var serializer = new XmlSerializer(typeof(ButterData));
@@ -1092,11 +1094,6 @@ namespace BUTTER
             using var writer = new StreamWriter(stream, Encoding.UTF8);
             serializer.Serialize(writer, data);
         }
-
-
-
-
-
 
         // Add these methods inside the Form1 class (near SaveStationsToXml)
         private void LoadStationsFromXml(string path)
@@ -1116,7 +1113,7 @@ namespace BUTTER
             CopyListToArray(data.Station5, Station5Rows);
             CopyListToArray(data.Station6, Station6Rows);
            
-
+            CopyMachineDataToProg(data.MachineDataList);
 
             // If UI should reflect loaded data immediately, refresh here.
             // For example, update total hours or any dependent views:
@@ -1136,6 +1133,25 @@ namespace BUTTER
                 dest[i] = src[i];
         }
 
+        private void CopyMachineDataToProg(System.Collections.Generic.List<MachineData>? src)//, MachineData[] dest)
+        {
+            //populate the machine data form fields from the loaded xml data
+            nudPneumatic.Value = src[0].numPneumatics;
+            nudLube.Value = src[0].numLube;
+            nudHydraulic.Value = src[0].numHydraulics;
+            nudSafetyDoors.Value = src[0].numSafetyDoors;
+            nudSafetyZones.Value = src[0].numSafeyZones;
+            nudEStopButtons.Value = src[0].numEStopButtons;
+            nudLightCurtains.Value = src[0].numLightCurtains;
+            cboxHasRobot.Checked = src[0].hasRobot;
+            cboxSpecialDevices.Checked = src[0].hasSpecialDevices;
+            cboxAutoScanIO.Checked = src[0].hasAutoScanIO;
+            cboxSoftwareSafetyProgram.Checked = src[0].hasSoftwareSafetyProgram;
+            nudNumIOModules.Value = src[0].numIOmodules;
+
+        }
+
+    
         private void loadToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
 
@@ -1166,12 +1182,3 @@ namespace BUTTER
     }
 
 }
-
-
-
-
-
-
-
-
- 

@@ -20,21 +20,21 @@ namespace BUTTER
             lblLightCurtain = new Label();
             nudLightCurtains = new NumericUpDown();
             lblDoors = new Label();
-            checkBox2 = new CheckBox();
-            nudDoors = new NumericUpDown();
-            nudSafeyZones = new NumericUpDown();
+            cboxAutoScanIO = new CheckBox();
+            nudSafetyDoors = new NumericUpDown();
+            nudSafetyZones = new NumericUpDown();
             lblEstopsTitle = new Label();
             label7 = new Label();
-            nudEmergencyStops = new NumericUpDown();
-            checkBox3 = new CheckBox();
+            nudEStopButtons = new NumericUpDown();
+            cboxSoftwareSafetyProgram = new CheckBox();
             textBox1 = new TextBox();
             label40 = new Label();
             groupBox6 = new GroupBox();
-            checkBox5 = new CheckBox();
-            checkBox6 = new CheckBox();
+            cboxSpecialDevices = new CheckBox();
+            cboxHasRobot = new CheckBox();
             groupBox2 = new GroupBox();
             label6 = new Label();
-            numericUpDown2 = new NumericUpDown();
+            nudNumIOModules = new NumericUpDown();
             groupBox1 = new GroupBox();
             label4 = new Label();
             nudLube = new NumericUpDown();
@@ -237,12 +237,12 @@ namespace BUTTER
             tpBase.SuspendLayout();
             groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudLightCurtains).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nudDoors).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nudSafeyZones).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nudEmergencyStops).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudSafetyDoors).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudSafetyZones).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudEStopButtons).BeginInit();
             groupBox6.SuspendLayout();
             groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudNumIOModules).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudLube).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudHydraulic).BeginInit();
@@ -353,13 +353,13 @@ namespace BUTTER
             groupBox7.Controls.Add(lblLightCurtain);
             groupBox7.Controls.Add(nudLightCurtains);
             groupBox7.Controls.Add(lblDoors);
-            groupBox7.Controls.Add(checkBox2);
-            groupBox7.Controls.Add(nudDoors);
-            groupBox7.Controls.Add(nudSafeyZones);
+            groupBox7.Controls.Add(cboxAutoScanIO);
+            groupBox7.Controls.Add(nudSafetyDoors);
+            groupBox7.Controls.Add(nudSafetyZones);
             groupBox7.Controls.Add(lblEstopsTitle);
             groupBox7.Controls.Add(label7);
-            groupBox7.Controls.Add(nudEmergencyStops);
-            groupBox7.Controls.Add(checkBox3);
+            groupBox7.Controls.Add(nudEStopButtons);
+            groupBox7.Controls.Add(cboxSoftwareSafetyProgram);
             groupBox7.Location = new Point(287, 134);
             groupBox7.Name = "groupBox7";
             groupBox7.Size = new Size(259, 238);
@@ -394,33 +394,33 @@ namespace BUTTER
             lblDoors.TabIndex = 12;
             lblDoors.Text = "Doors";
             // 
-            // checkBox2
+            // cboxAutoScanIO
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(21, 22);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(123, 19);
-            checkBox2.TabIndex = 7;
-            checkBox2.Text = "Has Auto Scan IO?";
-            checkBox2.UseVisualStyleBackColor = true;
+            cboxAutoScanIO.AutoSize = true;
+            cboxAutoScanIO.Location = new Point(21, 22);
+            cboxAutoScanIO.Name = "cboxAutoScanIO";
+            cboxAutoScanIO.Size = new Size(123, 19);
+            cboxAutoScanIO.TabIndex = 7;
+            cboxAutoScanIO.Text = "Has Auto Scan IO?";
+            cboxAutoScanIO.UseVisualStyleBackColor = true;
             // 
-            // nudDoors
+            // nudSafetyDoors
             // 
-            nudDoors.Location = new Point(170, 138);
-            nudDoors.Name = "nudDoors";
-            nudDoors.Size = new Size(66, 23);
-            nudDoors.TabIndex = 11;
-            nudDoors.TextAlign = HorizontalAlignment.Center;
-            nudDoors.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudSafetyDoors.Location = new Point(170, 138);
+            nudSafetyDoors.Name = "nudSafetyDoors";
+            nudSafetyDoors.Size = new Size(66, 23);
+            nudSafetyDoors.TabIndex = 11;
+            nudSafetyDoors.TextAlign = HorizontalAlignment.Center;
+            nudSafetyDoors.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // nudSafeyZones
+            // nudSafetyZones
             // 
-            nudSafeyZones.Location = new Point(170, 80);
-            nudSafeyZones.Name = "nudSafeyZones";
-            nudSafeyZones.Size = new Size(66, 23);
-            nudSafeyZones.TabIndex = 0;
-            nudSafeyZones.TextAlign = HorizontalAlignment.Center;
-            nudSafeyZones.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudSafetyZones.Location = new Point(170, 80);
+            nudSafetyZones.Name = "nudSafetyZones";
+            nudSafetyZones.Size = new Size(66, 23);
+            nudSafetyZones.TabIndex = 0;
+            nudSafetyZones.TextAlign = HorizontalAlignment.Center;
+            nudSafetyZones.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // lblEstopsTitle
             // 
@@ -440,24 +440,24 @@ namespace BUTTER
             label7.TabIndex = 1;
             label7.Text = "Safety Zones";
             // 
-            // nudEmergencyStops
+            // nudEStopButtons
             // 
-            nudEmergencyStops.Location = new Point(170, 109);
-            nudEmergencyStops.Name = "nudEmergencyStops";
-            nudEmergencyStops.Size = new Size(66, 23);
-            nudEmergencyStops.TabIndex = 9;
-            nudEmergencyStops.TextAlign = HorizontalAlignment.Center;
-            nudEmergencyStops.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            nudEStopButtons.Location = new Point(170, 109);
+            nudEStopButtons.Name = "nudEStopButtons";
+            nudEStopButtons.Size = new Size(66, 23);
+            nudEStopButtons.TabIndex = 9;
+            nudEStopButtons.TextAlign = HorizontalAlignment.Center;
+            nudEStopButtons.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // checkBox3
+            // cboxSoftwareSafetyProgram
             // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(21, 47);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(184, 19);
-            checkBox3.TabIndex = 8;
-            checkBox3.Text = "Has Software Safety Program?";
-            checkBox3.UseVisualStyleBackColor = true;
+            cboxSoftwareSafetyProgram.AutoSize = true;
+            cboxSoftwareSafetyProgram.Location = new Point(21, 47);
+            cboxSoftwareSafetyProgram.Name = "cboxSoftwareSafetyProgram";
+            cboxSoftwareSafetyProgram.Size = new Size(184, 19);
+            cboxSoftwareSafetyProgram.TabIndex = 8;
+            cboxSoftwareSafetyProgram.Text = "Has Software Safety Program?";
+            cboxSoftwareSafetyProgram.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -477,8 +477,8 @@ namespace BUTTER
             // 
             // groupBox6
             // 
-            groupBox6.Controls.Add(checkBox5);
-            groupBox6.Controls.Add(checkBox6);
+            groupBox6.Controls.Add(cboxSpecialDevices);
+            groupBox6.Controls.Add(cboxHasRobot);
             groupBox6.Location = new Point(287, 30);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(255, 98);
@@ -486,30 +486,30 @@ namespace BUTTER
             groupBox6.TabStop = false;
             groupBox6.Text = "Automation";
             // 
-            // checkBox5
+            // cboxSpecialDevices
             // 
-            checkBox5.AutoSize = true;
-            checkBox5.Location = new Point(13, 44);
-            checkBox5.Name = "checkBox5";
-            checkBox5.Size = new Size(131, 19);
-            checkBox5.TabIndex = 8;
-            checkBox5.Text = "has Special devices?";
-            checkBox5.UseVisualStyleBackColor = true;
+            cboxSpecialDevices.AutoSize = true;
+            cboxSpecialDevices.Location = new Point(13, 44);
+            cboxSpecialDevices.Name = "cboxSpecialDevices";
+            cboxSpecialDevices.Size = new Size(131, 19);
+            cboxSpecialDevices.TabIndex = 8;
+            cboxSpecialDevices.Text = "has Special devices?";
+            cboxSpecialDevices.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // cboxHasRobot
             // 
-            checkBox6.AutoSize = true;
-            checkBox6.Location = new Point(13, 22);
-            checkBox6.Name = "checkBox6";
-            checkBox6.Size = new Size(84, 19);
-            checkBox6.TabIndex = 7;
-            checkBox6.Text = "has Robot?";
-            checkBox6.UseVisualStyleBackColor = true;
+            cboxHasRobot.AutoSize = true;
+            cboxHasRobot.Location = new Point(13, 22);
+            cboxHasRobot.Name = "cboxHasRobot";
+            cboxHasRobot.Size = new Size(84, 19);
+            cboxHasRobot.TabIndex = 7;
+            cboxHasRobot.Text = "has Robot?";
+            cboxHasRobot.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
             groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(numericUpDown2);
+            groupBox2.Controls.Add(nudNumIOModules);
             groupBox2.Location = new Point(26, 149);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(255, 223);
@@ -527,14 +527,14 @@ namespace BUTTER
             label6.Text = "Number of IO Modules";
             label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // numericUpDown2
+            // nudNumIOModules
             // 
-            numericUpDown2.Location = new Point(161, 22);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(66, 23);
-            numericUpDown2.TabIndex = 2;
-            numericUpDown2.TextAlign = HorizontalAlignment.Center;
-            numericUpDown2.Value = new decimal(new int[] { 20, 0, 0, 0 });
+            nudNumIOModules.Location = new Point(161, 22);
+            nudNumIOModules.Name = "nudNumIOModules";
+            nudNumIOModules.Size = new Size(66, 23);
+            nudNumIOModules.TabIndex = 2;
+            nudNumIOModules.TextAlign = HorizontalAlignment.Center;
+            nudNumIOModules.Value = new decimal(new int[] { 20, 0, 0, 0 });
             // 
             // groupBox1
             // 
@@ -2337,33 +2337,33 @@ namespace BUTTER
             // newToolStripMenuItem
             // 
             newToolStripMenuItem.Name = "newToolStripMenuItem";
-            newToolStripMenuItem.Size = new Size(180, 22);
+            newToolStripMenuItem.Size = new Size(108, 22);
             newToolStripMenuItem.Text = "New";
             // 
             // loadToolStripMenuItem
             // 
             loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            loadToolStripMenuItem.Size = new Size(180, 22);
+            loadToolStripMenuItem.Size = new Size(108, 22);
             loadToolStripMenuItem.Text = "Load";
             loadToolStripMenuItem.Click += loadToolStripMenuItem_Click_1;
             // 
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(180, 22);
+            saveToolStripMenuItem.Size = new Size(108, 22);
             saveToolStripMenuItem.Text = "Save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(105, 6);
             // 
             // exportToolStripMenuItem
             // 
             exportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toTwinCAT3ToolStripMenuItem });
             exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            exportToolStripMenuItem.Size = new Size(180, 22);
+            exportToolStripMenuItem.Size = new Size(108, 22);
             exportToolStripMenuItem.Text = "Export";
             // 
             // toTwinCAT3ToolStripMenuItem
@@ -2375,12 +2375,12 @@ namespace BUTTER
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(177, 6);
+            toolStripSeparator2.Size = new Size(105, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(108, 22);
             exitToolStripMenuItem.Text = "Exit";
             // 
             // editToolStripMenuItem
@@ -2584,14 +2584,14 @@ namespace BUTTER
             groupBox7.ResumeLayout(false);
             groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)nudLightCurtains).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nudDoors).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nudSafeyZones).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nudEmergencyStops).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudSafetyDoors).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudSafetyZones).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudEStopButtons).EndInit();
             groupBox6.ResumeLayout(false);
             groupBox6.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudNumIOModules).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)nudLube).EndInit();
@@ -2732,12 +2732,12 @@ namespace BUTTER
         private NumericUpDown nudLube;
         private CheckBox checkBox1;
         private GroupBox groupBox2;
-        private CheckBox checkBox2;
+        private CheckBox cboxAutoScanIO;
         private Label label6;
-        private NumericUpDown numericUpDown2;
+        private NumericUpDown nudNumIOModules;
         private Label label7;
-        private NumericUpDown nudSafeyZones;
-        private CheckBox checkBox3;
+        private NumericUpDown nudSafetyZones;
+        private CheckBox cboxSoftwareSafetyProgram;
         private Label lblToday;
         private Label label5;
         private DateTimePicker dateToday;
@@ -2851,8 +2851,8 @@ namespace BUTTER
         private TrackBar tbHard6;
         private NumericUpDown nudHardHoursTask6;
         private GroupBox groupBox6;
-        private CheckBox checkBox5;
-        private CheckBox checkBox6;
+        private CheckBox cboxSpecialDevices;
+        private CheckBox cboxHasRobot;
         private TextBox txbHoursS1;
         private CheckBox cboxStandard2;
         private Label label10;
@@ -2924,10 +2924,10 @@ namespace BUTTER
         private TextBox textBox1;
         private Label label40;
         private Label lblEstopsTitle;
-        private NumericUpDown nudEmergencyStops;
+        private NumericUpDown nudEStopButtons;
         private GroupBox groupBox7;
         private Label lblDoors;
-        private NumericUpDown nudDoors;
+        private NumericUpDown nudSafetyDoors;
         private Label lblLightCurtain;
         private NumericUpDown nudLightCurtains;
         private ToolStripMenuItem aboutToolStripMenuItem;
