@@ -17,6 +17,16 @@ namespace BUTTER
             tabControlStations = new TabControl();
             tpBase = new TabPage();
             groupBox7 = new GroupBox();
+            nudEnableingDeviceHours = new NumericUpDown();
+            lblEnableDeviceTitle = new Label();
+            nudEnablingDevice = new NumericUpDown();
+            nudScannerHours = new NumericUpDown();
+            lblScannersTitle = new Label();
+            nudScanners = new NumericUpDown();
+            nudLightCurtainHours = new NumericUpDown();
+            nudDoorsHours = new NumericUpDown();
+            nudEStopHours = new NumericUpDown();
+            nudSafetyZoneHours = new NumericUpDown();
             lblLightCurtain = new Label();
             nudLightCurtains = new NumericUpDown();
             lblDoors = new Label();
@@ -30,12 +40,20 @@ namespace BUTTER
             textBox1 = new TextBox();
             label40 = new Label();
             groupBox6 = new GroupBox();
+            nudSpecialDevicesHours = new NumericUpDown();
+            nudSpecialDevices = new NumericUpDown();
+            nudRobotHours = new NumericUpDown();
+            nudNumRobots = new NumericUpDown();
             cboxSpecialDevices = new CheckBox();
             cboxHasRobot = new CheckBox();
             groupBox2 = new GroupBox();
+            nudIOModulesHours = new NumericUpDown();
             label6 = new Label();
             nudNumIOModules = new NumericUpDown();
             groupBox1 = new GroupBox();
+            nudLubeHours = new NumericUpDown();
+            nudHydHours = new NumericUpDown();
+            nudPneuHours = new NumericUpDown();
             label4 = new Label();
             nudLube = new NumericUpDown();
             label3 = new Label();
@@ -233,17 +251,35 @@ namespace BUTTER
             saveFileDialog1 = new SaveFileDialog();
             statusStrip1 = new StatusStrip();
             tslFilePath = new ToolStripStatusLabel();
+            lblNumberQty = new Label();
+            lblHoursQty = new Label();
             tabControlStations.SuspendLayout();
             tpBase.SuspendLayout();
             groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudEnableingDeviceHours).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudEnablingDevice).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudScannerHours).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudScanners).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudLightCurtainHours).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudDoorsHours).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudEStopHours).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudSafetyZoneHours).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudLightCurtains).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudSafetyDoors).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudSafetyZones).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudEStopButtons).BeginInit();
             groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudSpecialDevicesHours).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudSpecialDevices).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudRobotHours).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudNumRobots).BeginInit();
             groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudIOModulesHours).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudNumIOModules).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)nudLubeHours).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudHydHours).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudPneuHours).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudLube).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudHydraulic).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudPneumatic).BeginInit();
@@ -329,7 +365,7 @@ namespace BUTTER
             tabControlStations.Location = new Point(12, 52);
             tabControlStations.Name = "tabControlStations";
             tabControlStations.SelectedIndex = 0;
-            tabControlStations.Size = new Size(568, 443);
+            tabControlStations.Size = new Size(930, 517);
             tabControlStations.TabIndex = 1;
             // 
             // tpBase
@@ -343,13 +379,23 @@ namespace BUTTER
             tpBase.Location = new Point(4, 24);
             tpBase.Name = "tpBase";
             tpBase.Padding = new Padding(3);
-            tpBase.Size = new Size(560, 415);
+            tpBase.Size = new Size(922, 489);
             tpBase.TabIndex = 0;
             tpBase.Text = "Base";
             tpBase.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
+            groupBox7.Controls.Add(nudEnableingDeviceHours);
+            groupBox7.Controls.Add(lblEnableDeviceTitle);
+            groupBox7.Controls.Add(nudEnablingDevice);
+            groupBox7.Controls.Add(nudScannerHours);
+            groupBox7.Controls.Add(lblScannersTitle);
+            groupBox7.Controls.Add(nudScanners);
+            groupBox7.Controls.Add(nudLightCurtainHours);
+            groupBox7.Controls.Add(nudDoorsHours);
+            groupBox7.Controls.Add(nudEStopHours);
+            groupBox7.Controls.Add(nudSafetyZoneHours);
             groupBox7.Controls.Add(lblLightCurtain);
             groupBox7.Controls.Add(nudLightCurtains);
             groupBox7.Controls.Add(lblDoors);
@@ -360,12 +406,102 @@ namespace BUTTER
             groupBox7.Controls.Add(label7);
             groupBox7.Controls.Add(nudEStopButtons);
             groupBox7.Controls.Add(cboxSoftwareSafetyProgram);
-            groupBox7.Location = new Point(287, 134);
+            groupBox7.Location = new Point(409, 134);
             groupBox7.Name = "groupBox7";
-            groupBox7.Size = new Size(259, 238);
+            groupBox7.Size = new Size(442, 284);
             groupBox7.TabIndex = 16;
             groupBox7.TabStop = false;
             groupBox7.Text = "Safety Attributes";
+            // 
+            // nudEnableingDeviceHours
+            // 
+            nudEnableingDeviceHours.Location = new Point(262, 225);
+            nudEnableingDeviceHours.Name = "nudEnableingDeviceHours";
+            nudEnableingDeviceHours.Size = new Size(66, 23);
+            nudEnableingDeviceHours.TabIndex = 24;
+            nudEnableingDeviceHours.TextAlign = HorizontalAlignment.Center;
+            nudEnableingDeviceHours.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // lblEnableDeviceTitle
+            // 
+            lblEnableDeviceTitle.AutoSize = true;
+            lblEnableDeviceTitle.Location = new Point(15, 225);
+            lblEnableDeviceTitle.Name = "lblEnableDeviceTitle";
+            lblEnableDeviceTitle.Size = new Size(91, 15);
+            lblEnableDeviceTitle.TabIndex = 23;
+            lblEnableDeviceTitle.Text = "Enabling Device";
+            // 
+            // nudEnablingDevice
+            // 
+            nudEnablingDevice.Location = new Point(170, 225);
+            nudEnablingDevice.Name = "nudEnablingDevice";
+            nudEnablingDevice.Size = new Size(66, 23);
+            nudEnablingDevice.TabIndex = 22;
+            nudEnablingDevice.TextAlign = HorizontalAlignment.Center;
+            nudEnablingDevice.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // nudScannerHours
+            // 
+            nudScannerHours.Location = new Point(262, 196);
+            nudScannerHours.Name = "nudScannerHours";
+            nudScannerHours.Size = new Size(66, 23);
+            nudScannerHours.TabIndex = 21;
+            nudScannerHours.TextAlign = HorizontalAlignment.Center;
+            nudScannerHours.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // lblScannersTitle
+            // 
+            lblScannersTitle.AutoSize = true;
+            lblScannersTitle.Location = new Point(15, 196);
+            lblScannersTitle.Name = "lblScannersTitle";
+            lblScannersTitle.Size = new Size(54, 15);
+            lblScannersTitle.TabIndex = 20;
+            lblScannersTitle.Text = "Scanners";
+            // 
+            // nudScanners
+            // 
+            nudScanners.Location = new Point(170, 196);
+            nudScanners.Name = "nudScanners";
+            nudScanners.Size = new Size(66, 23);
+            nudScanners.TabIndex = 19;
+            nudScanners.TextAlign = HorizontalAlignment.Center;
+            nudScanners.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // nudLightCurtainHours
+            // 
+            nudLightCurtainHours.Location = new Point(262, 167);
+            nudLightCurtainHours.Name = "nudLightCurtainHours";
+            nudLightCurtainHours.Size = new Size(66, 23);
+            nudLightCurtainHours.TabIndex = 18;
+            nudLightCurtainHours.TextAlign = HorizontalAlignment.Center;
+            nudLightCurtainHours.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // nudDoorsHours
+            // 
+            nudDoorsHours.Location = new Point(262, 138);
+            nudDoorsHours.Name = "nudDoorsHours";
+            nudDoorsHours.Size = new Size(66, 23);
+            nudDoorsHours.TabIndex = 17;
+            nudDoorsHours.TextAlign = HorizontalAlignment.Center;
+            nudDoorsHours.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // nudEStopHours
+            // 
+            nudEStopHours.Location = new Point(262, 109);
+            nudEStopHours.Name = "nudEStopHours";
+            nudEStopHours.Size = new Size(66, 23);
+            nudEStopHours.TabIndex = 16;
+            nudEStopHours.TextAlign = HorizontalAlignment.Center;
+            nudEStopHours.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // nudSafetyZoneHours
+            // 
+            nudSafetyZoneHours.Location = new Point(262, 80);
+            nudSafetyZoneHours.Name = "nudSafetyZoneHours";
+            nudSafetyZoneHours.Size = new Size(66, 23);
+            nudSafetyZoneHours.TabIndex = 15;
+            nudSafetyZoneHours.TextAlign = HorizontalAlignment.Center;
+            nudSafetyZoneHours.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // lblLightCurtain
             // 
@@ -461,7 +597,7 @@ namespace BUTTER
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(409, 386);
+            textBox1.Location = new Point(409, 424);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 15;
@@ -469,7 +605,7 @@ namespace BUTTER
             // label40
             // 
             label40.AutoSize = true;
-            label40.Location = new Point(515, 389);
+            label40.Location = new Point(515, 427);
             label40.Name = "label40";
             label40.Size = new Size(39, 15);
             label40.TabIndex = 14;
@@ -477,19 +613,59 @@ namespace BUTTER
             // 
             // groupBox6
             // 
+            groupBox6.Controls.Add(nudSpecialDevicesHours);
+            groupBox6.Controls.Add(nudSpecialDevices);
+            groupBox6.Controls.Add(nudRobotHours);
+            groupBox6.Controls.Add(nudNumRobots);
             groupBox6.Controls.Add(cboxSpecialDevices);
             groupBox6.Controls.Add(cboxHasRobot);
-            groupBox6.Location = new Point(287, 30);
+            groupBox6.Location = new Point(409, 30);
             groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(255, 98);
+            groupBox6.Size = new Size(406, 98);
             groupBox6.TabIndex = 9;
             groupBox6.TabStop = false;
             groupBox6.Text = "Automation";
             // 
+            // nudSpecialDevicesHours
+            // 
+            nudSpecialDevicesHours.Location = new Point(262, 51);
+            nudSpecialDevicesHours.Name = "nudSpecialDevicesHours";
+            nudSpecialDevicesHours.Size = new Size(66, 23);
+            nudSpecialDevicesHours.TabIndex = 19;
+            nudSpecialDevicesHours.TextAlign = HorizontalAlignment.Center;
+            nudSpecialDevicesHours.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // nudSpecialDevices
+            // 
+            nudSpecialDevices.Location = new Point(170, 51);
+            nudSpecialDevices.Name = "nudSpecialDevices";
+            nudSpecialDevices.Size = new Size(66, 23);
+            nudSpecialDevices.TabIndex = 18;
+            nudSpecialDevices.TextAlign = HorizontalAlignment.Center;
+            nudSpecialDevices.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // nudRobotHours
+            // 
+            nudRobotHours.Location = new Point(262, 22);
+            nudRobotHours.Name = "nudRobotHours";
+            nudRobotHours.Size = new Size(66, 23);
+            nudRobotHours.TabIndex = 17;
+            nudRobotHours.TextAlign = HorizontalAlignment.Center;
+            nudRobotHours.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // nudNumRobots
+            // 
+            nudNumRobots.Location = new Point(170, 22);
+            nudNumRobots.Name = "nudNumRobots";
+            nudNumRobots.Size = new Size(66, 23);
+            nudNumRobots.TabIndex = 16;
+            nudNumRobots.TextAlign = HorizontalAlignment.Center;
+            nudNumRobots.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
             // cboxSpecialDevices
             // 
             cboxSpecialDevices.AutoSize = true;
-            cboxSpecialDevices.Location = new Point(13, 44);
+            cboxSpecialDevices.Location = new Point(6, 52);
             cboxSpecialDevices.Name = "cboxSpecialDevices";
             cboxSpecialDevices.Size = new Size(131, 19);
             cboxSpecialDevices.TabIndex = 8;
@@ -499,7 +675,7 @@ namespace BUTTER
             // cboxHasRobot
             // 
             cboxHasRobot.AutoSize = true;
-            cboxHasRobot.Location = new Point(13, 22);
+            cboxHasRobot.Location = new Point(6, 26);
             cboxHasRobot.Name = "cboxHasRobot";
             cboxHasRobot.Size = new Size(84, 19);
             cboxHasRobot.TabIndex = 7;
@@ -508,14 +684,25 @@ namespace BUTTER
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(nudIOModulesHours);
             groupBox2.Controls.Add(label6);
             groupBox2.Controls.Add(nudNumIOModules);
-            groupBox2.Location = new Point(26, 149);
+            groupBox2.Location = new Point(26, 214);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(255, 223);
+            groupBox2.Size = new Size(355, 158);
             groupBox2.TabIndex = 6;
             groupBox2.TabStop = false;
             groupBox2.Text = "PLC Attributes";
+            // 
+            // nudIOModulesHours
+            // 
+            nudIOModulesHours.Increment = new decimal(new int[] { 25, 0, 0, 131072 });
+            nudIOModulesHours.Location = new Point(242, 21);
+            nudIOModulesHours.Name = "nudIOModulesHours";
+            nudIOModulesHours.Size = new Size(66, 23);
+            nudIOModulesHours.TabIndex = 4;
+            nudIOModulesHours.TextAlign = HorizontalAlignment.Center;
+            nudIOModulesHours.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // label6
             // 
@@ -538,6 +725,11 @@ namespace BUTTER
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(lblHoursQty);
+            groupBox1.Controls.Add(lblNumberQty);
+            groupBox1.Controls.Add(nudLubeHours);
+            groupBox1.Controls.Add(nudHydHours);
+            groupBox1.Controls.Add(nudPneuHours);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(nudLube);
             groupBox1.Controls.Add(label3);
@@ -546,15 +738,45 @@ namespace BUTTER
             groupBox1.Controls.Add(nudPneumatic);
             groupBox1.Location = new Point(26, 30);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(255, 113);
+            groupBox1.Size = new Size(355, 151);
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Services";
             // 
+            // nudLubeHours
+            // 
+            nudLubeHours.Increment = new decimal(new int[] { 25, 0, 0, 131072 });
+            nudLubeHours.Location = new Point(246, 102);
+            nudLubeHours.Name = "nudLubeHours";
+            nudLubeHours.Size = new Size(66, 23);
+            nudLubeHours.TabIndex = 8;
+            nudLubeHours.TextAlign = HorizontalAlignment.Center;
+            nudLubeHours.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // nudHydHours
+            // 
+            nudHydHours.Increment = new decimal(new int[] { 25, 0, 0, 131072 });
+            nudHydHours.Location = new Point(246, 73);
+            nudHydHours.Name = "nudHydHours";
+            nudHydHours.Size = new Size(66, 23);
+            nudHydHours.TabIndex = 7;
+            nudHydHours.TextAlign = HorizontalAlignment.Center;
+            nudHydHours.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // nudPneuHours
+            // 
+            nudPneuHours.Increment = new decimal(new int[] { 25, 0, 0, 131072 });
+            nudPneuHours.Location = new Point(246, 44);
+            nudPneuHours.Name = "nudPneuHours";
+            nudPneuHours.Size = new Size(66, 23);
+            nudPneuHours.TabIndex = 6;
+            nudPneuHours.TextAlign = HorizontalAlignment.Center;
+            nudPneuHours.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(6, 77);
+            label4.Location = new Point(6, 99);
             label4.Name = "label4";
             label4.Size = new Size(33, 15);
             label4.TabIndex = 5;
@@ -563,7 +785,7 @@ namespace BUTTER
             // 
             // nudLube
             // 
-            nudLube.Location = new Point(76, 75);
+            nudLube.Location = new Point(161, 102);
             nudLube.Name = "nudLube";
             nudLube.Size = new Size(66, 23);
             nudLube.TabIndex = 4;
@@ -572,7 +794,7 @@ namespace BUTTER
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(6, 48);
+            label3.Location = new Point(6, 70);
             label3.Name = "label3";
             label3.Size = new Size(58, 15);
             label3.TabIndex = 3;
@@ -581,7 +803,7 @@ namespace BUTTER
             // 
             // nudHydraulic
             // 
-            nudHydraulic.Location = new Point(76, 46);
+            nudHydraulic.Location = new Point(161, 73);
             nudHydraulic.Name = "nudHydraulic";
             nudHydraulic.Size = new Size(66, 23);
             nudHydraulic.TabIndex = 2;
@@ -590,7 +812,7 @@ namespace BUTTER
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(6, 19);
+            label2.Location = new Point(6, 41);
             label2.Name = "label2";
             label2.Size = new Size(64, 15);
             label2.TabIndex = 1;
@@ -598,7 +820,7 @@ namespace BUTTER
             // 
             // nudPneumatic
             // 
-            nudPneumatic.Location = new Point(76, 17);
+            nudPneumatic.Location = new Point(161, 44);
             nudPneumatic.Name = "nudPneumatic";
             nudPneumatic.Size = new Size(66, 23);
             nudPneumatic.TabIndex = 0;
@@ -619,7 +841,7 @@ namespace BUTTER
             tpStation1.Location = new Point(4, 24);
             tpStation1.Name = "tpStation1";
             tpStation1.Padding = new Padding(3);
-            tpStation1.Size = new Size(560, 415);
+            tpStation1.Size = new Size(922, 489);
             tpStation1.TabIndex = 1;
             tpStation1.Text = "Station 1";
             tpStation1.UseVisualStyleBackColor = true;
@@ -892,7 +1114,7 @@ namespace BUTTER
             tpStation2.Location = new Point(4, 24);
             tpStation2.Name = "tpStation2";
             tpStation2.Padding = new Padding(3);
-            tpStation2.Size = new Size(560, 415);
+            tpStation2.Size = new Size(922, 489);
             tpStation2.TabIndex = 2;
             tpStation2.Text = "Station 2";
             tpStation2.UseVisualStyleBackColor = true;
@@ -1220,7 +1442,7 @@ namespace BUTTER
             tpStation3.Location = new Point(4, 24);
             tpStation3.Name = "tpStation3";
             tpStation3.Padding = new Padding(3);
-            tpStation3.Size = new Size(560, 415);
+            tpStation3.Size = new Size(922, 489);
             tpStation3.TabIndex = 3;
             tpStation3.Text = "Station 3";
             tpStation3.UseVisualStyleBackColor = true;
@@ -1528,7 +1750,7 @@ namespace BUTTER
             tpStation4.Location = new Point(4, 24);
             tpStation4.Name = "tpStation4";
             tpStation4.Padding = new Padding(3);
-            tpStation4.Size = new Size(560, 415);
+            tpStation4.Size = new Size(922, 489);
             tpStation4.TabIndex = 4;
             tpStation4.Text = "Station 4";
             tpStation4.UseVisualStyleBackColor = true;
@@ -1796,7 +2018,7 @@ namespace BUTTER
             tpStation5.Location = new Point(4, 24);
             tpStation5.Name = "tpStation5";
             tpStation5.Padding = new Padding(3);
-            tpStation5.Size = new Size(560, 415);
+            tpStation5.Size = new Size(922, 489);
             tpStation5.TabIndex = 5;
             tpStation5.Text = "Station 5";
             tpStation5.UseVisualStyleBackColor = true;
@@ -2064,7 +2286,7 @@ namespace BUTTER
             tpStation6.Location = new Point(4, 24);
             tpStation6.Name = "tpStation6";
             tpStation6.Padding = new Padding(3);
-            tpStation6.Size = new Size(560, 415);
+            tpStation6.Size = new Size(922, 489);
             tpStation6.TabIndex = 6;
             tpStation6.Text = "Station 6";
             tpStation6.UseVisualStyleBackColor = true;
@@ -2323,7 +2545,7 @@ namespace BUTTER
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, aboutToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(590, 24);
+            menuStrip1.Size = new Size(1016, 24);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -2393,13 +2615,13 @@ namespace BUTTER
             // timeBaseToolStripMenuItem
             // 
             timeBaseToolStripMenuItem.Name = "timeBaseToolStripMenuItem";
-            timeBaseToolStripMenuItem.Size = new Size(127, 22);
+            timeBaseToolStripMenuItem.Size = new Size(180, 22);
             timeBaseToolStripMenuItem.Text = "Time Base";
             // 
             // weekToolStripMenuItem
             // 
             weekToolStripMenuItem.Name = "weekToolStripMenuItem";
-            weekToolStripMenuItem.Size = new Size(127, 22);
+            weekToolStripMenuItem.Size = new Size(180, 22);
             weekToolStripMenuItem.Text = "Week";
             weekToolStripMenuItem.Click += weekToolStripMenuItem_Click;
             // 
@@ -2431,7 +2653,7 @@ namespace BUTTER
             // lblToday
             // 
             lblToday.AutoSize = true;
-            lblToday.Location = new Point(15, 500);
+            lblToday.Location = new Point(15, 605);
             lblToday.Name = "lblToday";
             lblToday.Size = new Size(70, 15);
             lblToday.TabIndex = 4;
@@ -2440,7 +2662,7 @@ namespace BUTTER
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(322, 561);
+            label5.Location = new Point(322, 666);
             label5.Name = "label5";
             label5.Size = new Size(109, 15);
             label5.TabIndex = 5;
@@ -2449,7 +2671,7 @@ namespace BUTTER
             // dateToday
             // 
             dateToday.Enabled = false;
-            dateToday.Location = new Point(92, 497);
+            dateToday.Location = new Point(92, 602);
             dateToday.Name = "dateToday";
             dateToday.Size = new Size(143, 23);
             dateToday.TabIndex = 8;
@@ -2458,7 +2680,7 @@ namespace BUTTER
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(16, 529);
+            label8.Location = new Point(16, 634);
             label8.Name = "label8";
             label8.Size = new Size(58, 15);
             label8.TabIndex = 9;
@@ -2466,7 +2688,7 @@ namespace BUTTER
             // 
             // dateProjectStartDate
             // 
-            dateProjectStartDate.Location = new Point(92, 526);
+            dateProjectStartDate.Location = new Point(92, 631);
             dateProjectStartDate.Name = "dateProjectStartDate";
             dateProjectStartDate.Size = new Size(143, 23);
             dateProjectStartDate.TabIndex = 10;
@@ -2475,7 +2697,7 @@ namespace BUTTER
             // dateEstimatedCompleteProject
             // 
             dateEstimatedCompleteProject.Enabled = false;
-            dateEstimatedCompleteProject.Location = new Point(437, 555);
+            dateEstimatedCompleteProject.Location = new Point(437, 660);
             dateEstimatedCompleteProject.Name = "dateEstimatedCompleteProject";
             dateEstimatedCompleteProject.Size = new Size(143, 23);
             dateEstimatedCompleteProject.TabIndex = 11;
@@ -2483,7 +2705,7 @@ namespace BUTTER
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(252, 500);
+            label9.Location = new Point(252, 605);
             label9.Name = "label9";
             label9.Size = new Size(55, 15);
             label9.TabIndex = 12;
@@ -2492,7 +2714,7 @@ namespace BUTTER
             // txbDaysLeft
             // 
             txbDaysLeft.Enabled = false;
-            txbDaysLeft.Location = new Point(252, 526);
+            txbDaysLeft.Location = new Point(252, 631);
             txbDaysLeft.Name = "txbDaysLeft";
             txbDaysLeft.Size = new Size(55, 23);
             txbDaysLeft.TabIndex = 13;
@@ -2503,7 +2725,7 @@ namespace BUTTER
             // txbTotalHours
             // 
             txbTotalHours.Enabled = false;
-            txbTotalHours.Location = new Point(480, 497);
+            txbTotalHours.Location = new Point(480, 602);
             txbTotalHours.Name = "txbTotalHours";
             txbTotalHours.Size = new Size(100, 23);
             txbTotalHours.TabIndex = 17;
@@ -2514,7 +2736,7 @@ namespace BUTTER
             // lblTotalHours
             // 
             lblTotalHours.AutoSize = true;
-            lblTotalHours.Location = new Point(407, 500);
+            lblTotalHours.Location = new Point(407, 605);
             lblTotalHours.Name = "lblTotalHours";
             lblTotalHours.Size = new Size(67, 15);
             lblTotalHours.TabIndex = 16;
@@ -2523,7 +2745,7 @@ namespace BUTTER
             // txbHoursPerWeek
             // 
             txbHoursPerWeek.Enabled = false;
-            txbHoursPerWeek.Location = new Point(480, 526);
+            txbHoursPerWeek.Location = new Point(480, 631);
             txbHoursPerWeek.Name = "txbHoursPerWeek";
             txbHoursPerWeek.Size = new Size(100, 23);
             txbHoursPerWeek.TabIndex = 19;
@@ -2534,7 +2756,7 @@ namespace BUTTER
             // lblHoursPerWeek
             // 
             lblHoursPerWeek.AutoSize = true;
-            lblHoursPerWeek.Location = new Point(384, 529);
+            lblHoursPerWeek.Location = new Point(384, 634);
             lblHoursPerWeek.Name = "lblHoursPerWeek";
             lblHoursPerWeek.Size = new Size(91, 15);
             lblHoursPerWeek.TabIndex = 18;
@@ -2543,9 +2765,9 @@ namespace BUTTER
             // statusStrip1
             // 
             statusStrip1.Items.AddRange(new ToolStripItem[] { tslFilePath });
-            statusStrip1.Location = new Point(0, 592);
+            statusStrip1.Location = new Point(0, 692);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(590, 22);
+            statusStrip1.Size = new Size(1016, 22);
             statusStrip1.TabIndex = 20;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -2555,9 +2777,27 @@ namespace BUTTER
             tslFilePath.Size = new Size(87, 17);
             tslFilePath.Text = "No file loaded..";
             // 
+            // lblNumberQty
+            // 
+            lblNumberQty.AutoSize = true;
+            lblNumberQty.Location = new Point(171, 22);
+            lblNumberQty.Name = "lblNumberQty";
+            lblNumberQty.Size = new Size(51, 15);
+            lblNumberQty.TabIndex = 9;
+            lblNumberQty.Text = "Number";
+            // 
+            // lblHoursQty
+            // 
+            lblHoursQty.AutoSize = true;
+            lblHoursQty.Location = new Point(246, 22);
+            lblHoursQty.Name = "lblHoursQty";
+            lblHoursQty.Size = new Size(39, 15);
+            lblHoursQty.TabIndex = 10;
+            lblHoursQty.Text = "Hours";
+            // 
             // frmMain
             // 
-            ClientSize = new Size(590, 614);
+            ClientSize = new Size(1016, 714);
             Controls.Add(statusStrip1);
             Controls.Add(txbHoursPerWeek);
             Controls.Add(lblHoursPerWeek);
@@ -2583,17 +2823,33 @@ namespace BUTTER
             tpBase.PerformLayout();
             groupBox7.ResumeLayout(false);
             groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudEnableingDeviceHours).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudEnablingDevice).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudScannerHours).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudScanners).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudLightCurtainHours).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudDoorsHours).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudEStopHours).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudSafetyZoneHours).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudLightCurtains).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudSafetyDoors).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudSafetyZones).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudEStopButtons).EndInit();
             groupBox6.ResumeLayout(false);
             groupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudSpecialDevicesHours).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudSpecialDevices).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudRobotHours).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudNumRobots).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudIOModulesHours).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudNumIOModules).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)nudLubeHours).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudHydHours).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudPneuHours).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudLube).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudHydraulic).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudPneumatic).EndInit();
@@ -2937,5 +3193,25 @@ namespace BUTTER
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel tslFilePath;
         private ToolStripMenuItem loadToolStripMenuItem;
+        private NumericUpDown nudEnableingDeviceHours;
+        private Label lblEnableDeviceTitle;
+        private NumericUpDown nudEnablingDevice;
+        private NumericUpDown nudScannerHours;
+        private Label lblScannersTitle;
+        private NumericUpDown nudScanners;
+        private NumericUpDown nudLightCurtainHours;
+        private NumericUpDown nudDoorsHours;
+        private NumericUpDown nudEStopHours;
+        private NumericUpDown nudSafetyZoneHours;
+        private NumericUpDown nudIOModulesHours;
+        private NumericUpDown nudLubeHours;
+        private NumericUpDown nudHydHours;
+        private NumericUpDown nudPneuHours;
+        private NumericUpDown nudSpecialDevicesHours;
+        private NumericUpDown nudSpecialDevices;
+        private NumericUpDown nudRobotHours;
+        private NumericUpDown nudNumRobots;
+        private Label lblHoursQty;
+        private Label lblNumberQty;
     }
 }
