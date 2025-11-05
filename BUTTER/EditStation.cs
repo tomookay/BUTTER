@@ -16,6 +16,8 @@ namespace BUTTER
         private TextBox[] _tbMotionName;
         private TextBox[] _tbReturn;
         private TextBox[] _tbReturned;
+        private NumericUpDown[] _nudSpecialHours;
+
 
         public EditStation()
         {
@@ -45,6 +47,8 @@ namespace BUTTER
             _tbMotionName = new TextBox[] { txbMotionName1, txbMotionName2, txbMotionName3, txbMotionName4, txbMotionName5, txbMotionName6 };
             _tbReturn = new TextBox[] { txbReturn1, txbReturn2, txbReturn3, txbReturn4, txbReturn5, txbReturn6 };
             _tbReturned = new TextBox[] { txbReturned1, txbReturned2, txbReturned3, txbReturned4, txbReturned5, txbReturned6 };
+            _nudSpecialHours = new NumericUpDown[] { nudSpecialHours1, nudSpecialHours2, nudSpecialHours3, nudSpecialHours4, nudSpecialHours5, nudSpecialHours6 };
+
         }
 
         private void ConfigureScrollBar()
@@ -81,6 +85,7 @@ namespace BUTTER
                 _tbMotionName[rowSlot].Enabled = hasSource;
                 _tbReturn[rowSlot].Enabled = hasSource;
                 _tbReturned[rowSlot].Enabled = hasSource;
+                _nudSpecialHours[rowSlot].Enabled = hasSource;
 
                 if (hasSource)
                 {
@@ -96,6 +101,8 @@ namespace BUTTER
                     // store source index into Tag so button handlers can know which MotionRow they refer to
                     _btnAdvance[rowSlot].Tag = sourceIndex;
                     _btnReturn[rowSlot].Tag = sourceIndex;
+
+                    _nudSpecialHours[rowSlot].Value = (decimal)(m.SpecialHours);
                 }
                 else
                 {
@@ -106,6 +113,7 @@ namespace BUTTER
                     _tbReturned[rowSlot].Text = "";
                     _btnAdvance[rowSlot].Tag = null;
                     _btnReturn[rowSlot].Tag = null;
+                    _nudSpecialHours[rowSlot].Value = 0;
                 }
             }
         }
@@ -127,6 +135,7 @@ namespace BUTTER
                 row.Motion.MotionName = _tbMotionName[rowSlot].Text;
                 row.Motion.textReturn = _tbReturn[rowSlot].Text;
                 row.Motion.textReturned = _tbReturned[rowSlot].Text;
+                row.Motion.SpecialHours = (float)_nudSpecialHours[rowSlot].Value;
             }
         }
 
@@ -138,6 +147,16 @@ namespace BUTTER
         }
 
         private void EditStation_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
