@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace BUTTER
 {
@@ -136,6 +137,10 @@ namespace BUTTER
                 row.Motion.textReturn = _tbReturn[rowSlot].Text;
                 row.Motion.textReturned = _tbReturned[rowSlot].Text;
                 row.Motion.SpecialHours = (float)_nudSpecialHours[rowSlot].Value;
+                row.Motion.NumAdvance = _btnAdvance[rowSlot].Text;
+                row.Motion.NumReturn = _btnReturn[rowSlot].Text;
+
+
             }
         }
 
@@ -146,19 +151,66 @@ namespace BUTTER
             base.OnFormClosing(e);
         }
 
-        private void EditStation_Load(object sender, EventArgs e)
-        {
 
+
+        private void btnOrderAdvance1_Click(object sender, EventArgs e)
+        {
+            btnOrderAdvance1.Text = Microsoft.VisualBasic.Interaction.InputBox("Enter new Advance Order Number:", "Edit Advance Order Number", btnOrderAdvance1.Text);
         }
 
-        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        private void btnOrderAdvance2_Click(object sender, EventArgs e)
         {
-
+            btnOrderAdvance2.Text = Microsoft.VisualBasic.Interaction.InputBox("Enter new Advance Order Number:", "Edit Advance Order Number", btnOrderAdvance2.Text);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnOrderAdvance3_Click(object sender, EventArgs e)
         {
+            btnOrderAdvance3.Text = Microsoft.VisualBasic.Interaction.InputBox("Enter new Advance Order Number:", "Edit Advance Order Number", btnOrderAdvance3.Text);
+        }
 
+        private void btnOrderAdvance4_Click(object sender, EventArgs e)
+        {
+            btnOrderAdvance4.Text = Microsoft.VisualBasic.Interaction.InputBox("Enter new Advance Order Number:", "Edit Advance Order Number", btnOrderAdvance4.Text);
+        }
+
+        private void btnOrderAdvance5_Click(object sender, EventArgs e)
+        {
+            btnOrderAdvance5.Text = Microsoft.VisualBasic.Interaction.InputBox("Enter new Advance Order Number:", "Edit Advance Order Number", btnOrderAdvance5.Text);
+        }
+
+        private void btnOrderAdvance6_Click(object sender, EventArgs e)
+        {
+            btnOrderAdvance6.Text = Microsoft.VisualBasic.Interaction.InputBox("Enter new Advance Order Number:", "Edit Advance Order Number", btnOrderAdvance6.Text);
+        }
+
+        private void btnOrderReturn1_Click(object sender, EventArgs e)
+        {
+            btnOrderReturn1.Text = Microsoft.VisualBasic.Interaction.InputBox("Enter new Return Order Number:", "Edit Return Order Number", btnOrderReturn1.Text);
+        }
+
+        private void btnOrderReturn2_Click(object sender, EventArgs e)
+        {
+            btnOrderReturn2.Text = Microsoft.VisualBasic.Interaction.InputBox("Enter new Return Order Number:", "Edit Return Order Number", btnOrderReturn2.Text);
+        }
+
+        private void btnOrderReturn3_Click(object sender, EventArgs e)
+        {
+            btnOrderReturn3.Text = Microsoft.VisualBasic.Interaction.InputBox("Enter new Return Order Number:", "Edit Return Order Number", btnOrderReturn3.Text);
+        }
+
+        private void btnOrderReturn4_Click(object sender, EventArgs e)
+        {
+            btnOrderReturn4.Text = Microsoft.VisualBasic.Interaction.InputBox("Enter new Return Order Number:", "Edit Return Order Number", btnOrderReturn4.Text);
+        }
+
+        private void btnOrderReturn5_Click(object sender, EventArgs e)
+        {
+            btnOrderReturn5.Text = Microsoft.VisualBasic.Interaction.InputBox("Enter new Return Order Number:", "Edit Return Order Number", btnOrderReturn5.Text);
+        }
+
+        private void btnOrderReturn6_Click(object sender, EventArgs e)
+        {
+            btnOrderReturn6.Text = Microsoft.VisualBasic.Interaction.InputBox("Enter new Return Order Number:", "Edit Return Order Number", btnOrderReturn6.Text);
         }
     }
 }

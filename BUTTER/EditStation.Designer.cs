@@ -96,6 +96,7 @@
             btnOrderReturn1.TabIndex = 21;
             btnOrderReturn1.Text = "2";
             btnOrderReturn1.UseVisualStyleBackColor = true;
+            btnOrderReturn1.Click += btnOrderReturn1_Click;
             // 
             // btnOrderAdvance1
             // 
@@ -105,6 +106,7 @@
             btnOrderAdvance1.TabIndex = 20;
             btnOrderAdvance1.Text = "1";
             btnOrderAdvance1.UseVisualStyleBackColor = true;
+            btnOrderAdvance1.Click += btnOrderAdvance1_Click;
             // 
             // txbReturned1
             // 
@@ -161,6 +163,7 @@
             btnOrderReturn2.TabIndex = 28;
             btnOrderReturn2.Text = "2";
             btnOrderReturn2.UseVisualStyleBackColor = true;
+            btnOrderReturn2.Click += btnOrderReturn2_Click;
             // 
             // btnOrderAdvance2
             // 
@@ -170,6 +173,7 @@
             btnOrderAdvance2.TabIndex = 27;
             btnOrderAdvance2.Text = "1";
             btnOrderAdvance2.UseVisualStyleBackColor = true;
+            btnOrderAdvance2.Click += btnOrderAdvance2_Click;
             // 
             // txbReturned2
             // 
@@ -226,6 +230,7 @@
             btnOrderReturn3.TabIndex = 35;
             btnOrderReturn3.Text = "2";
             btnOrderReturn3.UseVisualStyleBackColor = true;
+            btnOrderReturn3.Click += btnOrderReturn3_Click;
             // 
             // btnOrderAdvance3
             // 
@@ -235,6 +240,7 @@
             btnOrderAdvance3.TabIndex = 34;
             btnOrderAdvance3.Text = "1";
             btnOrderAdvance3.UseVisualStyleBackColor = true;
+            btnOrderAdvance3.Click += btnOrderAdvance3_Click;
             // 
             // txbReturned3
             // 
@@ -291,6 +297,7 @@
             btnOrderReturn6.TabIndex = 56;
             btnOrderReturn6.Text = "2";
             btnOrderReturn6.UseVisualStyleBackColor = true;
+            btnOrderReturn6.Click += btnOrderReturn6_Click;
             // 
             // btnOrderAdvance6
             // 
@@ -300,6 +307,7 @@
             btnOrderAdvance6.TabIndex = 55;
             btnOrderAdvance6.Text = "1";
             btnOrderAdvance6.UseVisualStyleBackColor = true;
+            btnOrderAdvance6.Click += btnOrderAdvance6_Click;
             // 
             // txbReturned6
             // 
@@ -356,6 +364,7 @@
             btnOrderReturn5.TabIndex = 49;
             btnOrderReturn5.Text = "2";
             btnOrderReturn5.UseVisualStyleBackColor = true;
+            btnOrderReturn5.Click += btnOrderReturn5_Click;
             // 
             // btnOrderAdvance5
             // 
@@ -365,6 +374,7 @@
             btnOrderAdvance5.TabIndex = 48;
             btnOrderAdvance5.Text = "1";
             btnOrderAdvance5.UseVisualStyleBackColor = true;
+            btnOrderAdvance5.Click += btnOrderAdvance5_Click;
             // 
             // txbReturned5
             // 
@@ -421,6 +431,7 @@
             btnOrderReturn4.TabIndex = 42;
             btnOrderReturn4.Text = "2";
             btnOrderReturn4.UseVisualStyleBackColor = true;
+            btnOrderReturn4.Click += btnOrderReturn4_Click;
             // 
             // btnOrderAdvance4
             // 
@@ -430,6 +441,7 @@
             btnOrderAdvance4.TabIndex = 41;
             btnOrderAdvance4.Text = "1";
             btnOrderAdvance4.UseVisualStyleBackColor = true;
+            btnOrderAdvance4.Click += btnOrderAdvance4_Click;
             // 
             // txbReturned4
             // 
@@ -484,7 +496,6 @@
             vScrollBar1.Name = "vScrollBar1";
             vScrollBar1.Size = new Size(20, 348);
             vScrollBar1.TabIndex = 57;
-            vScrollBar1.Scroll += vScrollBar1_Scroll;
             // 
             // grpBoxEditRows
             // 
@@ -623,7 +634,6 @@
             Name = "EditStation";
             StartPosition = FormStartPosition.CenterParent;
             Text = "EditStation";
-            Load += EditStation_Load;
             grpBoxEditRows.ResumeLayout(false);
             grpBoxEditRows.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)nudSpecialHours6).EndInit();

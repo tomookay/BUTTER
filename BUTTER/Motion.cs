@@ -17,6 +17,10 @@ namespace BUTTER
         public String MotionName;
         public float SpecialHours; //special hours to add to calculation, 0 if none
         //interlocks not implemented yet
+        public string NumAdvance;
+        public string NumReturn;
+
+
     }
 
 
