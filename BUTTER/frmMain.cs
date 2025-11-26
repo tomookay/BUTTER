@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using static System.Windows.Forms.DataFormats;
 
 namespace BUTTER
 {
@@ -318,7 +319,7 @@ namespace BUTTER
             PopulateStationTestData(Station4Rows);
             PopulateStationTestData(Station5Rows);
             PopulateStationTestData(Station6Rows);
-         
+
         }
 
         /// <summary>
@@ -360,19 +361,19 @@ namespace BUTTER
         //just populate the xml from the globals on the form, only use 1 index of the array to keep the same implem.
         {
             rows[0] = new MachineData
-            { 
-                      
-            numPneumatics = (int)nudPneumatic.Value,
-            numLube = (int)nudLube.Value,
-            numHydraulics = (int)nudHydraulic.Value,
-            numSafetyDoors = (int)nudSafetyDoors.Value,
-            numEStopButtons = (int)nudEStopButtons.Value,
-            numLightCurtains = (int)nudLightCurtains.Value,
-            hasRobot = cboxHasRobot.Checked,
-            hasSpecialDevices = cboxSpecialDevices.Checked,
-            hasAutoScanIO = cboxAutoScanIO.Checked,
-            hasSoftwareSafetyProgram = cboxSoftwareSafetyProgram.Checked,
-            numSafeyZones = (int)nudSafetyZones.Value
+            {
+
+                numPneumatics = (int)nudPneumatic.Value,
+                numLube = (int)nudLube.Value,
+                numHydraulics = (int)nudHydraulic.Value,
+                numSafetyDoors = (int)nudSafetyDoors.Value,
+                numEStopButtons = (int)nudEStopButtons.Value,
+                numLightCurtains = (int)nudLightCurtains.Value,
+                hasRobot = cboxHasRobot.Checked,
+                hasSpecialDevices = cboxSpecialDevices.Checked,
+                hasAutoScanIO = cboxAutoScanIO.Checked,
+                hasSoftwareSafetyProgram = cboxSoftwareSafetyProgram.Checked,
+                numSafeyZones = (int)nudSafetyZones.Value
 
             };
 
@@ -1112,7 +1113,7 @@ namespace BUTTER
             CopyListToArray(data.Station4, Station4Rows);
             CopyListToArray(data.Station5, Station5Rows);
             CopyListToArray(data.Station6, Station6Rows);
-           
+
             CopyMachineDataToProg(data.MachineDataList);
 
             // If UI should reflect loaded data immediately, refresh here.
@@ -1151,7 +1152,7 @@ namespace BUTTER
 
         }
 
-    
+
         private void loadToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
 
@@ -1177,6 +1178,15 @@ namespace BUTTER
             {
                 MessageBox.Show("Failed to load stations: " + ex.Message, "Load Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+        }
+
+        private void toTwinCAT3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+          frmExportTC3 exportTC3 = new frmExportTC3();
+          exportTC3.Show();
+
 
         }
     }

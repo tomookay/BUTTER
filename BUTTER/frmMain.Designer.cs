@@ -51,6 +51,8 @@ namespace BUTTER
             label6 = new Label();
             nudNumIOModules = new NumericUpDown();
             groupBox1 = new GroupBox();
+            lblHoursQty = new Label();
+            lblNumberQty = new Label();
             nudLubeHours = new NumericUpDown();
             nudHydHours = new NumericUpDown();
             nudPneuHours = new NumericUpDown();
@@ -251,8 +253,6 @@ namespace BUTTER
             saveFileDialog1 = new SaveFileDialog();
             statusStrip1 = new StatusStrip();
             tslFilePath = new ToolStripStatusLabel();
-            lblNumberQty = new Label();
-            lblHoursQty = new Label();
             tabControlStations.SuspendLayout();
             tpBase.SuspendLayout();
             groupBox7.SuspendLayout();
@@ -742,6 +742,24 @@ namespace BUTTER
             groupBox1.TabIndex = 1;
             groupBox1.TabStop = false;
             groupBox1.Text = "Services";
+            // 
+            // lblHoursQty
+            // 
+            lblHoursQty.AutoSize = true;
+            lblHoursQty.Location = new Point(246, 22);
+            lblHoursQty.Name = "lblHoursQty";
+            lblHoursQty.Size = new Size(39, 15);
+            lblHoursQty.TabIndex = 10;
+            lblHoursQty.Text = "Hours";
+            // 
+            // lblNumberQty
+            // 
+            lblNumberQty.AutoSize = true;
+            lblNumberQty.Location = new Point(171, 22);
+            lblNumberQty.Name = "lblNumberQty";
+            lblNumberQty.Size = new Size(51, 15);
+            lblNumberQty.TabIndex = 9;
+            lblNumberQty.Text = "Number";
             // 
             // nudLubeHours
             // 
@@ -2559,50 +2577,51 @@ namespace BUTTER
             // newToolStripMenuItem
             // 
             newToolStripMenuItem.Name = "newToolStripMenuItem";
-            newToolStripMenuItem.Size = new Size(108, 22);
+            newToolStripMenuItem.Size = new Size(180, 22);
             newToolStripMenuItem.Text = "New";
             // 
             // loadToolStripMenuItem
             // 
             loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            loadToolStripMenuItem.Size = new Size(108, 22);
+            loadToolStripMenuItem.Size = new Size(180, 22);
             loadToolStripMenuItem.Text = "Load";
             loadToolStripMenuItem.Click += loadToolStripMenuItem_Click_1;
             // 
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(108, 22);
+            saveToolStripMenuItem.Size = new Size(180, 22);
             saveToolStripMenuItem.Text = "Save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(105, 6);
+            toolStripSeparator1.Size = new Size(177, 6);
             // 
             // exportToolStripMenuItem
             // 
             exportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toTwinCAT3ToolStripMenuItem });
             exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            exportToolStripMenuItem.Size = new Size(108, 22);
+            exportToolStripMenuItem.Size = new Size(180, 22);
             exportToolStripMenuItem.Text = "Export";
             // 
             // toTwinCAT3ToolStripMenuItem
             // 
             toTwinCAT3ToolStripMenuItem.Name = "toTwinCAT3ToolStripMenuItem";
-            toTwinCAT3ToolStripMenuItem.Size = new Size(139, 22);
+            toTwinCAT3ToolStripMenuItem.Size = new Size(180, 22);
             toTwinCAT3ToolStripMenuItem.Text = "to TwinCAT3";
+            toTwinCAT3ToolStripMenuItem.Click += toTwinCAT3ToolStripMenuItem_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(105, 6);
+            toolStripSeparator2.Size = new Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(108, 22);
+            exitToolStripMenuItem.Size = new Size(180, 22);
             exitToolStripMenuItem.Text = "Exit";
             // 
             // editToolStripMenuItem
@@ -2615,13 +2634,13 @@ namespace BUTTER
             // timeBaseToolStripMenuItem
             // 
             timeBaseToolStripMenuItem.Name = "timeBaseToolStripMenuItem";
-            timeBaseToolStripMenuItem.Size = new Size(180, 22);
+            timeBaseToolStripMenuItem.Size = new Size(127, 22);
             timeBaseToolStripMenuItem.Text = "Time Base";
             // 
             // weekToolStripMenuItem
             // 
             weekToolStripMenuItem.Name = "weekToolStripMenuItem";
-            weekToolStripMenuItem.Size = new Size(180, 22);
+            weekToolStripMenuItem.Size = new Size(127, 22);
             weekToolStripMenuItem.Text = "Week";
             weekToolStripMenuItem.Click += weekToolStripMenuItem_Click;
             // 
@@ -2776,24 +2795,6 @@ namespace BUTTER
             tslFilePath.Name = "tslFilePath";
             tslFilePath.Size = new Size(87, 17);
             tslFilePath.Text = "No file loaded..";
-            // 
-            // lblNumberQty
-            // 
-            lblNumberQty.AutoSize = true;
-            lblNumberQty.Location = new Point(171, 22);
-            lblNumberQty.Name = "lblNumberQty";
-            lblNumberQty.Size = new Size(51, 15);
-            lblNumberQty.TabIndex = 9;
-            lblNumberQty.Text = "Number";
-            // 
-            // lblHoursQty
-            // 
-            lblHoursQty.AutoSize = true;
-            lblHoursQty.Location = new Point(246, 22);
-            lblHoursQty.Name = "lblHoursQty";
-            lblHoursQty.Size = new Size(39, 15);
-            lblHoursQty.TabIndex = 10;
-            lblHoursQty.Text = "Hours";
             // 
             // frmMain
             // 

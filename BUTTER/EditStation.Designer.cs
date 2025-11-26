@@ -110,7 +110,7 @@
             // 
             // txbReturned1
             // 
-            txbReturned1.BackColor = Color.FromArgb(255, 255, 192);
+            txbReturned1.BackColor = Color.FromArgb(192, 255, 192);
             txbReturned1.Location = new Point(299, 52);
             txbReturned1.Name = "txbReturned1";
             txbReturned1.Size = new Size(100, 23);
@@ -120,7 +120,7 @@
             // 
             // txbReturn1
             // 
-            txbReturn1.BackColor = Color.FromArgb(255, 255, 192);
+            txbReturn1.BackColor = Color.FromArgb(192, 255, 192);
             txbReturn1.Location = new Point(299, 23);
             txbReturn1.Name = "txbReturn1";
             txbReturn1.Size = new Size(100, 23);
@@ -139,7 +139,7 @@
             // 
             // txbAdvanced1
             // 
-            txbAdvanced1.BackColor = Color.FromArgb(192, 255, 192);
+            txbAdvanced1.BackColor = Color.FromArgb(255, 255, 192);
             txbAdvanced1.Location = new Point(87, 52);
             txbAdvanced1.Name = "txbAdvanced1";
             txbAdvanced1.Size = new Size(100, 23);
@@ -148,7 +148,7 @@
             // 
             // txbAdvance1
             // 
-            txbAdvance1.BackColor = Color.FromArgb(192, 255, 192);
+            txbAdvance1.BackColor = Color.FromArgb(255, 255, 192);
             txbAdvance1.Location = new Point(87, 23);
             txbAdvance1.Name = "txbAdvance1";
             txbAdvance1.Size = new Size(100, 23);
@@ -177,7 +177,7 @@
             // 
             // txbReturned2
             // 
-            txbReturned2.BackColor = Color.FromArgb(255, 255, 192);
+            txbReturned2.BackColor = Color.FromArgb(192, 255, 192);
             txbReturned2.Location = new Point(299, 111);
             txbReturned2.Name = "txbReturned2";
             txbReturned2.Size = new Size(100, 23);
@@ -187,7 +187,7 @@
             // 
             // txbReturn2
             // 
-            txbReturn2.BackColor = Color.FromArgb(255, 255, 192);
+            txbReturn2.BackColor = Color.FromArgb(192, 255, 192);
             txbReturn2.Location = new Point(299, 82);
             txbReturn2.Name = "txbReturn2";
             txbReturn2.Size = new Size(100, 23);
@@ -206,7 +206,7 @@
             // 
             // txbAdvanced2
             // 
-            txbAdvanced2.BackColor = Color.FromArgb(192, 255, 192);
+            txbAdvanced2.BackColor = Color.FromArgb(255, 255, 192);
             txbAdvanced2.Location = new Point(87, 111);
             txbAdvanced2.Name = "txbAdvanced2";
             txbAdvanced2.Size = new Size(100, 23);
@@ -215,7 +215,7 @@
             // 
             // txbAdvance2
             // 
-            txbAdvance2.BackColor = Color.FromArgb(192, 255, 192);
+            txbAdvance2.BackColor = Color.FromArgb(255, 255, 192);
             txbAdvance2.Location = new Point(87, 82);
             txbAdvance2.Name = "txbAdvance2";
             txbAdvance2.Size = new Size(100, 23);
@@ -244,7 +244,7 @@
             // 
             // txbReturned3
             // 
-            txbReturned3.BackColor = Color.FromArgb(255, 255, 192);
+            txbReturned3.BackColor = Color.FromArgb(192, 255, 192);
             txbReturned3.Location = new Point(299, 170);
             txbReturned3.Name = "txbReturned3";
             txbReturned3.Size = new Size(100, 23);
@@ -254,7 +254,7 @@
             // 
             // txbReturn3
             // 
-            txbReturn3.BackColor = Color.FromArgb(255, 255, 192);
+            txbReturn3.BackColor = Color.FromArgb(192, 255, 192);
             txbReturn3.Location = new Point(299, 141);
             txbReturn3.Name = "txbReturn3";
             txbReturn3.Size = new Size(100, 23);
@@ -273,7 +273,7 @@
             // 
             // txbAdvanced3
             // 
-            txbAdvanced3.BackColor = Color.FromArgb(192, 255, 192);
+            txbAdvanced3.BackColor = Color.FromArgb(255, 255, 192);
             txbAdvanced3.Location = new Point(87, 170);
             txbAdvanced3.Name = "txbAdvanced3";
             txbAdvanced3.Size = new Size(100, 23);
@@ -282,7 +282,7 @@
             // 
             // txbAdvance3
             // 
-            txbAdvance3.BackColor = Color.FromArgb(192, 255, 192);
+            txbAdvance3.BackColor = Color.FromArgb(255, 255, 192);
             txbAdvance3.Location = new Point(87, 141);
             txbAdvance3.Name = "txbAdvance3";
             txbAdvance3.Size = new Size(100, 23);
@@ -311,7 +311,7 @@
             // 
             // txbReturned6
             // 
-            txbReturned6.BackColor = Color.FromArgb(255, 255, 192);
+            txbReturned6.BackColor = Color.FromArgb(192, 255, 192);
             txbReturned6.Location = new Point(299, 347);
             txbReturned6.Name = "txbReturned6";
             txbReturned6.Size = new Size(100, 23);
@@ -321,7 +321,7 @@
             // 
             // txbReturn6
             // 
-            txbReturn6.BackColor = Color.FromArgb(255, 255, 192);
+            txbReturn6.BackColor = Color.FromArgb(192, 255, 192);
             txbReturn6.Location = new Point(299, 318);
             txbReturn6.Name = "txbReturn6";
             txbReturn6.Size = new Size(100, 23);
@@ -340,7 +340,7 @@
             // 
             // txbAdvanced6
             // 
-            txbAdvanced6.BackColor = Color.FromArgb(192, 255, 192);
+            txbAdvanced6.BackColor = Color.FromArgb(255, 255, 192);
             txbAdvanced6.Location = new Point(87, 347);
             txbAdvanced6.Name = "txbAdvanced6";
             txbAdvanced6.Size = new Size(100, 23);
@@ -349,7 +349,7 @@
             // 
             // txbAdvance6
             // 
-            txbAdvance6.BackColor = Color.FromArgb(192, 255, 192);
+            txbAdvance6.BackColor = Color.FromArgb(255, 255, 192);
             txbAdvance6.Location = new Point(87, 318);
             txbAdvance6.Name = "txbAdvance6";
             txbAdvance6.Size = new Size(100, 23);
@@ -378,7 +378,7 @@
             // 
             // txbReturned5
             // 
-            txbReturned5.BackColor = Color.FromArgb(255, 255, 192);
+            txbReturned5.BackColor = Color.FromArgb(192, 255, 192);
             txbReturned5.Location = new Point(299, 288);
             txbReturned5.Name = "txbReturned5";
             txbReturned5.Size = new Size(100, 23);
@@ -388,7 +388,7 @@
             // 
             // txbReturn5
             // 
-            txbReturn5.BackColor = Color.FromArgb(255, 255, 192);
+            txbReturn5.BackColor = Color.FromArgb(192, 255, 192);
             txbReturn5.Location = new Point(299, 259);
             txbReturn5.Name = "txbReturn5";
             txbReturn5.Size = new Size(100, 23);
@@ -407,7 +407,7 @@
             // 
             // txbAdvanced5
             // 
-            txbAdvanced5.BackColor = Color.FromArgb(192, 255, 192);
+            txbAdvanced5.BackColor = Color.FromArgb(255, 255, 192);
             txbAdvanced5.Location = new Point(87, 288);
             txbAdvanced5.Name = "txbAdvanced5";
             txbAdvanced5.Size = new Size(100, 23);
@@ -416,7 +416,7 @@
             // 
             // txbAdvance5
             // 
-            txbAdvance5.BackColor = Color.FromArgb(192, 255, 192);
+            txbAdvance5.BackColor = Color.FromArgb(255, 255, 192);
             txbAdvance5.Location = new Point(87, 259);
             txbAdvance5.Name = "txbAdvance5";
             txbAdvance5.Size = new Size(100, 23);
@@ -445,7 +445,7 @@
             // 
             // txbReturned4
             // 
-            txbReturned4.BackColor = Color.FromArgb(255, 255, 192);
+            txbReturned4.BackColor = Color.FromArgb(192, 255, 192);
             txbReturned4.Location = new Point(299, 229);
             txbReturned4.Name = "txbReturned4";
             txbReturned4.Size = new Size(100, 23);
@@ -455,7 +455,7 @@
             // 
             // txbReturn4
             // 
-            txbReturn4.BackColor = Color.FromArgb(255, 255, 192);
+            txbReturn4.BackColor = Color.FromArgb(192, 255, 192);
             txbReturn4.Location = new Point(299, 200);
             txbReturn4.Name = "txbReturn4";
             txbReturn4.Size = new Size(100, 23);
@@ -474,7 +474,7 @@
             // 
             // txbAdvanced4
             // 
-            txbAdvanced4.BackColor = Color.FromArgb(192, 255, 192);
+            txbAdvanced4.BackColor = Color.FromArgb(255, 255, 192);
             txbAdvanced4.Location = new Point(87, 229);
             txbAdvanced4.Name = "txbAdvanced4";
             txbAdvanced4.Size = new Size(100, 23);
@@ -483,7 +483,7 @@
             // 
             // txbAdvance4
             // 
-            txbAdvance4.BackColor = Color.FromArgb(192, 255, 192);
+            txbAdvance4.BackColor = Color.FromArgb(255, 255, 192);
             txbAdvance4.Location = new Point(87, 200);
             txbAdvance4.Name = "txbAdvance4";
             txbAdvance4.Size = new Size(100, 23);
