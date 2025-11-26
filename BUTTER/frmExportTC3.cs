@@ -46,20 +46,47 @@ namespace BUTTER
             }
 
             // Populate listBoxStation1Motions with full file paths of all .TcPOU files found (recursive)
+            // but only include files that are contained in folders named "Station 1" .. "Station 6".
             listBoxStation1Motions.Items.Clear();
             try
             {
-                var tcPouFiles = Directory.EnumerateFiles(searchDir, "*.TcPOU", SearchOption.AllDirectories).ToList();
-                if (tcPouFiles.Count == 0)
+                var tcPouFiles = Directory.EnumerateFiles(searchDir, "*.TcPOU", SearchOption.AllDirectories);
+
+                // Allowed station folder names
+                var allowedStations = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
                 {
-                    MessageBox.Show("No .TcPOU files found under the selected path.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    "Station 1",
+                    "Station 2",
+                    "Station 3",
+                    "Station 4",
+                    "Station 5",
+                    "Station 6"
+                };
+
+                // Filter to files that have one of the allowed station folder names in their ancestor path
+                var filteredFiles = tcPouFiles.Where(file =>
+                {
+                    string dir = Path.GetDirectoryName(file);
+                    while (!string.IsNullOrEmpty(dir))
+                    {
+                        string folderName = Path.GetFileName(dir);
+                        if (allowedStations.Contains(folderName))
+                            return true;
+                        dir = Path.GetDirectoryName(dir);
+                    }
+                    return false;
+                }).ToList();
+
+                if (filteredFiles.Count == 0)
+                {
+                    MessageBox.Show("No .TcPOU files found under the selected path within 'Station 1'..'Station 6' folders.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
                 listBoxStation1Motions.BeginUpdate();
                 try
                 {
-                    foreach (var file in tcPouFiles)
+                    foreach (var file in filteredFiles)
                     {
                         // Add the full file path as a single ListBox item
                         listBoxStation1Motions.Items.Add(file);
@@ -82,14 +109,14 @@ namespace BUTTER
             if (listBoxStation1Motions.SelectedItem is not string filePath || string.IsNullOrWhiteSpace(filePath))
             {
                 // No valid selection — clear the display
-                textBox1.Clear();
+                txbFileContents.Clear();
                 return;
             }
 
             if (!File.Exists(filePath))
             {
                 MessageBox.Show($"File not found: {filePath}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox1.Clear();
+                txbFileContents.Clear();
                 return;
             }
 
@@ -102,7 +129,7 @@ namespace BUTTER
                 {
                     // Read and display the file contents
                     string content = File.ReadAllText(filePath);
-                    textBox1.Text = content;
+                    txbFileContents.Text = content;
                 }
                 finally
                 {
@@ -112,7 +139,7 @@ namespace BUTTER
             catch (Exception ex)
             {
                 MessageBox.Show("Failed to open file: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBox1.Clear();
+                txbFileContents.Clear();
             }
         }
     }

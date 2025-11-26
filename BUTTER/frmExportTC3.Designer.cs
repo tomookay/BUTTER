@@ -33,7 +33,7 @@
             grpbxStation1 = new GroupBox();
             listBoxStation1Motions = new ListBox();
             OpenTC3Solution = new OpenFileDialog();
-            textBox1 = new TextBox();
+            txbFileContents = new TextBox();
             statusStrip1.SuspendLayout();
             grpbxStation1.SuspendLayout();
             SuspendLayout();
@@ -79,20 +79,20 @@
             OpenTC3Solution.Filter = "TwinCAT3 Solution files|*.sln";
             OpenTC3Solution.Title = "Select TwinCAT3 Solution";
             // 
-            // textBox1
+            // txbFileContents
             // 
-            textBox1.Location = new Point(18, 214);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(699, 201);
-            textBox1.TabIndex = 2;
+            txbFileContents.Location = new Point(18, 214);
+            txbFileContents.Multiline = true;
+            txbFileContents.Name = "txbFileContents";
+            txbFileContents.Size = new Size(699, 201);
+            txbFileContents.TabIndex = 2;
             // 
             // frmExportTC3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
+            Controls.Add(txbFileContents);
             Controls.Add(grpbxStation1);
             Controls.Add(statusStrip1);
             Name = "frmExportTC3";
@@ -112,6 +112,6 @@
         private GroupBox grpbxStation1;
         private ListBox listBoxStation1Motions;
         private OpenFileDialog OpenTC3Solution;
-        private TextBox textBox1;
+        private TextBox txbFileContents;
     }
 }
