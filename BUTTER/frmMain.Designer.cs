@@ -2577,51 +2577,51 @@ namespace BUTTER
             // newToolStripMenuItem
             // 
             newToolStripMenuItem.Name = "newToolStripMenuItem";
-            newToolStripMenuItem.Size = new Size(180, 22);
+            newToolStripMenuItem.Size = new Size(108, 22);
             newToolStripMenuItem.Text = "New";
             // 
             // loadToolStripMenuItem
             // 
             loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            loadToolStripMenuItem.Size = new Size(180, 22);
+            loadToolStripMenuItem.Size = new Size(108, 22);
             loadToolStripMenuItem.Text = "Load";
             loadToolStripMenuItem.Click += loadToolStripMenuItem_Click_1;
             // 
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(180, 22);
+            saveToolStripMenuItem.Size = new Size(108, 22);
             saveToolStripMenuItem.Text = "Save";
             saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(105, 6);
             // 
             // exportToolStripMenuItem
             // 
             exportToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toTwinCAT3ToolStripMenuItem });
             exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            exportToolStripMenuItem.Size = new Size(180, 22);
+            exportToolStripMenuItem.Size = new Size(108, 22);
             exportToolStripMenuItem.Text = "Export";
             // 
             // toTwinCAT3ToolStripMenuItem
             // 
             toTwinCAT3ToolStripMenuItem.Name = "toTwinCAT3ToolStripMenuItem";
-            toTwinCAT3ToolStripMenuItem.Size = new Size(180, 22);
+            toTwinCAT3ToolStripMenuItem.Size = new Size(139, 22);
             toTwinCAT3ToolStripMenuItem.Text = "to TwinCAT3";
             toTwinCAT3ToolStripMenuItem.Click += toTwinCAT3ToolStripMenuItem_Click;
             // 
             // toolStripSeparator2
             // 
             toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(177, 6);
+            toolStripSeparator2.Size = new Size(105, 6);
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Size = new Size(108, 22);
             exitToolStripMenuItem.Text = "Exit";
             // 
             // editToolStripMenuItem
@@ -2634,13 +2634,13 @@ namespace BUTTER
             // timeBaseToolStripMenuItem
             // 
             timeBaseToolStripMenuItem.Name = "timeBaseToolStripMenuItem";
-            timeBaseToolStripMenuItem.Size = new Size(127, 22);
+            timeBaseToolStripMenuItem.Size = new Size(180, 22);
             timeBaseToolStripMenuItem.Text = "Time Base";
             // 
             // weekToolStripMenuItem
             // 
             weekToolStripMenuItem.Name = "weekToolStripMenuItem";
-            weekToolStripMenuItem.Size = new Size(127, 22);
+            weekToolStripMenuItem.Size = new Size(180, 22);
             weekToolStripMenuItem.Text = "Week";
             weekToolStripMenuItem.Click += weekToolStripMenuItem_Click;
             // 
@@ -2655,7 +2655,7 @@ namespace BUTTER
             // aboutToolStripMenuItem1
             // 
             aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            aboutToolStripMenuItem1.Size = new Size(107, 22);
+            aboutToolStripMenuItem1.Size = new Size(180, 22);
             aboutToolStripMenuItem1.Text = "About";
             aboutToolStripMenuItem1.Click += aboutToolStripMenuItem1_Click;
             // 
